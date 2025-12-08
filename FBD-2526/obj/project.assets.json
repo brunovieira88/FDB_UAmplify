@@ -1604,19 +1604,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< Updated upstream
       "projectUniqueName": "C:\\Users\\User\\Desktop\\FBD\\FBD-2526\\FDB_UAmplify\\FBD-2526\\FBD-2526.csproj",
       "projectName": "FBD-2526",
       "projectPath": "C:\\Users\\User\\Desktop\\FBD\\FBD-2526\\FDB_UAmplify\\FBD-2526\\FBD-2526.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\User\\Desktop\\FBD\\FBD-2526\\FDB_UAmplify\\FBD-2526\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\FDB_UAmplify\\FBD-2526\\FBD-2526.csproj",
-      "projectName": "FBD-2526",
-      "projectPath": "C:\\Users\\User\\Desktop\\FDB_UAmplify\\FBD-2526\\FBD-2526.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\FDB_UAmplify\\FBD-2526\\obj\\",
->>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

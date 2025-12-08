@@ -96,9 +96,10 @@ namespace FBD_2526
             {
                 MessageBox.Show($"Bem-vindo, {UserName}!\n(ID de Utilizador: {UserId})",
                     "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                this.Hide();
                 EditProfile editProfileForm = new EditProfile(UserId);
                 editProfileForm.ShowDialog();
+                this.Close();
             }
             else
             {
@@ -131,6 +132,14 @@ namespace FBD_2526
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRegisto_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Registo registoForm = new Registo();
+            registoForm.ShowDialog();
+            this.Close();
         }
     }
 }

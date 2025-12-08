@@ -35,6 +35,8 @@
             txtUser = new TextBox();
             txtPass = new TextBox();
             pictureBox1 = new PictureBox();
+            label1 = new Label();
+            btnRegisto = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -42,7 +44,7 @@
             // 
             btnLogin.BackColor = Color.FromArgb(224, 224, 224);
             btnLogin.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnLogin.Location = new Point(625, 410);
+            btnLogin.Location = new Point(529, 229);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(144, 52);
             btnLogin.TabIndex = 0;
@@ -54,7 +56,7 @@
             // 
             username.AutoSize = true;
             username.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            username.Location = new Point(377, 123);
+            username.Location = new Point(376, 83);
             username.Name = "username";
             username.Size = new Size(142, 38);
             username.TabIndex = 1;
@@ -65,7 +67,7 @@
             // 
             password.AutoSize = true;
             password.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            password.Location = new Point(377, 287);
+            password.Location = new Point(376, 144);
             password.Name = "password";
             password.Size = new Size(132, 38);
             password.TabIndex = 2;
@@ -75,7 +77,7 @@
             // txtUser
             // 
             txtUser.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUser.Location = new Point(569, 134);
+            txtUser.Location = new Point(568, 94);
             txtUser.Name = "txtUser";
             txtUser.Size = new Size(252, 31);
             txtUser.TabIndex = 3;
@@ -84,7 +86,7 @@
             // txtPass
             // 
             txtPass.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPass.Location = new Point(569, 298);
+            txtPass.Location = new Point(568, 155);
             txtPass.Name = "txtPass";
             txtPass.PasswordChar = '*';
             txtPass.Size = new Size(252, 31);
@@ -93,14 +95,37 @@
             // 
             // pictureBox1
             // 
+            pictureBox1.BorderStyle = BorderStyle.Fixed3D;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(28, 94);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(318, 314);
+            pictureBox1.Size = new Size(318, 345);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(529, 351);
+            label1.Name = "label1";
+            label1.Size = new Size(140, 25);
+            label1.TabIndex = 6;
+            label1.Text = "Não tens conta?";
+            // 
+            // btnRegisto
+            // 
+            btnRegisto.BackColor = Color.FromArgb(224, 224, 224);
+            btnRegisto.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnRegisto.Location = new Point(529, 392);
+            btnRegisto.Name = "btnRegisto";
+            btnRegisto.Size = new Size(144, 52);
+            btnRegisto.TabIndex = 7;
+            btnRegisto.Text = "Resgista-te";
+            btnRegisto.UseVisualStyleBackColor = false;
+            btnRegisto.Click += btnRegisto_Click;
             // 
             // Login
             // 
@@ -108,6 +133,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(898, 551);
+            Controls.Add(btnRegisto);
+            Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(txtPass);
             Controls.Add(txtUser);
@@ -130,5 +157,7 @@
         private TextBox txtUser;
         private TextBox txtPass;
         private PictureBox pictureBox1;
+        private Label label1;
+        private Button btnRegisto;
     }
 }
