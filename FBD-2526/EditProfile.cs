@@ -55,7 +55,6 @@ namespace FBD_2526
             ToggleField(txtPassword, enable);
             dateBorn.Enabled = enable;
             btnEdit.Visible = !enable;
-            btnQuit.Visible = !enable;
             btnDone.Visible = enable;
             btnCancel.Visible = enable;
         }
@@ -237,9 +236,11 @@ namespace FBD_2526
             Save();
         }
 
-        private void btnQuit_Click(object sender, EventArgs e)
+        private void btnHome_Click(object sender, EventArgs e)
         {
-            Close();
+            Home home = new Home(UserId);
+            home.Show();
+            this.Close();
         }
     }
 }

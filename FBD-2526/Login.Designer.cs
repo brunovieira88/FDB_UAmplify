@@ -42,11 +42,12 @@
             // 
             // btnLogin
             // 
-            btnLogin.BackColor = Color.FromArgb(224, 224, 224);
-            btnLogin.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnLogin.Location = new Point(529, 229);
+            btnLogin.BackColor = Color.FromArgb(40, 40, 40);
+            btnLogin.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            btnLogin.ForeColor = Color.FromArgb(30, 215, 96);
+            btnLogin.Location = new Point(529, 246);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(144, 52);
+            btnLogin.Size = new Size(144, 55);
             btnLogin.TabIndex = 0;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
@@ -56,6 +57,7 @@
             // 
             username.AutoSize = true;
             username.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            username.ForeColor = Color.White;
             username.Location = new Point(376, 83);
             username.Name = "username";
             username.Size = new Size(142, 38);
@@ -67,6 +69,7 @@
             // 
             password.AutoSize = true;
             password.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            password.ForeColor = Color.White;
             password.Location = new Point(376, 144);
             password.Name = "password";
             password.Size = new Size(132, 38);
@@ -76,7 +79,9 @@
             // 
             // txtUser
             // 
+            txtUser.BackColor = Color.FromArgb(40, 40, 40);
             txtUser.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtUser.ForeColor = SystemColors.InactiveBorder;
             txtUser.Location = new Point(568, 94);
             txtUser.Name = "txtUser";
             txtUser.Size = new Size(252, 31);
@@ -85,7 +90,9 @@
             // 
             // txtPass
             // 
+            txtPass.BackColor = Color.FromArgb(40, 40, 40);
             txtPass.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPass.ForeColor = SystemColors.InactiveBorder;
             txtPass.Location = new Point(568, 155);
             txtPass.Name = "txtPass";
             txtPass.PasswordChar = '*';
@@ -109,21 +116,23 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(529, 351);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(485, 364);
             label1.Name = "label1";
-            label1.Size = new Size(140, 25);
+            label1.Size = new Size(232, 25);
             label1.TabIndex = 6;
-            label1.Text = "Não tens conta?";
+            label1.Text = "Don't you have an account?";
             // 
             // btnRegisto
             // 
-            btnRegisto.BackColor = Color.FromArgb(224, 224, 224);
-            btnRegisto.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnRegisto.Location = new Point(529, 392);
+            btnRegisto.BackColor = Color.FromArgb(40, 40, 40);
+            btnRegisto.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            btnRegisto.ForeColor = Color.FromArgb(30, 215, 96);
+            btnRegisto.Location = new Point(517, 414);
             btnRegisto.Name = "btnRegisto";
-            btnRegisto.Size = new Size(144, 52);
+            btnRegisto.Size = new Size(169, 69);
             btnRegisto.TabIndex = 7;
-            btnRegisto.Text = "Resgista-te";
+            btnRegisto.Text = "Resgister";
             btnRegisto.UseVisualStyleBackColor = false;
             btnRegisto.Click += btnRegisto_Click;
             // 
@@ -131,7 +140,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ButtonFace;
+            BackColor = Color.FromArgb(18, 18, 18);
             ClientSize = new Size(898, 551);
             Controls.Add(btnRegisto);
             Controls.Add(label1);
