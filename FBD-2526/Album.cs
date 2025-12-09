@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic;
+﻿using Accessibility;
+using Microsoft.VisualBasic;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,7 +14,11 @@ namespace FBD_2526
     {
         private String _albumID;
         private String _albumName;
+        private String _duration;
+        private String _releaseDate;
         private String _artistId;
+        private String _artist;
+
 
         public String albumID
         {
@@ -31,10 +36,28 @@ namespace FBD_2526
             }
         }
 
+        public String Duration
+        {
+            get { return _duration; }
+            set { _duration = value; }
+        }
+
+        public String ReleaseDate
+        {
+            get { return _releaseDate; }
+            set { _releaseDate = value; }
+        }
+
         public String AlbumIdArtist
         {
             get { return _artistId; }
             set { _artistId = value; }
+        }
+
+        public String AlbumNameArtist
+        {
+            get { return _artist; }
+            set { _artist = value; }
         }
 
         public override string ToString()

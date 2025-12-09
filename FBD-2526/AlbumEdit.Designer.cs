@@ -43,6 +43,8 @@
             button2 = new Button();
             listView1 = new ListView();
             label5 = new Label();
+            textBox5 = new TextBox();
+            label6 = new Label();
             SuspendLayout();
             // 
             // panel1
@@ -80,6 +82,7 @@
             button1.TabIndex = 15;
             button1.Text = "GET";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // label3
             // 
@@ -95,14 +98,14 @@
             // 
             textBox2.Location = new Point(241, 139);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(313, 27);
+            textBox2.Size = new Size(293, 27);
             textBox2.TabIndex = 17;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label2.Location = new Point(581, 116);
+            label2.Location = new Point(560, 116);
             label2.Name = "label2";
             label2.Size = new Size(71, 20);
             label2.TabIndex = 18;
@@ -110,7 +113,7 @@
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(581, 139);
+            textBox3.Location = new Point(560, 139);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(70, 27);
             textBox3.TabIndex = 19;
@@ -119,7 +122,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label4.Location = new Point(680, 116);
+            label4.Location = new Point(668, 116);
             label4.Name = "label4";
             label4.Size = new Size(95, 20);
             label4.TabIndex = 20;
@@ -127,9 +130,9 @@
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(688, 139);
+            textBox4.Location = new Point(653, 139);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(87, 27);
+            textBox4.Size = new Size(138, 27);
             textBox4.TabIndex = 21;
             // 
             // button4
@@ -170,28 +173,47 @@
             // 
             // listView1
             // 
-            listView1.Location = new Point(241, 247);
+            listView1.Location = new Point(241, 281);
             listView1.Name = "listView1";
             listView1.Size = new Size(534, 188);
             listView1.TabIndex = 27;
             listView1.UseCompatibleStateImageBehavior = false;
-            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
+            listView1.View = View.Details;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label5.Location = new Point(241, 224);
+            label5.Location = new Point(241, 258);
             label5.Name = "label5";
             label5.Size = new Size(57, 20);
             label5.TabIndex = 28;
             label5.Text = "Musics";
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(241, 210);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(293, 27);
+            textBox5.TabIndex = 29;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label6.Location = new Point(241, 187);
+            label6.Name = "label6";
+            label6.Size = new Size(91, 20);
+            label6.TabIndex = 30;
+            label6.Text = "ArtistName";
             // 
             // AlbumEdit
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(803, 601);
+            Controls.Add(label6);
+            Controls.Add(textBox5);
             Controls.Add(label5);
             Controls.Add(listView1);
             Controls.Add(button2);
@@ -230,5 +252,7 @@
         private Button button2;
         private ListView listView1;
         private Label label5;
+        private TextBox textBox5;
+        private Label label6;
     }
 }

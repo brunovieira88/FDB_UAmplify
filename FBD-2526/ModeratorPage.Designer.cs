@@ -41,12 +41,14 @@
             panel2 = new Panel();
             textBox1 = new TextBox();
             listView1 = new ListView();
+            button8 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.ControlLight;
+            panel1.Controls.Add(button8);
             panel1.Controls.Add(button7);
             panel1.Controls.Add(button6);
             panel1.Controls.Add(button9);
@@ -212,6 +214,23 @@
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
             // 
+            // button8
+            // 
+            button8.Dock = DockStyle.Top;
+            button8.FlatAppearance.BorderSize = 0;
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.Font = new Font("Nirmala UI", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button8.ForeColor = SystemColors.ActiveCaptionText;
+            button8.ImageAlign = ContentAlignment.MiddleRight;
+            button8.Location = new Point(0, 412);
+            button8.Name = "button8";
+            button8.RightToLeft = RightToLeft.Yes;
+            button8.Size = new Size(216, 66);
+            button8.TabIndex = 6;
+            button8.Text = "Modifications";
+            button8.TextImageRelation = TextImageRelation.TextBeforeImage;
+            button8.UseVisualStyleBackColor = true;
+            // 
             // ModeratorPage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -243,5 +262,6 @@
         private Button button7;
         private Button button6;
         private Button button9;
+        private Button button8;
     }
 }
