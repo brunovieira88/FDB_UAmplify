@@ -175,6 +175,7 @@
             listView1.Size = new Size(534, 188);
             listView1.TabIndex = 27;
             listView1.UseCompatibleStateImageBehavior = false;
+            listView1.SelectedIndexChanged += listView1_SelectedIndexChanged;
             // 
             // label5
             // 

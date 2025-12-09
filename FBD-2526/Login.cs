@@ -81,7 +81,7 @@ namespace FBD_2526
         }
         private bool isMod()
         {
-            string query = "SELECT TOP 1 1 FROM uamplify.moderator as m WHERE m.userId = @Id";
+            string query = "SELECT * FROM uamplify.moderator as m WHERE m.userId = @Id";
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
@@ -127,8 +127,8 @@ namespace FBD_2526
                 else
                 {
                     Home home = new Home(UserId);
-                    home.Show();
                     this.Hide();
+                    home.Show();
                 }
                     
             }
