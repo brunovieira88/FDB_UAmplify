@@ -79,7 +79,29 @@ namespace FBD_2526
             }
             return loginValido;
         }
+        private bool isMod()
+        {
+            string query = "SELECT TOP 1 1 FROM uamplify.moderator as m WHERE m.userId = @Id";
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+                    cmd.Parameters.AddWithValue("@Id", UserId);
+                    object res = cmd.ExecuteScalar();
 
+                    return res != null;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao ligar à base de dados:\n" + ex.Message,
+                    "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
+            }
+            return false;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             string username = txtUser.Text.Trim();
@@ -96,9 +118,19 @@ namespace FBD_2526
             {
                 MessageBox.Show($"Bem-vindo, {UserName}!\n(ID de Utilizador: {UserId})",
                     "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Home home = new Home(UserId);
-                home.Show();
-                this.Close();
+                if (isMod())
+                {
+                    ModeratorPage mp = new ModeratorPage();
+                    this.Hide();
+                    mp.Show();
+                }
+                else
+                {
+                    Home home = new Home(UserId);
+                    home.Show();
+                    this.Hide();
+                }
+                    
             }
             else
             {
@@ -136,8 +168,8 @@ namespace FBD_2526
         private void btnRegisto_Click(object sender, EventArgs e)
         {
             Registo registoForm = new Registo();
+            this.Hide();
             registoForm.Show();
-            this.Close();
         }
     }
 }

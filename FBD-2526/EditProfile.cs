@@ -225,12 +225,6 @@ namespace FBD_2526
         {
 
         }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            SetEditingMode(true);
-        }
-
         private void btnDone_Click(object sender, EventArgs e)
         {
             Save();
@@ -241,6 +235,16 @@ namespace FBD_2526
             Home home = new Home(UserId);
             home.Show();
             this.Close();
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEdit_Click_1(object sender, EventArgs e)
+        {
+            SetEditingMode(true);
         }
     }
 }

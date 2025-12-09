@@ -217,6 +217,7 @@
             btnEdit.TabIndex = 37;
             btnEdit.Text = "EDIT";
             btnEdit.UseVisualStyleBackColor = false;
+            btnEdit.Click += btnEdit_Click_1;
             // 
             // lblTitle
             // 
@@ -275,7 +276,7 @@
             txtPassword.BackColor = Color.FromArgb(40, 40, 40);
             txtPassword.BorderStyle = BorderStyle.FixedSingle;
             txtPassword.Font = new Font("Segoe UI", 11F);
-            txtPassword.ForeColor = Color.White;
+            txtPassword.ForeColor = Color.Black;
             txtPassword.Location = new Point(282, 382);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '•';
@@ -299,7 +300,7 @@
             txtCountry.BackColor = Color.FromArgb(40, 40, 40);
             txtCountry.BorderStyle = BorderStyle.FixedSingle;
             txtCountry.Font = new Font("Segoe UI", 11F);
-            txtCountry.ForeColor = Color.White;
+            txtCountry.ForeColor = Color.Black;
             txtCountry.Location = new Point(282, 302);
             txtCountry.Name = "txtCountry";
             txtCountry.Size = new Size(281, 32);
@@ -346,7 +347,7 @@
             txtEmail.BackColor = Color.FromArgb(40, 40, 40);
             txtEmail.BorderStyle = BorderStyle.FixedSingle;
             txtEmail.Font = new Font("Segoe UI", 11F);
-            txtEmail.ForeColor = Color.White;
+            txtEmail.ForeColor = Color.Black;
             txtEmail.Location = new Point(282, 222);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(580, 32);
@@ -369,7 +370,7 @@
             txtUserName.BackColor = Color.FromArgb(40, 40, 40);
             txtUserName.BorderStyle = BorderStyle.FixedSingle;
             txtUserName.Font = new Font("Segoe UI", 11F);
-            txtUserName.ForeColor = Color.White;
+            txtUserName.ForeColor = Color.Black;
             txtUserName.Location = new Point(610, 142);
             txtUserName.Name = "txtUserName";
             txtUserName.Size = new Size(252, 32);
@@ -393,7 +394,7 @@
             txtName.BackColor = Color.FromArgb(40, 40, 40);
             txtName.BorderStyle = BorderStyle.FixedSingle;
             txtName.Font = new Font("Segoe UI", 11F);
-            txtName.ForeColor = Color.White;
+            txtName.ForeColor = Color.Black;
             txtName.Location = new Point(282, 142);
             txtName.Name = "txtName";
             txtName.Size = new Size(281, 32);
