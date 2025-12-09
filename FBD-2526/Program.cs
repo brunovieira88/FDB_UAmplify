@@ -12,7 +12,6 @@ namespace FBD_2526
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Login());
-            //Application.Run(new Home(10));
 
         }
     }

@@ -384,6 +384,7 @@
             Name = "Home";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "UAmplify";
+            Load += Home_Load;
             toolbarPanel.ResumeLayout(false);
             toolbarPanel.PerformLayout();
             contentPanel.ResumeLayout(false);
@@ -392,6 +393,7 @@
             cardTopHits.ResumeLayout(false);
             ResumeLayout(false);
         }
+
 
         private System.Windows.Forms.Panel toolbarPanel;
         private System.Windows.Forms.Panel contentPanel;
