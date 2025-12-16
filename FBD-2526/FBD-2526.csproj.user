@@ -20,6 +20,9 @@
     <Compile Update="ModeratorPage.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Musics.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="MusicEdit.cs">
       <SubType>Form</SubType>
     </Compile>
