@@ -5,6 +5,9 @@
     <Compile Update="AlbumEdit.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Albums.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ArtistEdit.cs">
       <SubType>Form</SubType>
     </Compile>

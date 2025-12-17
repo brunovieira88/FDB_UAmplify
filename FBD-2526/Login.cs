@@ -130,7 +130,7 @@ namespace FBD_2526
                     this.Hide();
                     home.Show();
                 }
-                    
+
             }
             else
             {
@@ -170,6 +170,11 @@ namespace FBD_2526
             Registo registoForm = new Registo();
             this.Hide();
             registoForm.Show();
+        }
+
+        private void Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -246,5 +246,10 @@ namespace FBD_2526
         {
             SetEditingMode(true);
         }
+
+        private void EditProfile_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

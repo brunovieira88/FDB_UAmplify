@@ -152,6 +152,7 @@
             Controls.Add(btnLogin);
             Name = "Login";
             Text = "Login";
+            FormClosed += Login_FormClosed;
             Load += Form2_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

@@ -141,5 +141,17 @@ namespace FBD_2526
             editProfile.Show();
             this.Close();
         }
+
+        private void btnMusics_Click(object sender, EventArgs e)
+        {
+            Musics musicPage = new Musics(UserId);
+            musicPage.Show();
+            this.Close();
+        }
+
+        private void Home_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             toolbarPanel = new Panel();
             btnPerfil = new Button();
             btnPlaylists = new Button();
@@ -36,13 +38,14 @@
             btnHome = new Button();
             lblLogo = new Label();
             contentPanel = new Panel();
-            listMusics = new ListBox();
+            dgvMusics = new DataGridView();
             panelSearch = new Panel();
             txtSearch = new TextBox();
             lblSearchIcon = new Label();
             lblTitle = new Label();
             toolbarPanel.SuspendLayout();
             contentPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvMusics).BeginInit();
             panelSearch.SuspendLayout();
             SuspendLayout();
             // 
@@ -78,6 +81,7 @@
             btnPerfil.TabIndex = 5;
             btnPerfil.Text = "Profile ";
             btnPerfil.UseVisualStyleBackColor = false;
+            btnPerfil.Click += btnPerfil_Click;
             // 
             // btnPlaylists
             // 
@@ -120,8 +124,8 @@
             btnMusics.FlatAppearance.BorderSize = 0;
             btnMusics.FlatAppearance.MouseOverBackColor = Color.FromArgb(40, 40, 40);
             btnMusics.FlatStyle = FlatStyle.Flat;
-            btnMusics.Font = new Font("Segoe UI", 10F, FontStyle.Bold); // Bold para indicar ativo
-            btnMusics.ForeColor = Color.FromArgb(30, 215, 96); // Verde para indicar ativo
+            btnMusics.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnMusics.ForeColor = Color.FromArgb(30, 215, 96);
             btnMusics.Location = new Point(467, 23);
             btnMusics.Margin = new Padding(4, 5, 4, 5);
             btnMusics.Name = "btnMusics";
@@ -137,8 +141,8 @@
             btnHome.FlatAppearance.BorderSize = 0;
             btnHome.FlatAppearance.MouseOverBackColor = Color.FromArgb(40, 40, 40);
             btnHome.FlatStyle = FlatStyle.Flat;
-            btnHome.Font = new Font("Segoe UI", 10F); // Normal
-            btnHome.ForeColor = Color.White; // Branco (Inativo)
+            btnHome.Font = new Font("Segoe UI", 10F);
+            btnHome.ForeColor = Color.White;
             btnHome.Location = new Point(333, 23);
             btnHome.Margin = new Padding(4, 5, 4, 5);
             btnHome.Name = "btnHome";
@@ -146,6 +150,7 @@
             btnHome.TabIndex = 1;
             btnHome.Text = "Home";
             btnHome.UseVisualStyleBackColor = false;
+            btnHome.Click += btnHome_Click;
             // 
             // lblLogo
             // 
@@ -162,7 +167,7 @@
             // contentPanel
             // 
             contentPanel.BackColor = Color.FromArgb(18, 18, 18);
-            contentPanel.Controls.Add(listMusics);
+            contentPanel.Controls.Add(dgvMusics);
             contentPanel.Controls.Add(panelSearch);
             contentPanel.Controls.Add(lblTitle);
             contentPanel.Dock = DockStyle.Fill;
@@ -173,27 +178,46 @@
             contentPanel.Size = new Size(1333, 963);
             contentPanel.TabIndex = 1;
             // 
-            // listMusics
+            // dgvMusics
             // 
-            listMusics.BackColor = Color.FromArgb(24, 24, 24);
-            listMusics.BorderStyle = BorderStyle.None;
-            listMusics.Font = new Font("Segoe UI", 11F);
-            listMusics.ForeColor = Color.White;
-            listMusics.FormattingEnabled = true;
-            listMusics.ItemHeight = 25;
-            listMusics.Items.AddRange(new object[] {
-            "1. Song Title - Artist A",
-            "2. Song Title - Artist B",
-            "3. Song Title - Artist C",
-            "4. Song Title - Artist D",
-            "5. Song Title - Artist E",
-            "6. Song Title - Artist F",
-            "7. Song Title - Artist G",
-            "8. Song Title - Artist H"});
-            listMusics.Location = new Point(44, 200);
-            listMusics.Name = "listMusics";
-            listMusics.Size = new Size(1240, 700);
-            listMusics.TabIndex = 2;
+            dgvMusics.AllowUserToAddRows = false;
+            dgvMusics.AllowUserToDeleteRows = false;
+            dgvMusics.AllowUserToResizeRows = false;
+            dgvMusics.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvMusics.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvMusics.BackgroundColor = Color.FromArgb(24, 24, 24);
+            dgvMusics.BorderStyle = BorderStyle.None;
+            dgvMusics.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dgvMusics.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(24, 24, 24);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(179, 179, 179);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(24, 24, 24);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvMusics.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvMusics.ColumnHeadersHeight = 40;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(24, 24, 24);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(40, 40, 40);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(30, 215, 96);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvMusics.DefaultCellStyle = dataGridViewCellStyle2;
+            dgvMusics.EnableHeadersVisualStyles = false;
+            dgvMusics.GridColor = Color.FromArgb(40, 40, 40);
+            dgvMusics.Location = new Point(44, 200);
+            dgvMusics.MultiSelect = false;
+            dgvMusics.Name = "dgvMusics";
+            dgvMusics.ReadOnly = true;
+            dgvMusics.RowHeadersVisible = false;
+            dgvMusics.RowHeadersWidth = 51;
+            dgvMusics.RowTemplate.Height = 45;
+            dgvMusics.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvMusics.Size = new Size(1240, 700);
+            dgvMusics.TabIndex = 2;
             // 
             // panelSearch
             // 
@@ -216,6 +240,7 @@
             txtSearch.PlaceholderText = "Search for songs...";
             txtSearch.Size = new Size(330, 25);
             txtSearch.TabIndex = 1;
+            txtSearch.TextChanged += txtSearch_TextChanged;
             // 
             // lblSearchIcon
             // 
@@ -224,7 +249,7 @@
             lblSearchIcon.ForeColor = Color.White;
             lblSearchIcon.Location = new Point(10, 10);
             lblSearchIcon.Name = "lblSearchIcon";
-            lblSearchIcon.Size = new Size(30, 23);
+            lblSearchIcon.Size = new Size(27, 23);
             lblSearchIcon.TabIndex = 0;
             lblSearchIcon.Text = "🔍";
             // 
@@ -236,7 +261,7 @@
             lblTitle.Location = new Point(40, 40);
             lblTitle.Margin = new Padding(4, 0, 4, 0);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(211, 54);
+            lblTitle.Size = new Size(197, 54);
             lblTitle.TabIndex = 0;
             lblTitle.Text = "All Songs";
             // 
@@ -252,10 +277,14 @@
             Name = "Musics";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "UAmplify - Musics";
+            FormClosing += Musics_FormClosing;
+            FormClosed += Musics_FormClosed;
+            Load += Musics_Load;
             toolbarPanel.ResumeLayout(false);
             toolbarPanel.PerformLayout();
             contentPanel.ResumeLayout(false);
             contentPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvMusics).EndInit();
             panelSearch.ResumeLayout(false);
             panelSearch.PerformLayout();
             ResumeLayout(false);
@@ -275,6 +304,6 @@
         private System.Windows.Forms.Panel panelSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label lblSearchIcon;
-        private System.Windows.Forms.ListBox listMusics;
+        private System.Windows.Forms.DataGridView dgvMusics; // Trocado ListBox por DataGridView
     }
 }

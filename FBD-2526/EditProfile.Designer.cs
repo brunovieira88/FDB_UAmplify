@@ -435,6 +435,7 @@
             Name = "EditProfile";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Edit Profile";
+            FormClosed += EditProfile_FormClosed;
             Load += EditProfile_Load;
             toolbarPanel.ResumeLayout(false);
             toolbarPanel.PerformLayout();

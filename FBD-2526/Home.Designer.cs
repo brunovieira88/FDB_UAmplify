@@ -145,6 +145,7 @@
             btnMusics.TabIndex = 2;
             btnMusics.Text = "Musics";
             btnMusics.UseVisualStyleBackColor = false;
+            btnMusics.Click += btnMusics_Click;
             // 
             // btnHome
             // 
@@ -384,6 +385,7 @@
             Name = "Home";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "UAmplify";
+            FormClosed += Home_FormClosed;
             Load += Home_Load;
             toolbarPanel.ResumeLayout(false);
             toolbarPanel.PerformLayout();
