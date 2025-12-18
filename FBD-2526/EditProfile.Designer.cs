@@ -126,6 +126,7 @@
             btnAlbums.TabIndex = 3;
             btnAlbums.Text = "Albums";
             btnAlbums.UseVisualStyleBackColor = false;
+            btnAlbums.Click += btnAlbums_Click;
             // 
             // btnMusics
             // 
@@ -143,6 +144,7 @@
             btnMusics.TabIndex = 2;
             btnMusics.Text = "Musics";
             btnMusics.UseVisualStyleBackColor = false;
+            btnMusics.Click += btnMusics_Click;
             // 
             // btnHome
             // 

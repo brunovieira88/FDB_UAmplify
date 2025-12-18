@@ -165,5 +165,12 @@ namespace FBD_2526
         {
             Application.Exit();
         }
+
+        private void btnAlbums_Click(object sender, EventArgs e)
+        {
+            Albums albums = new Albums(UserId);
+            albums.Show();
+            this.Hide();
+        }
     }
 }

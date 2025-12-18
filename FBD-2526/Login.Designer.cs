@@ -102,7 +102,6 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.BorderStyle = BorderStyle.Fixed3D;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(28, 94);
             pictureBox1.Name = "pictureBox1";

@@ -221,3 +221,5 @@ C:\Users\berna\Documents\ua\2 ano\1º semestre\FBD\P\GITHUBprojetoFBD\FDB_UAmpli
 C:\Users\berna\Documents\ua\2 ano\1º semestre\FBD\P\GITHUBprojetoFBD\FDB_UAmplify\FBD-2526\obj\Debug\net8.0-windows\FBD-2526.csproj.Up2Date
 C:\Users\berna\Documents\ua\2 ano\1º semestre\FBD\P\GITHUBprojetoFBD\FDB_UAmplify\FBD-2526\obj\Debug\net8.0-windows\FBD-2526.genruntimeconfig.cache
 C:\Users\berna\Documents\ua\2 ano\1º semestre\FBD\P\GITHUBprojetoFBD\FDB_UAmplify\FBD-2526\obj\Debug\net8.0-windows\ref\FBD-2526.dll
+C:\Users\User\Desktop\FBD\FBD-2526\FDB_UAmplify\FBD-2526\obj\Debug\net8.0-windows\FBD_2526.Albums.resources
+C:\Users\User\Desktop\FBD\FBD-2526\FDB_UAmplify\FBD-2526\obj\Debug\net8.0-windows\FBD_2526.EditUser.resources

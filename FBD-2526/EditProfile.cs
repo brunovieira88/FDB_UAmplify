@@ -234,7 +234,7 @@ namespace FBD_2526
         {
             Home home = new Home(UserId);
             home.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btnPerfil_Click(object sender, EventArgs e)
@@ -250,6 +250,20 @@ namespace FBD_2526
         private void EditProfile_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnAlbums_Click(object sender, EventArgs e)
+        {
+            Albums albums = new Albums(UserId);
+            albums.Show();
+            this.Hide();
+        }
+
+        private void btnMusics_Click(object sender, EventArgs e)
+        {
+            Musics musicPage = new Musics(UserId);
+            musicPage.Show();
+            this.Hide();
         }
     }
 }

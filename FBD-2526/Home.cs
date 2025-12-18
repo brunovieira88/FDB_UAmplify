@@ -139,7 +139,7 @@ namespace FBD_2526
         {
             EditProfile editProfile = new EditProfile(UserId);
             editProfile.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void btnMusics_Click(object sender, EventArgs e)
@@ -153,6 +153,13 @@ namespace FBD_2526
         private void Home_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnAlbums_Click(object sender, EventArgs e)
+        {
+            Albums albums = new Albums(UserId);
+            albums.Show();
+            this.Hide();
         }
     }
 }
