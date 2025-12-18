@@ -385,7 +385,7 @@
             Name = "Home";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "UAmplify";
-            FormClosed += Home_FormClosed;
+            FormClosing += Home_FormClosing;
             Load += Home_Load;
             toolbarPanel.ResumeLayout(false);
             toolbarPanel.PerformLayout();

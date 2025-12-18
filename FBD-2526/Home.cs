@@ -146,10 +146,11 @@ namespace FBD_2526
         {
             Musics musicPage = new Musics(UserId);
             musicPage.Show();
-            this.Close();
+            this.Hide();
         }
 
-        private void Home_FormClosed(object sender, FormClosedEventArgs e)
+
+        private void Home_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }

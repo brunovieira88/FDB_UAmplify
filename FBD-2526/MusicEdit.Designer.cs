@@ -51,6 +51,14 @@
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
+            labelPrimaryArtist = new Label();
+            musicArtistId = new TextBox();
+            musicArtistName = new TextBox();
+            labelFeats = new Label();
+            featArtistId = new TextBox();
+            btnAddFeat = new Button();
+            listFeats = new ListBox();
+            button5 = new Button();
             SuspendLayout();
             // 
             // IdMusic
@@ -126,9 +134,9 @@
             // 
             // musicLyrics
             // 
-            musicLyrics.Location = new Point(262, 351);
+            musicLyrics.Location = new Point(262, 492);
             musicLyrics.Name = "musicLyrics";
-            musicLyrics.Size = new Size(452, 158);
+            musicLyrics.Size = new Size(452, 94);
             musicLyrics.TabIndex = 10;
             musicLyrics.Text = "";
             // 
@@ -139,7 +147,7 @@
             panel1.ImeMode = ImeMode.NoControl;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(202, 601);
+            panel1.Size = new Size(202, 686);
             panel1.TabIndex = 11;
             // 
             // label2
@@ -206,7 +214,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label8.Location = new Point(262, 328);
+            label8.Location = new Point(266, 469);
             label8.Name = "label8";
             label8.Size = new Size(48, 20);
             label8.TabIndex = 18;
@@ -233,7 +241,7 @@
             button2.BackColor = Color.YellowGreen;
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(633, 536);
+            button2.Location = new Point(633, 614);
             button2.Name = "button2";
             button2.Size = new Size(122, 42);
             button2.TabIndex = 21;
@@ -246,7 +254,7 @@
             button3.BackColor = Color.YellowGreen;
             button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button3.ForeColor = SystemColors.ButtonHighlight;
-            button3.Location = new Point(437, 536);
+            button3.Location = new Point(437, 614);
             button3.Name = "button3";
             button3.Size = new Size(110, 42);
             button3.TabIndex = 22;
@@ -259,7 +267,7 @@
             button4.BackColor = Color.YellowGreen;
             button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button4.ForeColor = SystemColors.ButtonFace;
-            button4.Location = new Point(237, 534);
+            button4.Location = new Point(237, 614);
             button4.Name = "button4";
             button4.Size = new Size(110, 44);
             button4.TabIndex = 23;
@@ -267,11 +275,89 @@
             button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             // 
+            // labelPrimaryArtist
+            // 
+            labelPrimaryArtist.AutoSize = true;
+            labelPrimaryArtist.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            labelPrimaryArtist.Location = new Point(237, 335);
+            labelPrimaryArtist.Name = "labelPrimaryArtist";
+            labelPrimaryArtist.Size = new Size(109, 20);
+            labelPrimaryArtist.TabIndex = 24;
+            labelPrimaryArtist.Text = "Primary Artist";
+            // 
+            // musicArtistId
+            // 
+            musicArtistId.Location = new Point(237, 358);
+            musicArtistId.Name = "musicArtistId";
+            musicArtistId.Size = new Size(56, 27);
+            musicArtistId.TabIndex = 25;
+            // 
+            // musicArtistName
+            // 
+            musicArtistName.Location = new Point(299, 358);
+            musicArtistName.Name = "musicArtistName";
+            musicArtistName.ReadOnly = true;
+            musicArtistName.Size = new Size(210, 27);
+            musicArtistName.TabIndex = 26;
+            // 
+            // labelFeats
+            // 
+            labelFeats.AutoSize = true;
+            labelFeats.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            labelFeats.Location = new Point(542, 263);
+            labelFeats.Name = "labelFeats";
+            labelFeats.Size = new Size(94, 20);
+            labelFeats.TabIndex = 27;
+            labelFeats.Text = "Feat. Artists";
+            // 
+            // featArtistId
+            // 
+            featArtistId.Location = new Point(542, 286);
+            featArtistId.Name = "featArtistId";
+            featArtistId.Size = new Size(68, 27);
+            featArtistId.TabIndex = 28;
+            // 
+            // btnAddFeat
+            // 
+            btnAddFeat.Location = new Point(616, 285);
+            btnAddFeat.Name = "btnAddFeat";
+            btnAddFeat.Size = new Size(58, 29);
+            btnAddFeat.TabIndex = 29;
+            btnAddFeat.Text = "Add";
+            btnAddFeat.UseVisualStyleBackColor = true;
+            btnAddFeat.Click += btnAddFeat_Click;
+            // 
+            // listFeats
+            // 
+            listFeats.FormattingEnabled = true;
+            listFeats.Location = new Point(542, 320);
+            listFeats.Name = "listFeats";
+            listFeats.Size = new Size(213, 104);
+            listFeats.TabIndex = 30;
+            // 
+            // button5
+            // 
+            button5.Location = new Point(680, 284);
+            button5.Name = "button5";
+            button5.Size = new Size(75, 29);
+            button5.TabIndex = 31;
+            button5.Text = "Remove";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
             // MusicEdit
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 601);
+            ClientSize = new Size(800, 686);
+            Controls.Add(button5);
+            Controls.Add(listFeats);
+            Controls.Add(btnAddFeat);
+            Controls.Add(featArtistId);
+            Controls.Add(labelFeats);
+            Controls.Add(musicArtistName);
+            Controls.Add(musicArtistId);
+            Controls.Add(labelPrimaryArtist);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
@@ -328,5 +414,15 @@
         private Button button2;
         private Button button3;
         private Button button4;
+
+        // Novos componentes adicionados
+        private Label labelPrimaryArtist;
+        private TextBox musicArtistId;
+        private TextBox musicArtistName;
+        private Label labelFeats;
+        private TextBox featArtistId;
+        private Button btnAddFeat;
+        private ListBox listFeats;
+        private Button button5;
     }
 }

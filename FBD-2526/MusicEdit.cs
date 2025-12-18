@@ -209,11 +209,46 @@ namespace FBD_2526
             }
         }
 
+        private void loadPrimaryFeats()
+        {
+            try
+            {
+                if (!verifySGBDConnection()) return;
+                SqlCommand cmd = new SqlCommand("SELECT * FROM uamplify.musicFeats(@id)", cn);
+                cmd.Parameters.AddWithValue("@id", IdMusic.Text);
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                listFeats.Items.Clear();
+                while (reader.Read())
+                {
+                    string artistName = reader["name"].ToString();
+                    listFeats.Items.Add(artistName);
+                }
+
+                reader.Close();
+                cmd = new SqlCommand("SELECT * FROM uamplify.musicprimary(@id)", cn);
+                cmd.Parameters.AddWithValue("@id", IdMusic.Text);
+                reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    musicArtistId.Text = reader["id"].ToString();
+                    musicArtistName.Text = reader["name"].ToString();
+                }
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar feats: " + ex.Message);
+            }
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
             if (isLoading) return;
             loadMusic();
+            loadPrimaryFeats();
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -242,6 +277,16 @@ namespace FBD_2526
         private void button4_Click(object sender, EventArgs e)
         {
             InsertUpdateMusicLog("UPDATE");
+        }
+
+        private void btnAddFeat_Click(object sender, EventArgs e)
+        {
+            //addMusicFeat();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //removeMusicFeats();
         }
     }
 }

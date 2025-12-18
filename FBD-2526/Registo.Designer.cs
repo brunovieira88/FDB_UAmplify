@@ -35,7 +35,6 @@
             textName = new TextBox();
             textUserName = new TextBox();
             textPassword = new TextBox();
-            textEmail = new TextBox();
             button1 = new Button();
             button2 = new Button();
             label4 = new Label();
@@ -45,7 +44,8 @@
             dateTimePicker1 = new DateTimePicker();
             label5 = new Label();
             label6 = new Label();
-            AccessCode = new TextBox();
+            registerCountry = new TextBox();
+            textEmail = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -53,67 +53,76 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.ForeColor = Color.Black;
+            label1.Font = new Font("Segoe UI", 10.8F);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(372, 40);
             label1.Name = "label1";
-            label1.Size = new Size(52, 20);
+            label1.Size = new Size(63, 25);
             label1.TabIndex = 0;
             label1.Text = "Name:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.ForeColor = Color.Black;
+            label2.Font = new Font("Segoe UI", 10.8F);
+            label2.ForeColor = Color.White;
             label2.Location = new Point(372, 118);
             label2.Name = "label2";
-            label2.Size = new Size(81, 20);
+            label2.Size = new Size(98, 25);
             label2.TabIndex = 2;
             label2.Text = "UserName:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.BackColor = Color.WhiteSmoke;
-            label3.ForeColor = Color.Black;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI", 10.8F);
+            label3.ForeColor = Color.White;
             label3.Location = new Point(372, 287);
             label3.Name = "label3";
-            label3.Size = new Size(73, 20);
+            label3.Size = new Size(91, 25);
             label3.TabIndex = 3;
             label3.Text = "Password:";
             // 
             // textName
             // 
+            textName.BackColor = Color.FromArgb(40, 40, 40);
+            textName.BorderStyle = BorderStyle.FixedSingle;
+            textName.Font = new Font("Segoe UI", 10.8F);
+            textName.ForeColor = Color.White;
             textName.Location = new Point(372, 75);
             textName.Name = "textName";
-            textName.Size = new Size(397, 27);
+            textName.Size = new Size(397, 31);
             textName.TabIndex = 4;
             // 
             // textUserName
             // 
+            textUserName.BackColor = Color.FromArgb(40, 40, 40);
+            textUserName.BorderStyle = BorderStyle.FixedSingle;
+            textUserName.Font = new Font("Segoe UI", 10.8F);
+            textUserName.ForeColor = Color.White;
             textUserName.Location = new Point(372, 153);
             textUserName.Name = "textUserName";
-            textUserName.Size = new Size(397, 27);
+            textUserName.Size = new Size(397, 31);
             textUserName.TabIndex = 5;
             // 
             // textPassword
             // 
+            textPassword.BackColor = Color.FromArgb(40, 40, 40);
+            textPassword.BorderStyle = BorderStyle.FixedSingle;
+            textPassword.Font = new Font("Segoe UI", 10.8F);
+            textPassword.ForeColor = Color.White;
             textPassword.Location = new Point(372, 320);
             textPassword.Name = "textPassword";
             textPassword.PasswordChar = '*';
-            textPassword.Size = new Size(397, 27);
+            textPassword.Size = new Size(397, 31);
             textPassword.TabIndex = 6;
-            // 
-            // textEmail
-            // 
-            textEmail.Location = new Point(372, 242);
-            textEmail.Name = "textEmail";
-            textEmail.PasswordChar = '*';
-            textEmail.Size = new Size(397, 27);
-            textEmail.TabIndex = 9;
             // 
             // button1
             // 
-            button1.BackColor = Color.DarkOliveGreen;
+            button1.BackColor = Color.FromArgb(30, 215, 96);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = SystemColors.ActiveCaptionText;
             button1.Location = new Point(328, 515);
@@ -126,9 +135,11 @@
             // 
             // button2
             // 
-            button2.BackColor = SystemColors.ControlLight;
+            button2.BackColor = Color.FromArgb(40, 40, 40);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.Black;
+            button2.ForeColor = Color.White;
             button2.Location = new Point(590, 515);
             button2.Name = "button2";
             button2.Size = new Size(202, 62);
@@ -140,33 +151,37 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.ForeColor = Color.Black;
+            label4.Font = new Font("Segoe UI", 10.8F);
+            label4.ForeColor = Color.White;
             label4.Location = new Point(372, 202);
             label4.Name = "label4";
-            label4.Size = new Size(55, 20);
+            label4.Size = new Size(62, 25);
             label4.TabIndex = 10;
             label4.Text = "E-mail:";
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.ControlLight;
+            panel1.BackColor = Color.Black;
             panel1.Controls.Add(textBox5);
             panel1.Controls.Add(pictureBox1);
-            panel1.Location = new Point(0, -2);
+            panel1.Dock = DockStyle.Left;
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(288, 606);
+            panel1.Size = new Size(288, 603);
             panel1.TabIndex = 11;
             // 
             // textBox5
             // 
-            textBox5.BackColor = SystemColors.ControlLight;
+            textBox5.BackColor = Color.Black;
+            textBox5.BorderStyle = BorderStyle.None;
             textBox5.Font = new Font("Microsoft JhengHei UI", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox5.ForeColor = Color.Black;
+            textBox5.ForeColor = Color.FromArgb(30, 215, 96);
             textBox5.Location = new Point(60, 278);
             textBox5.Name = "textBox5";
-            textBox5.Size = new Size(175, 49);
+            textBox5.Size = new Size(175, 42);
             textBox5.TabIndex = 1;
             textBox5.Text = "UAMPLIFY";
+            textBox5.TextAlign = HorizontalAlignment.Center;
             // 
             // pictureBox1
             // 
@@ -180,6 +195,8 @@
             // 
             // dateTimePicker1
             // 
+            dateTimePicker1.CalendarMonthBackground = Color.FromArgb(40, 40, 40);
+            dateTimePicker1.CalendarTitleBackColor = Color.FromArgb(30, 215, 96);
             dateTimePicker1.Location = new Point(372, 402);
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(214, 27);
@@ -188,40 +205,58 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.BackColor = Color.WhiteSmoke;
-            label5.ForeColor = Color.Black;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Segoe UI", 10.8F);
+            label5.ForeColor = Color.White;
             label5.Location = new Point(372, 367);
             label5.Name = "label5";
-            label5.Size = new Size(75, 20);
+            label5.Size = new Size(90, 25);
             label5.TabIndex = 13;
             label5.Text = "BirthDate:";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.BackColor = Color.WhiteSmoke;
-            label6.ForeColor = Color.Black;
-            label6.Location = new Point(624, 367);
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Segoe UI", 10.8F);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(611, 367);
             label6.Name = "label6";
-            label6.Size = new Size(118, 20);
+            label6.Size = new Size(75, 25);
             label6.TabIndex = 14;
-            label6.Text = "ModeratorCode:";
+            label6.Text = "Country";
             // 
-            // AccessCode
+            // registerCountry
             // 
-            AccessCode.Location = new Point(624, 402);
-            AccessCode.Name = "AccessCode";
-            AccessCode.PasswordChar = '*';
-            AccessCode.Size = new Size(145, 27);
-            AccessCode.TabIndex = 15;
+            registerCountry.BackColor = Color.FromArgb(40, 40, 40);
+            registerCountry.BorderStyle = BorderStyle.FixedSingle;
+            registerCountry.Font = new Font("Segoe UI", 10.8F);
+            registerCountry.ForeColor = Color.White;
+            registerCountry.Location = new Point(611, 402);
+            registerCountry.Name = "registerCountry";
+            registerCountry.PasswordChar = '*';
+            registerCountry.Size = new Size(158, 31);
+            registerCountry.TabIndex = 15;
+            // 
+            // textEmail
+            // 
+            textEmail.BackColor = Color.FromArgb(40, 40, 40);
+            textEmail.BorderStyle = BorderStyle.FixedSingle;
+            textEmail.Font = new Font("Segoe UI", 10.8F);
+            textEmail.ForeColor = Color.White;
+            textEmail.Location = new Point(372, 239);
+            textEmail.Name = "textEmail";
+            textEmail.Size = new Size(397, 31);
+            textEmail.TabIndex = 16;
             // 
             // Registo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
+            BackColor = Color.FromArgb(18, 18, 18);
             ClientSize = new Size(832, 603);
-            Controls.Add(AccessCode);
+            Controls.Add(textEmail);
+            Controls.Add(registerCountry);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(dateTimePicker1);
@@ -229,7 +264,6 @@
             Controls.Add(label4);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(textEmail);
             Controls.Add(textPassword);
             Controls.Add(textUserName);
             Controls.Add(textName);
@@ -259,15 +293,14 @@
         private TextBox textPassword;
         private Button button1;
         private Button button2;
-        private TextBox textEmail;
         private Label label4;
-        private DateTimePicker dtpNascimento;
         private Panel panel1;
         private DateTimePicker dateTimePicker1;
         private Label label5;
         private TextBox textBox5;
         private PictureBox pictureBox1;
         private Label label6;
-        private TextBox AccessCode;
+        private TextBox registerCountry;
+        private TextBox textEmail;
     }
 }

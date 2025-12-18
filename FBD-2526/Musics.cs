@@ -154,7 +154,7 @@ namespace FBD_2526
         {
             Home home = new Home(UserId);
             home.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void Musics_FormClosing(object sender, FormClosingEventArgs e)
