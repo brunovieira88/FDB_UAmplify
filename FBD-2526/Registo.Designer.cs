@@ -32,10 +32,10 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
+            textName = new TextBox();
+            textUserName = new TextBox();
+            textPassword = new TextBox();
+            textEmail = new TextBox();
             button1 = new Button();
             button2 = new Button();
             label4 = new Label();
@@ -44,6 +44,8 @@
             pictureBox1 = new PictureBox();
             dateTimePicker1 = new DateTimePicker();
             label5 = new Label();
+            label6 = new Label();
+            AccessCode = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -79,36 +81,35 @@
             label3.TabIndex = 3;
             label3.Text = "Password:";
             // 
-            // textBox1
+            // textName
             // 
-            textBox1.Location = new Point(372, 75);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(397, 27);
-            textBox1.TabIndex = 4;
+            textName.Location = new Point(372, 75);
+            textName.Name = "textName";
+            textName.Size = new Size(397, 27);
+            textName.TabIndex = 4;
             // 
-            // textBox2
+            // textUserName
             // 
-            textBox2.Location = new Point(372, 153);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(397, 27);
-            textBox2.TabIndex = 5;
+            textUserName.Location = new Point(372, 153);
+            textUserName.Name = "textUserName";
+            textUserName.Size = new Size(397, 27);
+            textUserName.TabIndex = 5;
             // 
-            // textBox3
+            // textPassword
             // 
-            textBox3.Location = new Point(372, 320);
-            textBox3.Name = "textBox3";
-            textBox3.PasswordChar = '*';
-            textBox3.Size = new Size(397, 27);
-            textBox3.TabIndex = 6;
-            textBox3.TextChanged += textBox3_TextChanged;
+            textPassword.Location = new Point(372, 320);
+            textPassword.Name = "textPassword";
+            textPassword.PasswordChar = '*';
+            textPassword.Size = new Size(397, 27);
+            textPassword.TabIndex = 6;
             // 
-            // textBox4
+            // textEmail
             // 
-            textBox4.Location = new Point(372, 242);
-            textBox4.Name = "textBox4";
-            textBox4.PasswordChar = '*';
-            textBox4.Size = new Size(397, 27);
-            textBox4.TabIndex = 9;
+            textEmail.Location = new Point(372, 242);
+            textEmail.Name = "textEmail";
+            textEmail.PasswordChar = '*';
+            textEmail.Size = new Size(397, 27);
+            textEmail.TabIndex = 9;
             // 
             // button1
             // 
@@ -155,7 +156,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(288, 606);
             panel1.TabIndex = 11;
-            panel1.Paint += panel1_Paint;
             // 
             // textBox5
             // 
@@ -180,9 +180,9 @@
             // 
             // dateTimePicker1
             // 
-            dateTimePicker1.Location = new Point(372, 403);
+            dateTimePicker1.Location = new Point(372, 402);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(250, 27);
+            dateTimePicker1.Size = new Size(214, 27);
             dateTimePicker1.TabIndex = 12;
             // 
             // label5
@@ -196,22 +196,43 @@
             label5.TabIndex = 13;
             label5.Text = "BirthDate:";
             // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.WhiteSmoke;
+            label6.ForeColor = Color.Black;
+            label6.Location = new Point(624, 367);
+            label6.Name = "label6";
+            label6.Size = new Size(118, 20);
+            label6.TabIndex = 14;
+            label6.Text = "ModeratorCode:";
+            // 
+            // AccessCode
+            // 
+            AccessCode.Location = new Point(624, 402);
+            AccessCode.Name = "AccessCode";
+            AccessCode.PasswordChar = '*';
+            AccessCode.Size = new Size(145, 27);
+            AccessCode.TabIndex = 15;
+            // 
             // Registo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.WhiteSmoke;
             ClientSize = new Size(832, 603);
+            Controls.Add(AccessCode);
+            Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(dateTimePicker1);
             Controls.Add(panel1);
             Controls.Add(label4);
             Controls.Add(button2);
             Controls.Add(button1);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(textEmail);
+            Controls.Add(textPassword);
+            Controls.Add(textUserName);
+            Controls.Add(textName);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -233,12 +254,12 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private TextBox textName;
+        private TextBox textUserName;
+        private TextBox textPassword;
         private Button button1;
         private Button button2;
-        private TextBox textBox4;
+        private TextBox textEmail;
         private Label label4;
         private DateTimePicker dtpNascimento;
         private Panel panel1;
@@ -246,5 +267,7 @@
         private Label label5;
         private TextBox textBox5;
         private PictureBox pictureBox1;
+        private Label label6;
+        private TextBox AccessCode;
     }
 }

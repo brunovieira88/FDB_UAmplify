@@ -7,76 +7,40 @@ namespace FBD_2526
 {
     public partial class Registo : Form
     {
+        private SqlConnection? cn;
+        private bool isLoading = false;
         public Registo()
         {
             InitializeComponent();
         }
 
-        private void Register(string name, string userName, string email, string userPass, DateTime birthday)
+        private SqlConnection getSGBDConnection()
         {
-            // Verificação dos campos obrigatórios
-            if (string.IsNullOrWhiteSpace(name) ||
-                string.IsNullOrWhiteSpace(userName) ||
-                string.IsNullOrWhiteSpace(email) ||
-                string.IsNullOrWhiteSpace(userPass))
-            {
-                MessageBox.Show("Por favor, preencha todos os campos.",
-                                "Erro de validação", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            //Ligação ao SQL Server
-            string connectionString =
-                "Data Source=tcp:mednat.ieeta.pt\\SQLSERVER,8101;" +
+            // Adicionado TrustServerCertificate=True para evitar erro de SSL
+            return new SqlConnection("Data Source=tcp:mednat.ieeta.pt\\SQLSERVER,8101;" +
                 "Initial Catalog=" + "p1g3;" +
                 "User ID=" + "p1g3;" +
                 "Password=" + "AD9CRu)XY8K;" +
-                "Encrypt=false;";
+                "Encrypt=false;");
+        }
+        private bool verifySGBDConnection()
+        {
+            if (cn == null)
+                cn = getSGBDConnection();
 
-            using (SqlConnection CN = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    CN.Open();
+            if (cn.State != ConnectionState.Open)
+                cn.Open();
 
-                    if (CN.State != ConnectionState.Open)
-                    {
-                        MessageBox.Show("Não foi possível ligar à base de dados!",
-                                        "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-
-                    string sql =
-                        "INSERT INTO uamplify.appuser (name, username, email, password, birthDate)" +
-                        "VALUES (@name, @username, @email, @password, @birth);";
-
-                    using (SqlCommand cmd = new SqlCommand(sql, CN))
-                    {
-                        cmd.Parameters.AddWithValue("@name", name);
-                        cmd.Parameters.AddWithValue("@username", userName);
-                        cmd.Parameters.AddWithValue("@email", email);
-                        cmd.Parameters.AddWithValue("@password", userPass);
-                        cmd.Parameters.AddWithValue("@birth", birthday);
-
-                        cmd.ExecuteNonQuery();
-                    }
-
-                    MessageBox.Show("Registo efetuado com sucesso!",
-                                    "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (SqlException ex)
-                {
-                    MessageBox.Show("Erro SQL:\n" + ex.Message,
-                                    "Erro SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Erro inesperado:\n" + ex.Message,
-                                    "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            return cn.State == ConnectionState.Open;
         }
 
+        /*
+
+        private void Register()
+        {
+            
+        }
+        */
 
 
         private string getTableContent(SqlConnection CN)
@@ -115,7 +79,42 @@ namespace FBD_2526
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Register(textBox1.Text, textBox2.Text, textBox4.Text, textBox3.Text, dtpNascimento.Value);
+            string userType = "Listener"; // Valor por defeito
+
+            // Se o código estiver correto, muda para Moderator
+            if (AccessCode.Text == "ADMIN123")
+            {
+                userType = "Moderator";
+            }
+
+            DateTime dataNascimento = dateTimePicker1.Value;
+
+            try
+            {
+                if (!verifySGBDConnection()) return;
+
+                SqlCommand cmd = new SqlCommand("ua_registerUser", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                // Passar os parâmetros
+                cmd.Parameters.AddWithValue("@username", textUserName.Text);
+                cmd.Parameters.AddWithValue("@password", textPassword.Text);
+                cmd.Parameters.AddWithValue("@email", textEmail.Text);
+                cmd.Parameters.AddWithValue("@name", textName.Text);
+
+                cmd.Parameters.AddWithValue("@birthDate", dataNascimento);
+
+                // Envia o tipo que decidimos acima
+                cmd.Parameters.AddWithValue("@userType", userType);
+
+                cmd.ExecuteNonQuery();
+                MessageBox.Show($"Registado com sucesso como {userType}!");
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -123,14 +122,5 @@ namespace FBD_2526
             this.Close();
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }
