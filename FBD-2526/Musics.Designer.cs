@@ -219,6 +219,7 @@
             dgvMusics.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvMusics.Size = new Size(1240, 700);
             dgvMusics.TabIndex = 2;
+            dgvMusics.CellContentClick += dgvMusics_CellContentClick_1;
             // 
             // panelSearch
             // 

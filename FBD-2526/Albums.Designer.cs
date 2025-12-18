@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             toolbarPanel = new Panel();
             btnPerfil = new Button();
             btnPlaylists = new Button();
@@ -190,23 +190,23 @@
             dgvAlbums.BorderStyle = BorderStyle.None;
             dgvAlbums.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvAlbums.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(24, 24, 24);
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(179, 179, 179);
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(24, 24, 24);
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvAlbums.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(24, 24, 24);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(179, 179, 179);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(24, 24, 24);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvAlbums.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvAlbums.ColumnHeadersHeight = 40;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(24, 24, 24);
-            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11F);
-            dataGridViewCellStyle4.ForeColor = Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(40, 40, 40);
-            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(30, 215, 96);
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dgvAlbums.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(24, 24, 24);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(40, 40, 40);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(30, 215, 96);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvAlbums.DefaultCellStyle = dataGridViewCellStyle2;
             dgvAlbums.EnableHeadersVisualStyles = false;
             dgvAlbums.GridColor = Color.FromArgb(40, 40, 40);
             dgvAlbums.Location = new Point(44, 200);
@@ -219,6 +219,7 @@
             dgvAlbums.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvAlbums.Size = new Size(1240, 700);
             dgvAlbums.TabIndex = 2;
+            dgvAlbums.CellContentClick += dgvAlbums_CellContentClick;
             // 
             // panelSearch
             // 

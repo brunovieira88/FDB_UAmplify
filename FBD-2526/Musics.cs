@@ -21,6 +21,7 @@ namespace FBD_2526
             "Password=AD9CRu)XY8K;" +
             "Encrypt=True;" +
             "TrustServerCertificate=True;";
+
         public Musics(int userId)
         {
             this.UserId = userId;
@@ -171,6 +172,11 @@ namespace FBD_2526
             Albums albums = new Albums(UserId);
             albums.Show();
             this.Hide();
+        }
+
+        private void dgvMusics_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
