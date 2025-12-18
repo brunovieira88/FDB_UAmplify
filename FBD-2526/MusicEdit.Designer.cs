@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            IdMusic = new TextBox();
             label1 = new Label();
             button1 = new Button();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox8 = new TextBox();
-            richTextBox1 = new RichTextBox();
+            musicName = new TextBox();
+            musicDuration = new TextBox();
+            musicReleaseDate = new TextBox();
+            musicAlbumId = new TextBox();
+            musicIdGenre = new TextBox();
+            musicLanguage = new TextBox();
+            musicLyrics = new RichTextBox();
             panel1 = new Panel();
             label2 = new Label();
             label3 = new Label();
@@ -46,19 +46,19 @@
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
-            textBox7 = new TextBox();
-            textBox9 = new TextBox();
+            musicAlbumName = new TextBox();
+            musicGenreName = new TextBox();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
             SuspendLayout();
             // 
-            // textBox1
+            // IdMusic
             // 
-            textBox1.Location = new Point(299, 31);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(151, 27);
-            textBox1.TabIndex = 0;
+            IdMusic.Location = new Point(299, 31);
+            IdMusic.Name = "IdMusic";
+            IdMusic.Size = new Size(151, 27);
+            IdMusic.TabIndex = 0;
             // 
             // label1
             // 
@@ -80,57 +80,57 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // textBox2
+            // musicName
             // 
-            textBox2.Location = new Point(234, 136);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(313, 27);
-            textBox2.TabIndex = 3;
+            musicName.Location = new Point(234, 136);
+            musicName.Name = "musicName";
+            musicName.Size = new Size(313, 27);
+            musicName.TabIndex = 3;
             // 
-            // textBox3
+            // musicDuration
             // 
-            textBox3.Location = new Point(574, 136);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(70, 27);
-            textBox3.TabIndex = 4;
+            musicDuration.Location = new Point(574, 136);
+            musicDuration.Name = "musicDuration";
+            musicDuration.Size = new Size(70, 27);
+            musicDuration.TabIndex = 4;
             // 
-            // textBox4
+            // musicReleaseDate
             // 
-            textBox4.Location = new Point(668, 136);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(87, 27);
-            textBox4.TabIndex = 5;
+            musicReleaseDate.Location = new Point(668, 136);
+            musicReleaseDate.Name = "musicReleaseDate";
+            musicReleaseDate.Size = new Size(87, 27);
+            musicReleaseDate.TabIndex = 5;
             // 
-            // textBox5
+            // musicAlbumId
             // 
-            textBox5.Location = new Point(234, 214);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(56, 27);
-            textBox5.TabIndex = 6;
-            textBox5.TextChanged += textBox5_TextChanged;
+            musicAlbumId.Location = new Point(234, 214);
+            musicAlbumId.Name = "musicAlbumId";
+            musicAlbumId.Size = new Size(56, 27);
+            musicAlbumId.TabIndex = 6;
+            musicAlbumId.TextChanged += textBox5_TextChanged;
             // 
-            // textBox6
+            // musicIdGenre
             // 
-            textBox6.Location = new Point(574, 214);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(51, 27);
-            textBox6.TabIndex = 7;
-            textBox6.TextChanged += textBox6_TextChanged;
+            musicIdGenre.Location = new Point(542, 214);
+            musicIdGenre.Name = "musicIdGenre";
+            musicIdGenre.Size = new Size(51, 27);
+            musicIdGenre.TabIndex = 7;
+            musicIdGenre.TextChanged += textBox6_TextChanged;
             // 
-            // textBox8
+            // musicLanguage
             // 
-            textBox8.Location = new Point(234, 286);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(129, 27);
-            textBox8.TabIndex = 9;
+            musicLanguage.Location = new Point(234, 286);
+            musicLanguage.Name = "musicLanguage";
+            musicLanguage.Size = new Size(129, 27);
+            musicLanguage.TabIndex = 9;
             // 
-            // richTextBox1
+            // musicLyrics
             // 
-            richTextBox1.Location = new Point(262, 351);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(452, 158);
-            richTextBox1.TabIndex = 10;
-            richTextBox1.Text = "";
+            musicLyrics.Location = new Point(262, 351);
+            musicLyrics.Name = "musicLyrics";
+            musicLyrics.Size = new Size(452, 158);
+            musicLyrics.TabIndex = 10;
+            musicLyrics.Text = "";
             // 
             // panel1
             // 
@@ -186,7 +186,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label6.Location = new Point(574, 191);
+            label6.Location = new Point(542, 191);
             label6.Name = "label6";
             label6.Size = new Size(51, 20);
             label6.TabIndex = 16;
@@ -212,21 +212,21 @@
             label8.TabIndex = 18;
             label8.Text = "Lyrics";
             // 
-            // textBox7
+            // musicAlbumName
             // 
-            textBox7.Location = new Point(311, 214);
-            textBox7.Name = "textBox7";
-            textBox7.ReadOnly = true;
-            textBox7.Size = new Size(210, 27);
-            textBox7.TabIndex = 19;
+            musicAlbumName.Location = new Point(299, 214);
+            musicAlbumName.Name = "musicAlbumName";
+            musicAlbumName.ReadOnly = true;
+            musicAlbumName.Size = new Size(210, 27);
+            musicAlbumName.TabIndex = 19;
             // 
-            // textBox9
+            // musicGenreName
             // 
-            textBox9.Location = new Point(658, 214);
-            textBox9.Name = "textBox9";
-            textBox9.ReadOnly = true;
-            textBox9.Size = new Size(97, 27);
-            textBox9.TabIndex = 20;
+            musicGenreName.Location = new Point(599, 214);
+            musicGenreName.Name = "musicGenreName";
+            musicGenreName.ReadOnly = true;
+            musicGenreName.Size = new Size(75, 27);
+            musicGenreName.TabIndex = 20;
             // 
             // button2
             // 
@@ -239,6 +239,7 @@
             button2.TabIndex = 21;
             button2.Text = "Remove";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -251,6 +252,7 @@
             button3.TabIndex = 22;
             button3.Text = "Insert";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -263,6 +265,7 @@
             button4.TabIndex = 23;
             button4.Text = "Update";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // MusicEdit
             // 
@@ -272,8 +275,8 @@
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(textBox9);
-            Controls.Add(textBox7);
+            Controls.Add(musicGenreName);
+            Controls.Add(musicAlbumName);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -282,16 +285,16 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(panel1);
-            Controls.Add(richTextBox1);
-            Controls.Add(textBox8);
-            Controls.Add(textBox6);
-            Controls.Add(textBox5);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
+            Controls.Add(musicLyrics);
+            Controls.Add(musicLanguage);
+            Controls.Add(musicIdGenre);
+            Controls.Add(musicAlbumId);
+            Controls.Add(musicReleaseDate);
+            Controls.Add(musicDuration);
+            Controls.Add(musicName);
             Controls.Add(button1);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(IdMusic);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "MusicEdit";
             StartPosition = FormStartPosition.CenterParent;
@@ -302,16 +305,16 @@
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox IdMusic;
         private Label label1;
         private Button button1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox8;
-        private RichTextBox richTextBox1;
+        private TextBox musicName;
+        private TextBox musicDuration;
+        private TextBox musicReleaseDate;
+        private TextBox musicAlbumId;
+        private TextBox musicIdGenre;
+        private TextBox musicLanguage;
+        private RichTextBox musicLyrics;
         private Panel panel1;
         private Label label2;
         private Label label3;
@@ -320,8 +323,8 @@
         private Label label6;
         private Label label7;
         private Label label8;
-        private TextBox textBox7;
-        private TextBox textBox9;
+        private TextBox musicAlbumName;
+        private TextBox musicGenreName;
         private Button button2;
         private Button button3;
         private Button button4;

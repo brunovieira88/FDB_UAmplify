@@ -8,12 +8,14 @@ namespace FBD_2526
     public partial class ModeratorPage : Form
     {
         private SqlConnection? cn;
-        private int currentContact;
         private bool adding;
+        private int UserId;
 
-        public ModeratorPage()
+        public ModeratorPage(int userId)
         {
             InitializeComponent();
+            createTempMusicTable();
+            UserId = userId;
         }
 
         private SqlConnection getSGBDConnection()
@@ -35,6 +37,14 @@ namespace FBD_2526
                 cn.Open();
 
             return cn.State == ConnectionState.Open;
+        }
+
+        private void createTempMusicTable()
+        {
+            if (!verifySGBDConnection())
+                return;
+            SqlCommand cmd = new SqlCommand("ua_createMusicLog", cn);
+            cmd.ExecuteNonQuery();
         }
 
         private void loadMusics()
@@ -61,42 +71,32 @@ namespace FBD_2526
 
                 while (reader.Read())
                 {
-                    Music M = new Music();
-                    M.musicID = reader["id"]?.ToString() ?? "";
-                    M.Name = reader["name"]?.ToString() ?? "";
-                    M.Duration = reader["duration"]?.ToString() ?? "";
-                    M.ReleaseDate = reader["releaseDate"]?.ToString() ?? "";
-                    M.IdAlbum = reader["albumName"]?.ToString() ?? "";
-                    M.IdGenre = reader["genreType"]?.ToString() ?? "";
-                    M.Language = reader["language"]?.ToString() ?? "";
-                    M.Lyrics = reader["lyrics"]?.ToString() ?? "";
+                    String musicID = reader["id"]?.ToString() ?? "";
+                    String Name = reader["name"]?.ToString() ?? "";
+                    String Duration = reader["duration"]?.ToString() ?? "";
+                    String ReleaseDate = reader["releaseDate"]?.ToString() ?? "";
+                    String IdAlbum = reader["albumName"]?.ToString() ?? "";
+                    String IdGenre = reader["genreType"]?.ToString() ?? "";
+                    String Language = reader["language"]?.ToString() ?? "";
+                    String Lyrics = reader["lyrics"]?.ToString() ?? "";
 
-                    ListViewItem item = new ListViewItem(M.musicID);
-                    item.SubItems.Add(M.Name);
-                    item.SubItems.Add(M.Duration);
-                    item.SubItems.Add(M.ReleaseDate);
-                    item.SubItems.Add(M.IdAlbum);
-                    item.SubItems.Add(M.IdGenre);
-                    item.SubItems.Add(M.Language);
-
-                    item.Tag = M;
+                    ListViewItem item = new ListViewItem(musicID);
+                    item.SubItems.Add(Name);
+                    item.SubItems.Add(Duration);
+                    item.SubItems.Add(ReleaseDate);
+                    item.SubItems.Add(IdAlbum);
+                    item.SubItems.Add(IdGenre);
+                    item.SubItems.Add(Language);
 
                     listView1.Items.Add(item);
                 }
 
                 // Fechamos o reader explicitamente
                 reader.Close();
-                currentContact = 0;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao carregar clientes: " + ex.Message);
-            }
-            finally
-            {
-                // Garante que a conexão feche mesmo se der erro
-                if (cn != null && cn.State == ConnectionState.Open)
-                    cn.Close();
             }
         }
         private void loadArtists()
@@ -119,35 +119,26 @@ namespace FBD_2526
 
                 while (reader.Read())
                 {
-                    Artist A = new Artist();
-                    A.artistID = reader["id"]?.ToString() ?? "";
-                    A.Name = reader["name"]?.ToString() ?? "";
-                    A.IdGenre = reader["genretype"]?.ToString() ?? "";
-                    A.Verified = reader["verified"]?.ToString() ?? "";
+                    String artistID = reader["id"]?.ToString() ?? "";
+                    String Name = reader["name"]?.ToString() ?? "";
+                    String IdGenre = reader["genretype"]?.ToString() ?? "";
+                    String Verified = reader["verified"]?.ToString() ?? "";
 
-                    ListViewItem item = new ListViewItem(A.artistID);
-                    item.SubItems.Add(A.Name);
-                    item.SubItems.Add(A.IdGenre);
-                    item.SubItems.Add(A.Verified); // O GET retorna "Sim"/"Não"
+                    ListViewItem item = new ListViewItem(artistID);
+                    item.SubItems.Add(Name);
+                    item.SubItems.Add(IdGenre);
+                    item.SubItems.Add(Verified); // O GET retorna "Sim"/"Não"
 
-                    item.Tag = A; // Guarda o objeto
 
                     listView1.Items.Add(item);
                 }
 
                 // Fechamos o reader explicitamente
                 reader.Close();
-                currentContact = 0;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao carregar clientes: " + ex.Message);
-            }
-            finally
-            {
-                // Garante que a conexão feche mesmo se der erro
-                if (cn != null && cn.State == ConnectionState.Open)
-                    cn.Close();
             }
         }
 
@@ -166,36 +157,30 @@ namespace FBD_2526
 
                 listView1.Columns.Add("ID", 50);
                 listView1.Columns.Add("Nome", 200);
-                listView1.Columns.Add("Artista", 80);
+                listView1.Columns.Add("Artista", 130);
+                listView1.Columns.Add("Duração", 80);
+
 
                 while (reader.Read())
                 {
-                    Album A = new Album();
-                    A.albumID = reader["id"]?.ToString() ?? "";
-                    A.Name = reader["name"]?.ToString() ?? "";
-                    A.AlbumIdArtist = reader["artistName"]?.ToString() ?? "";
-                    ListViewItem item = new ListViewItem(A.albumID);
-                    item.SubItems.Add(A.Name);
-                    item.SubItems.Add(A.AlbumIdArtist);
-
-                    item.Tag = A; // Guarda o objeto
+                    String albumID = reader["id"]?.ToString() ?? "";
+                    String Name = reader["name"]?.ToString() ?? "";
+                    String AlbumIdArtist = reader["artistName"]?.ToString() ?? "";
+                    String Duration = reader["duration"]?.ToString() ?? "";
+                    ListViewItem item = new ListViewItem(albumID);
+                    item.SubItems.Add(Name);
+                    item.SubItems.Add(AlbumIdArtist);
+                    item.SubItems.Add(Duration);
 
                     listView1.Items.Add(item);
                 }
 
                 // Fechamos o reader explicitamente
                 reader.Close();
-                currentContact = 0;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao carregar clientes: " + ex.Message);
-            }
-            finally
-            {
-                // Garante que a conexão feche mesmo se der erro
-                if (cn != null && cn.State == ConnectionState.Open)
-                    cn.Close();
             }
         }
         private void loadUsers()
@@ -219,61 +204,104 @@ namespace FBD_2526
 
                 while (reader.Read())
                 {
-                    User U = new User();
-                    U.userID = reader["userId"]?.ToString() ?? "";
-                    U.Name = reader["name"]?.ToString() ?? "";
-                    U.userName = reader["username"]?.ToString() ?? "";
-                    U.userEmail = reader["email"]?.ToString() ?? "";
-                    ListViewItem item = new ListViewItem(U.userID);
-                    item.SubItems.Add(U.Name);
-                    item.SubItems.Add(U.userName);
-                    item.SubItems.Add(U.userEmail);
-
-                    item.Tag = U; // Guarda o objeto
+                    String userID = reader["userId"]?.ToString() ?? "";
+                    String Name = reader["name"]?.ToString() ?? "";
+                    String userName = reader["username"]?.ToString() ?? "";
+                    String userEmail = reader["email"]?.ToString() ?? "";
+                    ListViewItem item = new ListViewItem(userID);
+                    item.SubItems.Add(Name);
+                    item.SubItems.Add(userName);
+                    item.SubItems.Add(userEmail);
 
                     listView1.Items.Add(item);
                 }
 
                 // Fechamos o reader explicitamente
                 reader.Close();
-                currentContact = 0;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao carregar clientes: " + ex.Message);
             }
-            finally
-            {
-                // Garante que a conexão feche mesmo se der erro
-                if (cn != null && cn.State == ConnectionState.Open)
-                    cn.Close();
-            }
         }
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (listView1.SelectedItems.Count > 0)
-            {
-                var tag = listView1.SelectedItems[0].Tag;
 
-                if (tag is Music music)
+        private void loadMusicLogs()
+        {
+            try
+            {
+                if (!verifySGBDConnection())
+                    return;
+
+                SqlCommand cmd = new SqlCommand("ua_loadMusicLog", cn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                listView1.Items.Clear();
+                listView1.Columns.Clear();
+
+                listView1.Columns.Add("operation", 80);
+                listView1.Columns.Add("Nome", 200);
+                listView1.Columns.Add("Duração", 80);
+                listView1.Columns.Add("Data", 100);
+                listView1.Columns.Add("Album", 70);
+                listView1.Columns.Add("Gênero", 70);
+                listView1.Columns.Add("Idioma", 80);
+
+                while (reader.Read())
                 {
-                    MessageBox.Show($"Música selecionada: {music.Name}");
+                    String operation = reader["operation"]?.ToString() ?? "";
+                    String musicName = reader["musicName"]?.ToString() ?? "";
+                    String musicDuration = reader["musicDuration"]?.ToString() ?? "";
+                    String musicReleaseDate = reader["musicReleaseDate"]?.ToString() ?? "";
+                    String musicAlbum = reader["musicIdAlbum"]?.ToString() ?? "";
+                    String musicGenre = reader["musicIdGenre"]?.ToString() ?? "";
+                    String musicLanguage = reader["musicLanguage"]?.ToString() ?? "";
+                    ListViewItem item = new ListViewItem(operation);
+                    item.SubItems.Add(musicName);
+                    item.SubItems.Add(musicDuration);
+                    item.SubItems.Add(musicReleaseDate);
+                    item.SubItems.Add(musicAlbum);
+                    item.SubItems.Add(musicGenre);
+                    item.SubItems.Add(musicLanguage);
+                    listView1.Items.Add(item);
                 }
-                else if (tag is Artist artist)
-                {
-                    MessageBox.Show($"Artista selecionado: {artist.Name}");
-                }
-                else if (tag is Album album)
-                {
-                    MessageBox.Show($"Álbum selecionado: {album.Name}");
-                }
+
+                // Fechamos o reader explicitamente
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao carregar clientes: " + ex.Message);
+            }
+
+        }
+        private void pushToOriginalTable()
+        {
+            try
+            {
+                if (!verifySGBDConnection())
+                    return;
+
+                SqlCommand cmd = new SqlCommand("ua_pushToOriginalTable", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idModerator", UserId);
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("Processo de sincronização terminado.");
+                loadMusicLogs();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro a dar push: " + ex.Message);
             }
         }
+
 
         // Método auxiliar para preencher a tela
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            cn.Close(); //apenas fecha a conexao quando se fecha a janela
             Application.Exit(); // Encerra o programa
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -304,15 +332,47 @@ namespace FBD_2526
 
         private void button9_Click(object sender, EventArgs e)
         {
-            ArtistEdit edArtist = new ArtistEdit();
+            ArtistEdit edArtist = new ArtistEdit(UserId);
             edArtist.Show();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            AlbumEdit edAlbum = new AlbumEdit();
+            AlbumEdit edAlbum = new AlbumEdit(UserId);
             edAlbum.Show();
 
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            loadMusicLogs();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            pushToOriginalTable();
+        }
+
+        private void ModeratorPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (cn != null && cn.State == ConnectionState.Open)
+            {
+                cn.Close();
+                cn.Dispose();
+            }
+
+            Application.Exit();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            EditUser editUser = new EditUser(UserId);
+            editUser.Show();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }

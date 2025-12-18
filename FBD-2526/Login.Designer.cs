@@ -132,7 +132,7 @@
             btnRegisto.Name = "btnRegisto";
             btnRegisto.Size = new Size(169, 69);
             btnRegisto.TabIndex = 7;
-            btnRegisto.Text = "Resgister";
+            btnRegisto.Text = "Register";
             btnRegisto.UseVisualStyleBackColor = false;
             btnRegisto.Click += btnRegisto_Click;
             // 

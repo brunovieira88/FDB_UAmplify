@@ -1,14 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\FBD\\FBD-2526\\FDB_UAmplify\\",
+  "WorkspaceRootPath": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\GITHUBprojetoFBD\\FDB_UAmplify\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|c:\\users\\user\\desktop\\fbd\\fbd-2526\\fdb_uamplify\\fbd-2526\\albums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|solutionrelative:fbd-2526\\albums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|c:\\users\\berna\\documents\\ua\\2 ano\\1\u00BA semestre\\fbd\\p\\githubprojetofbd\\fdb_uamplify\\fbd-2526\\registo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|solutionrelative:fbd-2526\\registo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|c:\\users\\user\\desktop\\fbd\\fbd-2526\\fdb_uamplify\\fbd-2526\\albums.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|solutionrelative:fbd-2526\\albums.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|c:\\users\\berna\\documents\\ua\\2 ano\\1\u00BA semestre\\fbd\\p\\githubprojetofbd\\fdb_uamplify\\fbd-2526\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|solutionrelative:fbd-2526\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|c:\\users\\berna\\documents\\ua\\2 ano\\1\u00BA semestre\\fbd\\p\\githubprojetofbd\\fdb_uamplify\\fbd-2526\\moderatorpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|solutionrelative:fbd-2526\\moderatorpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|c:\\users\\berna\\documents\\ua\\2 ano\\1\u00BA semestre\\fbd\\p\\githubprojetofbd\\fdb_uamplify\\fbd-2526\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|solutionrelative:fbd-2526\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|c:\\users\\berna\\documents\\ua\\2 ano\\1\u00BA semestre\\fbd\\p\\githubprojetofbd\\fdb_uamplify\\fbd-2526\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|solutionrelative:fbd-2526\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\GITHUBprojetoFBD\\FDB_UAmplify\\fbd-2526\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|solutionrelative:fbd-2526\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +34,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -27,26 +47,74 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Albums.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FBD\\FBD-2526\\FDB_UAmplify\\FBD-2526\\Albums.cs",
-              "RelativeDocumentMoniker": "FBD-2526\\Albums.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FBD\\FBD-2526\\FDB_UAmplify\\FBD-2526\\Albums.cs [Projeto]",
-              "RelativeToolTip": "FBD-2526\\Albums.cs [Projeto]",
+              "Title": "Registo.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\GITHUBprojetoFBD\\FDB_UAmplify\\FBD-2526\\Registo.cs",
+              "RelativeDocumentMoniker": "FBD-2526\\Registo.cs",
+              "ToolTip": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\GITHUBprojetoFBD\\FDB_UAmplify\\FBD-2526\\Registo.cs [Projeto]",
+              "RelativeToolTip": "FBD-2526\\Registo.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T18:33:10.363Z",
+              "WhenOpened": "2025-12-18T00:01:44.792Z",
               "EditorCaption": " [Projeto]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Albums.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FBD\\FBD-2526\\FDB_UAmplify\\FBD-2526\\Albums.Designer.cs",
-              "RelativeDocumentMoniker": "FBD-2526\\Albums.Designer.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FBD\\FBD-2526\\FDB_UAmplify\\FBD-2526\\Albums.Designer.cs",
-              "RelativeToolTip": "FBD-2526\\Albums.Designer.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAiwF4AAAAAAAAAAAAAAA==",
+              "Title": "Login.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\GITHUBprojetoFBD\\FDB_UAmplify\\FBD-2526\\Login.cs",
+              "RelativeDocumentMoniker": "FBD-2526\\Login.cs",
+              "ToolTip": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\GITHUBprojetoFBD\\FDB_UAmplify\\FBD-2526\\Login.cs [Projeto]",
+              "RelativeToolTip": "FBD-2526\\Login.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T18:32:32.769Z",
+              "WhenOpened": "2025-12-17T23:58:11.758Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Home.cs",
+              "DocumentMoniker": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\GITHUBprojetoFBD\\FDB_UAmplify\\FBD-2526\\Home.cs",
+              "RelativeDocumentMoniker": "FBD-2526\\Home.cs",
+              "ToolTip": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\GITHUBprojetoFBD\\FDB_UAmplify\\FBD-2526\\Home.cs",
+              "RelativeToolTip": "FBD-2526\\Home.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T23:51:36.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Home.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\GITHUBprojetoFBD\\FDB_UAmplify\\FBD-2526\\Home.cs",
+              "RelativeDocumentMoniker": "FBD-2526\\Home.cs",
+              "ToolTip": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\GITHUBprojetoFBD\\FDB_UAmplify\\FBD-2526\\Home.cs [Projeto]",
+              "RelativeToolTip": "FBD-2526\\Home.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T23:51:32.262Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ModeratorPage.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\GITHUBprojetoFBD\\FDB_UAmplify\\FBD-2526\\ModeratorPage.cs",
+              "RelativeDocumentMoniker": "FBD-2526\\ModeratorPage.cs",
+              "ToolTip": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\GITHUBprojetoFBD\\FDB_UAmplify\\FBD-2526\\ModeratorPage.cs [Projeto]",
+              "RelativeToolTip": "FBD-2526\\ModeratorPage.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T23:46:35.363Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\GITHUBprojetoFBD\\FDB_UAmplify\\FBD-2526\\Login.cs",
+              "RelativeDocumentMoniker": "FBD-2526\\Login.cs",
+              "ToolTip": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\GITHUBprojetoFBD\\FDB_UAmplify\\FBD-2526\\Login.cs",
+              "RelativeToolTip": "FBD-2526\\Login.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAkwHoAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-17T23:45:23.112Z",
               "EditorCaption": ""
             }
           ]

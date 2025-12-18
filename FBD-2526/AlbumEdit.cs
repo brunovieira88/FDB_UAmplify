@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,9 +17,11 @@ namespace FBD_2526
     {
         private SqlConnection? cn;
         private bool isLoading = false;
-        public AlbumEdit()
+        private int UserId;
+        public AlbumEdit(int userId)
         {
             InitializeComponent();
+            UserId = userId;
         }
 
         private SqlConnection getSGBDConnection()
@@ -47,27 +50,27 @@ namespace FBD_2526
             {
                 if (!verifySGBDConnection())
                     return;
-
+                isLoading = true;
                 SqlCommand cmd = new SqlCommand("SELECT * FROM uamplify.albumView WHERE id = @id", cn);
-                cmd.Parameters.AddWithValue("@id", textBox1.Text);
+                cmd.Parameters.AddWithValue("@id", albumId.Text);
                 SqlDataReader reader = cmd.ExecuteReader();
-                Album A = new Album();
                 while (reader.Read())
                 {
-                    A.albumID = reader["id"]?.ToString() ?? "";
-                    A.Name = reader["name"]?.ToString() ?? "";
-                    A.Duration = reader["duration"]?.ToString() ?? "";
-                    A.ReleaseDate = reader["releaseDate"]?.ToString() ?? "";
-                    A.AlbumNameArtist = reader["artistName"]?.ToString() ?? "";
+                    albumId.Text = reader["id"]?.ToString() ?? "";
+                    albumName.Text = reader["name"]?.ToString() ?? "";
+                    albumDuration.Text = reader["duration"]?.ToString() ?? "";
+                    albumReleaseDate.Text = reader["releaseDate"]?.ToString() ?? "";
+                    albumArtistId.Text = reader["idArtist"]?.ToString() ?? "";
+                    albumArtistName.Text = reader["artistName"]?.ToString() ?? "";
                     ;
                 }
 
                 reader.Close();
-                ShowAlbum(A);
+                isLoading = false;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao carregar clientes: " + ex.Message);
+                MessageBox.Show("Erro ao carregar album: " + ex.Message);
             }
             finally
             {
@@ -85,7 +88,7 @@ namespace FBD_2526
                     return;
 
                 SqlCommand cmd = new SqlCommand("SELECT * FROM uamplify.albumMusics (@id)", cn);
-                cmd.Parameters.AddWithValue("@id", textBox1.Text);
+                cmd.Parameters.AddWithValue("@id", albumId.Text);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 listView1.Items.Clear();
@@ -99,20 +102,18 @@ namespace FBD_2526
 
                 while (reader.Read())
                 {
-                    Music M = new Music();
-                    M.musicID = reader["id"]?.ToString() ?? "";
-                    M.Name = reader["name"]?.ToString() ?? "";
-                    M.Duration = reader["duration"]?.ToString() ?? "";
-                    M.ReleaseDate = reader["releaseDate"]?.ToString() ?? "";
-                    M.Language = reader["language"]?.ToString() ?? "";
+                    String musicID = reader["id"]?.ToString() ?? "";
+                    String Name = reader["name"]?.ToString() ?? "";
+                    String Duration = reader["duration"]?.ToString() ?? "";
+                    String ReleaseDate = reader["releaseDate"]?.ToString() ?? "";
+                    String Language = reader["language"]?.ToString() ?? "";
 
-                    ListViewItem item = new ListViewItem(M.musicID);
-                    item.SubItems.Add(M.Name);
-                    item.SubItems.Add(M.Duration);
-                    item.SubItems.Add(M.ReleaseDate);
-                    item.SubItems.Add(M.Language);
+                    ListViewItem item = new ListViewItem(musicID);
+                    item.SubItems.Add(Name);
+                    item.SubItems.Add(Duration);
+                    item.SubItems.Add(ReleaseDate);
+                    item.SubItems.Add(Language);
 
-                    item.Tag = M;
 
                     listView1.Items.Add(item);
                 }
@@ -131,22 +132,129 @@ namespace FBD_2526
             }
         }
 
-
-        public void ShowAlbum(Album album)
+        private void insertNewAlbum()
         {
-            isLoading = true;
-            textBox2.Text = album.Name;
-            textBox3.Text = album.Duration;
-            textBox4.Text = album.ReleaseDate;
-            textBox5.Text = album.AlbumNameArtist;
-            isLoading = false;
+            if (!verifySGBDConnection()) return;
 
+            SqlCommand cmd = new SqlCommand("ua_insertAlbum", cn);
+            cmd.CommandType = CommandType.StoredProcedure; // Define que é uma SP
+            cmd.Parameters.AddWithValue("@idModerator", UserId);
+            cmd.Parameters.AddWithValue("@albumName", albumName.Text);
+            cmd.Parameters.AddWithValue("@albumReleaseDate", Convert.ToDateTime(albumReleaseDate.Text));
+            cmd.Parameters.AddWithValue("@idArtist", albumArtistId.Text);
+            try
+            {
+                int rows = cmd.ExecuteNonQuery();
+                MessageBox.Show("Album inserido com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao inserir o Album");
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        private void updateAlbum()
+        {
+            if (!verifySGBDConnection()) return;
+
+            SqlCommand cmd = new SqlCommand("ua_updateAlbum", cn);
+            cmd.CommandType = CommandType.StoredProcedure; // Define que é uma SP
+            cmd.Parameters.AddWithValue("@idModerator", UserId);
+            cmd.Parameters.AddWithValue("@albumId", albumId.Text);
+            cmd.Parameters.AddWithValue("@albumName", albumName.Text);
+            cmd.Parameters.AddWithValue("@albumReleaseDate", Convert.ToDateTime(albumReleaseDate.Text));
+            cmd.Parameters.AddWithValue("@idArtist", albumArtistId.Text);
+            try
+            {
+                int rows = cmd.ExecuteNonQuery();
+                MessageBox.Show("Album atualizado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao atualizar o Album ");
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+
+        private void deleteAlbum()
+        {
+            if (!verifySGBDConnection()) return;
+
+            SqlCommand cmd = new SqlCommand("ua_deleteAlbum", cn);
+            cmd.CommandType = CommandType.StoredProcedure; // Define que é uma SP
+            cmd.Parameters.AddWithValue("@idAlbum", albumId.Text);
+            try
+            {
+                int rows = cmd.ExecuteNonQuery();
+                MessageBox.Show("Album removido com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao remover o Album");
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        private void loadArtist()
+        {
+            try { 
+                if (!verifySGBDConnection()) return;
+
+                SqlCommand cmd = new SqlCommand("ua_searchArtistById", cn);
+                cmd.CommandType = CommandType.StoredProcedure; // Define que é uma SP
+                cmd.Parameters.AddWithValue("@idArtist", albumArtistId.Text);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read()) // Tenta ler a primeira linha
+                {
+                    albumArtistName.Text = reader["name"].ToString();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não encontrado");
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             loadAlbum();
             loadMusics();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            updateAlbum();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            insertNewAlbum();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            deleteAlbum();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            loadArtist();
         }
     }
 }

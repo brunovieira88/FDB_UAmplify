@@ -49,29 +49,28 @@ namespace FBD_2526
             {
                 if (!verifySGBDConnection())
                     return;
-
+                isLoading = true;
                 SqlCommand cmd = new SqlCommand("SELECT * FROM uamplify.musicView WHERE id = @id", cn);
-                cmd.Parameters.AddWithValue("@id", textBox1.Text);
+                cmd.Parameters.AddWithValue("@id", IdMusic.Text);
                 SqlDataReader reader = cmd.ExecuteReader();
-                Music M = new Music();
                 while (reader.Read())
                 {
-                    M.musicID = reader["id"]?.ToString() ?? "";
-                    M.Name = reader["name"]?.ToString() ?? "";
-                    M.Duration = reader["duration"]?.ToString() ?? "";
-                    M.ReleaseDate = reader["releaseDate"]?.ToString() ?? "";
-                    M.IdAlbum = reader["idalbum"]?.ToString() ?? "";
-                    M.Album = reader["albumName"]?.ToString() ?? "";
-                    M.IdGenre = reader["idGenre"]?.ToString() ?? "";
-                    M.Genre = reader["genreType"]?.ToString() ?? "";
-                    M.Language = reader["language"]?.ToString() ?? "";
-                    M.Lyrics = reader["lyrics"]?.ToString() ?? "";
+                    IdMusic.Text = reader["id"]?.ToString() ?? "";
+                    musicName.Text = reader["name"]?.ToString() ?? "";
+                    musicDuration.Text = reader["duration"]?.ToString() ?? "";
+                    musicReleaseDate.Text = reader["releaseDate"]?.ToString() ?? "";
+                    musicAlbumId.Text = reader["idalbum"]?.ToString() ?? "";
+                    musicAlbumName.Text = reader["albumName"]?.ToString() ?? "";
+                    musicIdGenre.Text = reader["idGenre"]?.ToString() ?? "";
+                    musicGenreName.Text = reader["genreType"]?.ToString() ?? "";
+                    musicLanguage.Text = reader["language"]?.ToString() ?? "";
+                    musicLyrics.Text = reader["lyrics"]?.ToString() ?? "";
                     ;
                 }
 
                 // Fechamos o reader explicitamente
                 reader.Close();
-                ShowMusic(M);
+                isLoading = false;
             }
             catch (Exception ex)
             {
@@ -92,7 +91,7 @@ namespace FBD_2526
                 if (!verifySGBDConnection())
                     return;
                 SqlCommand cmd = new SqlCommand("SELECT name FROM uamplify.album WHERE id = @id", cn);
-                cmd.Parameters.AddWithValue("@id", textBox5.Text);
+                cmd.Parameters.AddWithValue("@id", musicAlbumId.Text);
                 SqlDataReader reader = cmd.ExecuteReader();
                 string albumName = "";
 
@@ -103,7 +102,7 @@ namespace FBD_2526
 
                 reader.Close();
 
-                textBox7.Text = albumName;
+                musicAlbumName.Text = albumName;
 
 
             }
@@ -116,6 +115,63 @@ namespace FBD_2526
                 // Garante que a conexão feche mesmo se der erro
                 if (cn != null && cn.State == ConnectionState.Open)
                     cn.Close();
+            }
+        }
+
+        private void InsertUpdateMusicLog(String operation)
+        {
+            if (!verifySGBDConnection()) return;
+
+            SqlCommand cmd = new SqlCommand("ua_registInsertUpdateLog", cn);
+            cmd.CommandType = CommandType.StoredProcedure; // Define que é uma SP
+
+            cmd.Parameters.AddWithValue("@operation", operation);
+            cmd.Parameters.AddWithValue("@musicId", IdMusic.Text);
+            cmd.Parameters.AddWithValue("@musicName", musicName.Text);
+            cmd.Parameters.AddWithValue("@musicDuration", musicDuration.Text);
+            cmd.Parameters.AddWithValue("@musicReleaseDate", Convert.ToDateTime(musicReleaseDate.Text));
+            cmd.Parameters.AddWithValue("@musicIdAlbum", musicAlbumId.Text);
+            cmd.Parameters.AddWithValue("@musicIdGenre", musicIdGenre.Text);
+            cmd.Parameters.AddWithValue("@musicLanguage", musicLanguage.Text);
+            cmd.Parameters.AddWithValue("@musicLyrics", musicLyrics.Text);
+
+            try
+            {
+                int rows = cmd.ExecuteNonQuery();
+                MessageBox.Show("Música inserida com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao inserir: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        private void DeleteMusicLog()
+        {
+            if (!verifySGBDConnection()) return;
+
+            SqlCommand cmd = new SqlCommand("ua_registDeleteLog", cn);
+            cmd.CommandType = CommandType.StoredProcedure; // Define que é uma SP
+
+            cmd.Parameters.AddWithValue("@operation", "DELETE");
+            cmd.Parameters.AddWithValue("@musicId", IdMusic.Text);
+
+            try
+            {
+                int rows = cmd.ExecuteNonQuery();
+                MessageBox.Show("Música removida");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao inserir: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
             }
         }
 
@@ -126,7 +182,7 @@ namespace FBD_2526
                 if (!verifySGBDConnection())
                     return;
                 SqlCommand cmd = new SqlCommand("SELECT genreType FROM uamplify.genreType WHERE idGenre = @id", cn);
-                cmd.Parameters.AddWithValue("@id", textBox6.Text);
+                cmd.Parameters.AddWithValue("@id", musicIdGenre.Text);
                 SqlDataReader reader = cmd.ExecuteReader();
                 string albumName = "";
 
@@ -137,7 +193,7 @@ namespace FBD_2526
 
                 reader.Close();
 
-                textBox9.Text = albumName;
+                musicGenreName.Text = albumName;
 
 
             }
@@ -153,22 +209,6 @@ namespace FBD_2526
             }
         }
 
-
-        public void ShowMusic(Music music)
-        {
-            isLoading = true;
-            textBox2.Text = music.Name;
-            textBox3.Text = music.Duration;
-            textBox4.Text = music.ReleaseDate;
-            textBox5.Text = music.IdAlbum;
-            textBox7.Text = music.Album;
-            textBox6.Text = music.IdGenre;
-            textBox9.Text = music.Genre;
-            textBox8.Text = music.Language;
-            richTextBox1.Text = music.Lyrics;
-            isLoading = false;
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -184,7 +224,24 @@ namespace FBD_2526
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
+            if (isLoading) return;
             loadGenreType();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            InsertUpdateMusicLog("INSERT");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DeleteMusicLog();
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            InsertUpdateMusicLog("UPDATE");
         }
     }
 }

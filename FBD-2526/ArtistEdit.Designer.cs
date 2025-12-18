@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            textBox1 = new TextBox();
+            artistId = new TextBox();
             label1 = new Label();
             button1 = new Button();
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();
             label3 = new Label();
-            textBox2 = new TextBox();
-            richTextBox1 = new RichTextBox();
+            artistName = new TextBox();
+            artistDescription = new RichTextBox();
             label8 = new Label();
             label6 = new Label();
-            textBox6 = new TextBox();
-            textBox9 = new TextBox();
+            artistGenreId = new TextBox();
+            artistGenreName = new TextBox();
             label2 = new Label();
-            textBox3 = new TextBox();
+            artistVerified = new TextBox();
             SuspendLayout();
             // 
             // panel1
@@ -56,12 +56,12 @@
             panel1.Size = new Size(202, 600);
             panel1.TabIndex = 12;
             // 
-            // textBox1
+            // artistId
             // 
-            textBox1.Location = new Point(299, 44);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(151, 27);
-            textBox1.TabIndex = 1;
+            artistId.Location = new Point(299, 44);
+            artistId.Name = "artistId";
+            artistId.Size = new Size(151, 27);
+            artistId.TabIndex = 1;
             // 
             // label1
             // 
@@ -94,6 +94,7 @@
             button4.TabIndex = 24;
             button4.Text = "Update";
             button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -106,6 +107,7 @@
             button3.TabIndex = 25;
             button3.Text = "Insert";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
@@ -118,6 +120,7 @@
             button2.TabIndex = 26;
             button2.Text = "Remove";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // label3
             // 
@@ -129,20 +132,20 @@
             label3.TabIndex = 27;
             label3.Text = "Name";
             // 
-            // textBox2
+            // artistName
             // 
-            textBox2.Location = new Point(246, 140);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(313, 27);
-            textBox2.TabIndex = 28;
+            artistName.Location = new Point(246, 140);
+            artistName.Name = "artistName";
+            artistName.Size = new Size(313, 27);
+            artistName.TabIndex = 28;
             // 
-            // richTextBox1
+            // artistDescription
             // 
-            richTextBox1.Location = new Point(249, 224);
-            richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(452, 158);
-            richTextBox1.TabIndex = 29;
-            richTextBox1.Text = "";
+            artistDescription.Location = new Point(249, 224);
+            artistDescription.Name = "artistDescription";
+            artistDescription.Size = new Size(452, 158);
+            artistDescription.TabIndex = 29;
+            artistDescription.Text = "";
             // 
             // label8
             // 
@@ -164,21 +167,21 @@
             label6.TabIndex = 31;
             label6.Text = "Genre";
             // 
-            // textBox6
+            // artistGenreId
             // 
-            textBox6.Location = new Point(249, 432);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(51, 27);
-            textBox6.TabIndex = 32;
-            textBox6.TextChanged += textBox6_TextChanged;
+            artistGenreId.Location = new Point(249, 432);
+            artistGenreId.Name = "artistGenreId";
+            artistGenreId.Size = new Size(51, 27);
+            artistGenreId.TabIndex = 32;
+            artistGenreId.TextChanged += textBox6_TextChanged;
             // 
-            // textBox9
+            // artistGenreName
             // 
-            textBox9.Location = new Point(344, 432);
-            textBox9.Name = "textBox9";
-            textBox9.ReadOnly = true;
-            textBox9.Size = new Size(97, 27);
-            textBox9.TabIndex = 33;
+            artistGenreName.Location = new Point(344, 432);
+            artistGenreName.Name = "artistGenreName";
+            artistGenreName.ReadOnly = true;
+            artistGenreName.Size = new Size(97, 27);
+            artistGenreName.TabIndex = 33;
             // 
             // label2
             // 
@@ -190,33 +193,33 @@
             label2.TabIndex = 34;
             label2.Text = "Verified";
             // 
-            // textBox3
+            // artistVerified
             // 
-            textBox3.Location = new Point(570, 432);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(51, 27);
-            textBox3.TabIndex = 35;
+            artistVerified.Location = new Point(570, 432);
+            artistVerified.Name = "artistVerified";
+            artistVerified.Size = new Size(51, 27);
+            artistVerified.TabIndex = 35;
             // 
             // ArtistEdit
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 600);
-            Controls.Add(textBox3);
+            Controls.Add(artistVerified);
             Controls.Add(label2);
-            Controls.Add(textBox9);
-            Controls.Add(textBox6);
+            Controls.Add(artistGenreName);
+            Controls.Add(artistGenreId);
             Controls.Add(label6);
             Controls.Add(label8);
-            Controls.Add(richTextBox1);
-            Controls.Add(textBox2);
+            Controls.Add(artistDescription);
+            Controls.Add(artistName);
             Controls.Add(label3);
             Controls.Add(button2);
             Controls.Add(button3);
             Controls.Add(button4);
             Controls.Add(button1);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(artistId);
             Controls.Add(panel1);
             Name = "ArtistEdit";
             Text = "ArtistEdit";
@@ -227,20 +230,20 @@
         #endregion
 
         private Panel panel1;
-        private TextBox textBox1;
+        private TextBox artistId;
         private Label label1;
         private Button button1;
         private Button button4;
         private Button button3;
         private Button button2;
         private Label label3;
-        private TextBox textBox2;
-        private RichTextBox richTextBox1;
+        private TextBox artistName;
+        private RichTextBox artistDescription;
         private Label label8;
         private Label label6;
-        private TextBox textBox6;
-        private TextBox textBox9;
+        private TextBox artistGenreId;
+        private TextBox artistGenreName;
         private Label label2;
-        private TextBox textBox3;
+        private TextBox artistVerified;
     }
 }

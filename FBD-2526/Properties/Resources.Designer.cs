@@ -59,5 +59,15 @@ namespace FBD_2526.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unnamed_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("unnamed-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

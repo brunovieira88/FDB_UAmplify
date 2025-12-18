@@ -16,9 +16,11 @@ namespace FBD_2526
     {
         private SqlConnection? cn;
         private bool isLoading = false;
-        public ArtistEdit()
+        private int UserId;
+        public ArtistEdit(int userID)
         {
             InitializeComponent();
+            UserId = userID;
         }
 
         private SqlConnection getSGBDConnection()
@@ -47,25 +49,24 @@ namespace FBD_2526
             {
                 if (!verifySGBDConnection())
                     return;
-
+                isLoading = true;
                 SqlCommand cmd = new SqlCommand("SELECT * FROM uamplify.artistView WHERE id = @id", cn);
-                cmd.Parameters.AddWithValue("@id", textBox1.Text);
+                cmd.Parameters.AddWithValue("@id", artistId.Text);
                 SqlDataReader reader = cmd.ExecuteReader();
-                Artist A = new Artist();
                 while (reader.Read())
                 {
-                    A.artistID = reader["id"]?.ToString() ?? "";
-                    A.Name = reader["name"]?.ToString() ?? "";
-                    A.Description = reader["description"]?.ToString() ?? "";
-                    A.Verified = reader["verified"]?.ToString() ?? "";
-                    A.IdGenre = reader["idgenre"]?.ToString() ?? "";
-                    A.NameGenre = reader["genreType"]?.ToString() ?? "";
+                    artistId.Text = reader["id"]?.ToString() ?? "";
+                    artistName.Text = reader["name"]?.ToString() ?? "";
+                    artistDescription.Text = reader["description"]?.ToString() ?? "";
+                    artistVerified.Text = reader["verified"]?.ToString() ?? "";
+                    artistGenreId.Text = reader["idgenre"]?.ToString() ?? "";
+                    artistGenreName.Text = reader["genreType"]?.ToString() ?? "";
                     ;
                 }
 
                 // Fechamos o reader explicitamente
                 reader.Close();
-                ShowArtist(A);
+                isLoading = false;
             }
             catch (Exception ex)
             {
@@ -86,7 +87,7 @@ namespace FBD_2526
                 if (!verifySGBDConnection())
                     return;
                 SqlCommand cmd = new SqlCommand("SELECT genreType FROM uamplify.genreType WHERE idGenre = @id", cn);
-                cmd.Parameters.AddWithValue("@id", textBox6.Text);
+                cmd.Parameters.AddWithValue("@id", artistGenreId.Text);
                 SqlDataReader reader = cmd.ExecuteReader();
                 string genretype = "";
 
@@ -97,7 +98,7 @@ namespace FBD_2526
 
                 reader.Close();
 
-                textBox9.Text = genretype;
+                artistGenreName.Text = genretype;
 
 
             }
@@ -113,16 +114,92 @@ namespace FBD_2526
             }
         }
 
-        public void ShowArtist(Artist artist)
+        private void insertArtist()
         {
-            isLoading = true;
-            textBox2.Text = artist.Name;
-            richTextBox1.Text = artist.Description;
-            textBox3.Text = artist.Verified;
-            textBox6.Text = artist.IdGenre;
-            textBox9.Text = artist.NameGenre;
-            isLoading = false;
+            if (!verifySGBDConnection()) return;
 
+            SqlCommand cmd = new SqlCommand("ua_insertArtist", cn);
+            cmd.CommandType = CommandType.StoredProcedure; // Define que é uma SP
+            cmd.Parameters.AddWithValue("@idMod", UserId);
+            cmd.Parameters.AddWithValue("@artistName", artistName.Text);
+            cmd.Parameters.AddWithValue("@description", artistDescription.Text);
+            cmd.Parameters.AddWithValue("@idGenre", artistGenreId);
+            string inputVerified = artistVerified.Text.Trim().ToLower();
+            if (!string.IsNullOrEmpty(inputVerified))
+            {
+                int valorVerified = (inputVerified == "sim") ? 1 : 0;
+                cmd.Parameters.AddWithValue("@verified", valorVerified);
+            }
+
+            try
+            {
+                int rows = cmd.ExecuteNonQuery();
+                MessageBox.Show("Artista inserida com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao inserir: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        private void updateArtist()
+        {
+            if (!verifySGBDConnection()) return;
+
+            SqlCommand cmd = new SqlCommand("ua_updateArtist", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@idModerator", UserId);
+            cmd.Parameters.AddWithValue("@artistId", artistId.Text);
+            cmd.Parameters.AddWithValue("@artistName", artistName.Text);
+            cmd.Parameters.AddWithValue("@description", artistDescription.Text);
+            cmd.Parameters.AddWithValue("@idGenre", artistGenreId.Text);
+            string inputVerified = artistVerified.Text.Trim().ToLower();
+            if (!string.IsNullOrEmpty(inputVerified))
+            {
+                int valorVerified = (inputVerified == "true") ? 1 : 0;
+                cmd.Parameters.AddWithValue("@verified", valorVerified);
+            }
+
+            try
+            {
+                int rows = cmd.ExecuteNonQuery();
+                MessageBox.Show("Artista atualizado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao atualizar: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
+        }
+
+        private void deleteArtist()
+        {
+            if (!verifySGBDConnection()) return;
+
+            SqlCommand cmd = new SqlCommand("ua_deleteArtist", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@artistId", artistId.Text);
+
+            try
+            {
+                int rows = cmd.ExecuteNonQuery();
+                MessageBox.Show("Artista atualizado com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao atualizar: " + ex.Message);
+            }
+            finally
+            {
+                cn.Close();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -135,6 +212,21 @@ namespace FBD_2526
             if (isLoading) return;
             loadGenreType();
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            updateArtist();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            insertArtist();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            deleteArtist();
         }
     }
 }

@@ -120,7 +120,7 @@ namespace FBD_2526
                     "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (isMod())
                 {
-                    ModeratorPage mp = new ModeratorPage();
+                    ModeratorPage mp = new ModeratorPage(UserId);
                     this.Hide();
                     mp.Show();
                 }
