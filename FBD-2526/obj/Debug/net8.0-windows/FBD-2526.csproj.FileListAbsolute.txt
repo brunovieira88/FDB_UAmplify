@@ -312,3 +312,6 @@ C:\Users\berna\Documents\ua\2 ano\1º semestre\FBD\P\darPushGIT\FDB_UAmplify\FBD
 C:\Users\berna\Documents\ua\2 ano\1º semestre\FBD\P\darPushGIT\FDB_UAmplify\FBD-2526\obj\Debug\net8.0-windows\FBD_2526.ArtistPage.resources
 C:\Users\berna\Documents\ua\2 ano\1º semestre\FBD\P\darPushGIT\FDB_UAmplify\FBD-2526\obj\Debug\net8.0-windows\FBD_2526.ListenerPage.resources
 C:\Users\berna\Documents\ua\2 ano\1º semestre\FBD\P\darPushGIT\FDB_UAmplify\FBD-2526\obj\Debug\net8.0-windows\FBD_2526.Listeners.resources
+C:\Users\User\Desktop\FBD\FBD-2526\FDB_UAmplify\FBD-2526\obj\Debug\net8.0-windows\FBD_2526.ArtistPage.resources
+C:\Users\User\Desktop\FBD\FBD-2526\FDB_UAmplify\FBD-2526\obj\Debug\net8.0-windows\FBD_2526.ListenerPage.resources
+C:\Users\User\Desktop\FBD\FBD-2526\FDB_UAmplify\FBD-2526\obj\Debug\net8.0-windows\FBD_2526.Listeners.resources

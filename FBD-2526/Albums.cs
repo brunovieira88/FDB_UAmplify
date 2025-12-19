@@ -60,6 +60,7 @@ namespace FBD_2526
                     dgvAlbums.Columns.Clear();
                     dgvAlbums.DataSource = dt;
                     dgvAlbums.Columns["id"].Visible = false;
+                    dgvAlbums.Columns["ArtistId"].Visible = false;
                     DataGridViewButtonColumn btnView = new DataGridViewButtonColumn();
                     btnView.Name = "ViewDetails";
                     btnView.HeaderText = "Details";
@@ -96,6 +97,17 @@ namespace FBD_2526
                 e.Value = date.ToString("dd/MM/yyyy");
                 e.FormattingApplied = true;
             }
+
+            if (dgvAlbums.Columns[e.ColumnIndex].Name == "Artist")
+            {
+                e.CellStyle.ForeColor = Color.FromArgb(30, 215, 96);
+                e.CellStyle.Font = new Font(dgvAlbums.Font, FontStyle.Underline | FontStyle.Bold);
+                dgvAlbums.Cursor = Cursors.Hand; 
+            }
+            else
+            {
+                dgvAlbums.Cursor = Cursors.Default;
+            }
         }
         private void txtSearch_Enter(object sender, EventArgs e)
         {
@@ -108,13 +120,27 @@ namespace FBD_2526
         }
         private void dgvAlbums_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && dgvAlbums.Columns[e.ColumnIndex].Name == "ViewDetails")
+            if (e.RowIndex < 0) return; 
+
+            if (dgvAlbums.Columns[e.ColumnIndex].Name == "ViewDetails")
             {
                 int idAlbum = Convert.ToInt32(dgvAlbums.Rows[e.RowIndex].Cells["id"].Value);
                 string nomeAlbum = dgvAlbums.Rows[e.RowIndex].Cells["Album"].Value.ToString();
                 string nomeArtista = dgvAlbums.Rows[e.RowIndex].Cells["Artist"].Value.ToString();
+
                 AlbumDetails detailsForm = new AlbumDetails(this.UserId, idAlbum, nomeAlbum, nomeArtista);
-                detailsForm.ShowDialog();
+                detailsForm.Show();
+                this.Hide();
+            }
+
+            else if (dgvAlbums.Columns[e.ColumnIndex].Name == "Artist")
+            {
+                int artistId = Convert.ToInt32(dgvAlbums.Rows[e.RowIndex].Cells["ArtistId"].Value);
+                string artistName = dgvAlbums.Rows[e.RowIndex].Cells["Artist"].Value.ToString();
+                ArtistPage artistPage = new ArtistPage(this.UserId, artistId);
+                artistPage.Show();
+                this.Hide();
+
             }
         }
         private void btnHome_Click(object sender, EventArgs e)

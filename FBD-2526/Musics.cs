@@ -62,6 +62,7 @@ namespace FBD_2526
                     dgvMusics.Columns.Clear();
                     dgvMusics.DataSource = dt;
                     dgvMusics.Columns["id"].Visible = false;
+                    dgvMusics.Columns["ArtistId"].Visible = false;
 
                     //criar botao de play
                     DataGridViewButtonColumn playBtn = new DataGridViewButtonColumn();
@@ -82,14 +83,24 @@ namespace FBD_2526
         }
         private void dgvMusics_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && dgvMusics.Columns[e.ColumnIndex].Name == "PlayAction")
+            if (e.RowIndex < 0) return;
+
+            if (dgvMusics.Columns[e.ColumnIndex].Name == "PlayAction")
             {
                 int musicId = Convert.ToInt32(dgvMusics.Rows[e.RowIndex].Cells["id"].Value);
                 string musicName = dgvMusics.Rows[e.RowIndex].Cells["Music"].Value.ToString();
 
                 RegistarPlayNaBaseDeDados(musicId);
 
-                MessageBox.Show($"A tocar: {musicName}");
+                MessageBox.Show($"Playing: {musicName}");
+            }
+            else if (dgvMusics.Columns[e.ColumnIndex].Name == "Artist")
+            {
+                int artistId = Convert.ToInt32(dgvMusics.Rows[e.RowIndex].Cells["ArtistId"].Value);
+                string artistName = dgvMusics.Rows[e.RowIndex].Cells["Artist"].Value.ToString();
+                ArtistPage artistPage = new ArtistPage(this.UserId, artistId);
+                artistPage.Show();
+                this.Hide();
             }
         }
         private void RegistarPlayNaBaseDeDados(int musicId)
@@ -131,6 +142,17 @@ namespace FBD_2526
                 DateTime date = Convert.ToDateTime(e.Value);
                 e.Value = date.ToString("dd/MM/yyyy");
                 e.FormattingApplied = true;
+            }
+
+            if (dgvMusics.Columns[e.ColumnIndex].Name == "Artist")
+            {
+                e.CellStyle.ForeColor = Color.FromArgb(30, 215, 96); 
+                e.CellStyle.Font = new Font(dgvMusics.Font, FontStyle.Underline | FontStyle.Bold);
+                dgvMusics.Cursor = Cursors.Hand; 
+            }
+            else
+            {
+                dgvMusics.Cursor = Cursors.Default;
             }
         }
 
