@@ -27,17 +27,17 @@ namespace FBD_2526
 
         private void Playlists_Load(object sender, EventArgs e)
         {
-            AlternarAbas(true); 
+            AlternarAbas(true);
         }
 
         private void btnTabLibrary_Click(object sender, EventArgs e)
         {
-            AlternarAbas(true); 
+            AlternarAbas(true);
         }
 
         private void btnTabSearch_Click(object sender, EventArgs e)
         {
-            AlternarAbas(false); 
+            AlternarAbas(false);
         }
 
         private void AlternarAbas(bool mostrarMinhas)
@@ -229,7 +229,7 @@ namespace FBD_2526
         }
         private void dgvMyPlaylists_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            
+
         }
         private void dgvMyPlaylists_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
@@ -320,6 +320,13 @@ namespace FBD_2526
         private void Playlists_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnCommunity_Click(object sender, EventArgs e)
+        {
+            Listeners listeners = new Listeners(UserId);
+            listeners.Show();
+            this.Hide();
         }
     }
 }

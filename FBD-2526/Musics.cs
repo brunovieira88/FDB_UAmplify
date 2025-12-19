@@ -185,5 +185,12 @@ namespace FBD_2526
             playlists.Show();
             this.Hide();
         }
+
+        private void btnCommunity_Click(object sender, EventArgs e)
+        {
+            Listeners listeners = new Listeners(UserId);
+            listeners.Show();
+            this.Hide();
+        }
     }
 }

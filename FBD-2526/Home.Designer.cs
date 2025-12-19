@@ -55,6 +55,7 @@
             lblTopHitsDesc = new Label();
             lblTopHitsTitle = new Label();
             lblWelcome = new Label();
+            btnCommunity = new Button();
             toolbarPanel.SuspendLayout();
             contentPanel.SuspendLayout();
             cardNovidades.SuspendLayout();
@@ -64,6 +65,7 @@
             // toolbarPanel
             // 
             toolbarPanel.BackColor = Color.FromArgb(30, 30, 30);
+            toolbarPanel.Controls.Add(btnCommunity);
             toolbarPanel.Controls.Add(btnPerfil);
             toolbarPanel.Controls.Add(btnPlaylists);
             toolbarPanel.Controls.Add(btnAlbums);
@@ -86,7 +88,7 @@
             btnPerfil.FlatStyle = FlatStyle.Flat;
             btnPerfil.Font = new Font("Segoe UI", 10F);
             btnPerfil.ForeColor = Color.White;
-            btnPerfil.Location = new Point(893, 23);
+            btnPerfil.Location = new Point(1036, 23);
             btnPerfil.Margin = new Padding(4, 5, 4, 5);
             btnPerfil.Name = "btnPerfil";
             btnPerfil.Size = new Size(120, 46);
@@ -375,6 +377,24 @@
             lblWelcome.TabIndex = 0;
             lblWelcome.Text = "Welcome to UAmplify";
             // 
+            // btnCommunity
+            // 
+            btnCommunity.BackColor = Color.Transparent;
+            btnCommunity.Cursor = Cursors.Hand;
+            btnCommunity.FlatAppearance.BorderSize = 0;
+            btnCommunity.FlatAppearance.MouseOverBackColor = Color.FromArgb(40, 40, 40);
+            btnCommunity.FlatStyle = FlatStyle.Flat;
+            btnCommunity.Font = new Font("Segoe UI", 10F);
+            btnCommunity.ForeColor = Color.White;
+            btnCommunity.Location = new Point(874, 23);
+            btnCommunity.Margin = new Padding(4, 5, 4, 5);
+            btnCommunity.Name = "btnCommunity";
+            btnCommunity.Size = new Size(120, 46);
+            btnCommunity.TabIndex = 6;
+            btnCommunity.Text = "Community";
+            btnCommunity.UseVisualStyleBackColor = false;
+            btnCommunity.Click += btnCommunity_Click;
+            // 
             // Home
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -425,5 +445,6 @@
         private Label lblTop1;
         private Label lblTop2;
         private Label lblTop3;
+        private Button btnCommunity;
     }
 }

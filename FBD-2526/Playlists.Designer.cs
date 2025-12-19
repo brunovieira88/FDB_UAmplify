@@ -33,6 +33,7 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             toolbarPanel = new Panel();
+            btnCommunity = new Button();
             btnPerfil = new Button();
             btnPlaylists = new Button();
             btnAlbums = new Button();
@@ -59,6 +60,7 @@
             // toolbarPanel
             // 
             toolbarPanel.BackColor = Color.FromArgb(30, 30, 30);
+            toolbarPanel.Controls.Add(btnCommunity);
             toolbarPanel.Controls.Add(btnPerfil);
             toolbarPanel.Controls.Add(btnPlaylists);
             toolbarPanel.Controls.Add(btnAlbums);
@@ -71,6 +73,24 @@
             toolbarPanel.Size = new Size(1333, 92);
             toolbarPanel.TabIndex = 0;
             // 
+            // btnCommunity
+            // 
+            btnCommunity.BackColor = Color.Transparent;
+            btnCommunity.Cursor = Cursors.Hand;
+            btnCommunity.FlatAppearance.BorderSize = 0;
+            btnCommunity.FlatAppearance.MouseOverBackColor = Color.FromArgb(40, 40, 40);
+            btnCommunity.FlatStyle = FlatStyle.Flat;
+            btnCommunity.Font = new Font("Segoe UI", 10F);
+            btnCommunity.ForeColor = Color.White;
+            btnCommunity.Location = new Point(882, 26);
+            btnCommunity.Margin = new Padding(4, 5, 4, 5);
+            btnCommunity.Name = "btnCommunity";
+            btnCommunity.Size = new Size(120, 46);
+            btnCommunity.TabIndex = 8;
+            btnCommunity.Text = "Community";
+            btnCommunity.UseVisualStyleBackColor = false;
+            btnCommunity.Click += btnCommunity_Click;
+            // 
             // btnPerfil
             // 
             btnPerfil.BackColor = Color.Transparent;
@@ -80,7 +100,7 @@
             btnPerfil.FlatStyle = FlatStyle.Flat;
             btnPerfil.Font = new Font("Segoe UI", 10F);
             btnPerfil.ForeColor = Color.White;
-            btnPerfil.Location = new Point(893, 23);
+            btnPerfil.Location = new Point(1043, 26);
             btnPerfil.Name = "btnPerfil";
             btnPerfil.Size = new Size(120, 46);
             btnPerfil.TabIndex = 5;
@@ -409,5 +429,6 @@
         private System.Windows.Forms.Button btnTabSearch;  // Botão de Aba 2
         private System.Windows.Forms.DataGridView dgvMyPlaylists; // Tabela das Minhas
         private System.Windows.Forms.DataGridView dgvSearch;      // Tabela da Pesquisa
+        private Button btnCommunity;
     }
 }

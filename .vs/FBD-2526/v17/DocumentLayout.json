@@ -1,18 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\FBD\\FBD-2526\\FDB_UAmplify\\",
+  "WorkspaceRootPath": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\darPushGIT\\FDB_UAmplify\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|c:\\users\\user\\desktop\\fbd\\fbd-2526\\fdb_uamplify\\fbd-2526\\playlistdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|solutionrelative:fbd-2526\\playlistdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|c:\\users\\user\\desktop\\fbd\\fbd-2526\\fdb_uamplify\\fbd-2526\\albumdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|solutionrelative:fbd-2526\\albumdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|c:\\users\\user\\desktop\\fbd\\fbd-2526\\fdb_uamplify\\fbd-2526\\albums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|solutionrelative:fbd-2526\\albums.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|c:\\users\\berna\\documents\\ua\\2 ano\\1\u00BA semestre\\fbd\\p\\darpushgit\\fdb_uamplify\\fbd-2526\\listeners.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|solutionrelative:fbd-2526\\listeners.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +14,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -31,41 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "PlaylistDetails.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FBD\\FBD-2526\\FDB_UAmplify\\FBD-2526\\PlaylistDetails.cs",
-              "RelativeDocumentMoniker": "FBD-2526\\PlaylistDetails.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FBD\\FBD-2526\\FDB_UAmplify\\FBD-2526\\PlaylistDetails.cs",
-              "RelativeToolTip": "FBD-2526\\PlaylistDetails.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAwwGwAAAAnAAAAAAAAAA==",
+              "Title": "Listeners.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\darPushGIT\\FDB_UAmplify\\FBD-2526\\Listeners.cs",
+              "RelativeDocumentMoniker": "FBD-2526\\Listeners.cs",
+              "ToolTip": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\darPushGIT\\FDB_UAmplify\\FBD-2526\\Listeners.cs [Projeto]",
+              "RelativeToolTip": "FBD-2526\\Listeners.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T11:43:28.019Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Albums.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FBD\\FBD-2526\\FDB_UAmplify\\FBD-2526\\Albums.cs",
-              "RelativeDocumentMoniker": "FBD-2526\\Albums.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FBD\\FBD-2526\\FDB_UAmplify\\FBD-2526\\Albums.cs",
-              "RelativeToolTip": "FBD-2526\\Albums.cs",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAIwHMAAABiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T11:38:33.299Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AlbumDetails.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\FBD\\FBD-2526\\FDB_UAmplify\\FBD-2526\\AlbumDetails.cs",
-              "RelativeDocumentMoniker": "FBD-2526\\AlbumDetails.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\FBD\\FBD-2526\\FDB_UAmplify\\FBD-2526\\AlbumDetails.cs",
-              "RelativeToolTip": "FBD-2526\\AlbumDetails.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAkwGwAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T11:35:26.35Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-19T14:05:12.958Z",
+              "EditorCaption": " [Projeto]"
             }
           ]
         }
