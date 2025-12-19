@@ -196,19 +196,17 @@ namespace FBD_2526
                 listView1.Items.Clear();
                 listView1.Columns.Clear();
 
-                listView1.Columns.Add("ID", 50);
-                listView1.Columns.Add("Nome", 200);
                 listView1.Columns.Add("Username", 200);
+                listView1.Columns.Add("Name", 200);
                 listView1.Columns.Add("E-mail", 200);
 
 
                 while (reader.Read())
                 {
-                    String userID = reader["userId"]?.ToString() ?? "";
                     String Name = reader["name"]?.ToString() ?? "";
                     String userName = reader["username"]?.ToString() ?? "";
                     String userEmail = reader["email"]?.ToString() ?? "";
-                    ListViewItem item = new ListViewItem(userID);
+                    ListViewItem item = new ListViewItem(userName);
                     item.SubItems.Add(Name);
                     item.SubItems.Add(userName);
                     item.SubItems.Add(userEmail);

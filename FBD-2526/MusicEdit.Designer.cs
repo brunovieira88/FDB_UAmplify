@@ -134,9 +134,9 @@
             // 
             // musicLyrics
             // 
-            musicLyrics.Location = new Point(262, 492);
+            musicLyrics.Location = new Point(262, 453);
             musicLyrics.Name = "musicLyrics";
-            musicLyrics.Size = new Size(452, 94);
+            musicLyrics.Size = new Size(464, 133);
             musicLyrics.TabIndex = 10;
             musicLyrics.Text = "";
             // 
@@ -214,7 +214,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label8.Location = new Point(266, 469);
+            label8.Location = new Point(262, 430);
             label8.Name = "label8";
             label8.Size = new Size(48, 20);
             label8.TabIndex = 18;
@@ -238,7 +238,7 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.YellowGreen;
+            button2.BackColor = Color.FromArgb(30, 215, 96);
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button2.ForeColor = SystemColors.ButtonHighlight;
             button2.Location = new Point(633, 614);
@@ -251,7 +251,7 @@
             // 
             // button3
             // 
-            button3.BackColor = Color.YellowGreen;
+            button3.BackColor = Color.FromArgb(30, 215, 96);
             button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button3.ForeColor = SystemColors.ButtonHighlight;
             button3.Location = new Point(437, 614);
@@ -264,7 +264,7 @@
             // 
             // button4
             // 
-            button4.BackColor = Color.YellowGreen;
+            button4.BackColor = Color.FromArgb(30, 215, 96);
             button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button4.ForeColor = SystemColors.ButtonFace;
             button4.Location = new Point(237, 614);
@@ -279,7 +279,7 @@
             // 
             labelPrimaryArtist.AutoSize = true;
             labelPrimaryArtist.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            labelPrimaryArtist.Location = new Point(237, 335);
+            labelPrimaryArtist.Location = new Point(237, 330);
             labelPrimaryArtist.Name = "labelPrimaryArtist";
             labelPrimaryArtist.Size = new Size(109, 20);
             labelPrimaryArtist.TabIndex = 24;
@@ -291,6 +291,7 @@
             musicArtistId.Name = "musicArtistId";
             musicArtistId.Size = new Size(56, 27);
             musicArtistId.TabIndex = 25;
+            musicArtistId.TextChanged += musicArtistId_TextChanged_1;
             // 
             // musicArtistName
             // 

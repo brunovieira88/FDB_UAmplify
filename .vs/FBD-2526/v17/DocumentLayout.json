@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\darPushGIT\\FDB_UAmplify\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|c:\\users\\berna\\documents\\ua\\2 ano\\1\u00BA semestre\\fbd\\p\\darpushgit\\fdb_uamplify\\fbd-2526\\listeners.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|solutionrelative:fbd-2526\\listeners.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|c:\\users\\berna\\documents\\ua\\2 ano\\1\u00BA semestre\\fbd\\p\\darpushgit\\fdb_uamplify\\fbd-2526\\registo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|solutionrelative:fbd-2526\\registo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|c:\\users\\berna\\documents\\ua\\2 ano\\1\u00BA semestre\\fbd\\p\\darpushgit\\fdb_uamplify\\fbd-2526\\registo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|solutionrelative:fbd-2526\\registo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|c:\\users\\berna\\documents\\ua\\2 ano\\1\u00BA semestre\\fbd\\p\\darpushgit\\fdb_uamplify\\fbd-2526\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|solutionrelative:fbd-2526\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|c:\\users\\berna\\documents\\ua\\2 ano\\1\u00BA semestre\\fbd\\p\\darpushgit\\fdb_uamplify\\fbd-2526\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC791527-81A3-4B8B-86AC-D602AABF6038}|FBD-2526\\FBD-2526.csproj|solutionrelative:fbd-2526\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,15 +38,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Listeners.cs [Projeto]",
-              "DocumentMoniker": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\darPushGIT\\FDB_UAmplify\\FBD-2526\\Listeners.cs",
-              "RelativeDocumentMoniker": "FBD-2526\\Listeners.cs",
-              "ToolTip": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\darPushGIT\\FDB_UAmplify\\FBD-2526\\Listeners.cs [Projeto]",
-              "RelativeToolTip": "FBD-2526\\Listeners.cs [Projeto]",
+              "DocumentIndex": 2,
+              "Title": "Login.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\darPushGIT\\FDB_UAmplify\\FBD-2526\\Login.cs",
+              "RelativeDocumentMoniker": "FBD-2526\\Login.cs",
+              "ToolTip": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\darPushGIT\\FDB_UAmplify\\FBD-2526\\Login.cs [Projeto]",
+              "RelativeToolTip": "FBD-2526\\Login.cs [Projeto]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-19T14:05:12.958Z",
+              "WhenOpened": "2025-12-19T16:22:06.31Z",
               "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Home.cs",
+              "DocumentMoniker": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\darPushGIT\\FDB_UAmplify\\FBD-2526\\Home.cs",
+              "RelativeDocumentMoniker": "FBD-2526\\Home.cs",
+              "ToolTip": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\darPushGIT\\FDB_UAmplify\\FBD-2526\\Home.cs",
+              "RelativeToolTip": "FBD-2526\\Home.cs",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T16:20:51.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Registo.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\darPushGIT\\FDB_UAmplify\\FBD-2526\\Registo.cs",
+              "RelativeDocumentMoniker": "FBD-2526\\Registo.cs",
+              "ToolTip": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\darPushGIT\\FDB_UAmplify\\FBD-2526\\Registo.cs [Projeto]",
+              "RelativeToolTip": "FBD-2526\\Registo.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T16:11:15.389Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Registo.cs",
+              "DocumentMoniker": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\darPushGIT\\FDB_UAmplify\\FBD-2526\\Registo.cs",
+              "RelativeDocumentMoniker": "FBD-2526\\Registo.cs",
+              "ToolTip": "C:\\Users\\berna\\Documents\\ua\\2 ano\\1\u00BA semestre\\FBD\\P\\darPushGIT\\FDB_UAmplify\\FBD-2526\\Registo.cs",
+              "RelativeToolTip": "FBD-2526\\Registo.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAYwFQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-19T16:11:17.799Z",
+              "EditorCaption": ""
             }
           ]
         }

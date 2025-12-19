@@ -140,7 +140,7 @@
             // 
             // button4
             // 
-            button4.BackColor = Color.YellowGreen;
+            button4.BackColor = Color.FromArgb(30, 215, 96);
             button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button4.ForeColor = SystemColors.ButtonFace;
             button4.Location = new Point(241, 545);
@@ -153,7 +153,7 @@
             // 
             // button3
             // 
-            button3.BackColor = Color.YellowGreen;
+            button3.BackColor = Color.FromArgb(30, 215, 96);
             button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button3.ForeColor = SystemColors.ButtonHighlight;
             button3.Location = new Point(444, 545);
@@ -166,7 +166,7 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.YellowGreen;
+            button2.BackColor = Color.FromArgb(30, 215, 96);
             button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             button2.ForeColor = SystemColors.ButtonHighlight;
             button2.Location = new Point(653, 545);

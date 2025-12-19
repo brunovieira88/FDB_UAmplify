@@ -37,7 +37,19 @@ namespace FBD_2526
         private void Register()
         {
             string userType = "Listener";
+            if (string.IsNullOrWhiteSpace(textUserName.Text) ||
+            string.IsNullOrWhiteSpace(textPassword.Text) ||
+            string.IsNullOrWhiteSpace(textEmail.Text))
+            {
+                MessageBox.Show("Por favor, preencha todos os campos obrigatórios.");
+                return;
+            }
 
+            if (dateTimePicker1.Value > DateTime.Now)
+            {
+                MessageBox.Show("A data de nascimento não pode ser no futuro.");
+                return;
+            }
             DateTime dataNascimento = dateTimePicker1.Value;
 
             try
@@ -57,7 +69,6 @@ namespace FBD_2526
 
                 cmd.ExecuteNonQuery();
                 MessageBox.Show($"Registado com sucesso como {userType}!");
-                this.Close();
             }
             catch (Exception ex)
             {
@@ -68,7 +79,10 @@ namespace FBD_2526
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Register(); 
+            Register();
+            Login login = new Login();
+            login.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -76,5 +90,9 @@ namespace FBD_2526
             Application.Restart();
         }
 
+        private void Register_FormClosed(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

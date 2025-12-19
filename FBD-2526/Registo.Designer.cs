@@ -44,8 +44,8 @@
             dateTimePicker1 = new DateTimePicker();
             label5 = new Label();
             label6 = new Label();
-            registerCountry = new TextBox();
             textEmail = new TextBox();
+            registerCountry = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -155,7 +155,7 @@
             label4.ForeColor = Color.White;
             label4.Location = new Point(372, 202);
             label4.Name = "label4";
-            label4.Size = new Size(62, 25);
+            label4.Size = new Size(65, 25);
             label4.TabIndex = 10;
             label4.Text = "E-mail:";
             // 
@@ -210,7 +210,7 @@
             label5.ForeColor = Color.White;
             label5.Location = new Point(372, 367);
             label5.Name = "label5";
-            label5.Size = new Size(90, 25);
+            label5.Size = new Size(89, 25);
             label5.TabIndex = 13;
             label5.Text = "BirthDate:";
             // 
@@ -226,18 +226,6 @@
             label6.TabIndex = 14;
             label6.Text = "Country";
             // 
-            // registerCountry
-            // 
-            registerCountry.BackColor = Color.FromArgb(40, 40, 40);
-            registerCountry.BorderStyle = BorderStyle.FixedSingle;
-            registerCountry.Font = new Font("Segoe UI", 10.8F);
-            registerCountry.ForeColor = Color.White;
-            registerCountry.Location = new Point(611, 402);
-            registerCountry.Name = "registerCountry";
-            registerCountry.PasswordChar = '*';
-            registerCountry.Size = new Size(158, 31);
-            registerCountry.TabIndex = 15;
-            // 
             // textEmail
             // 
             textEmail.BackColor = Color.FromArgb(40, 40, 40);
@@ -249,14 +237,25 @@
             textEmail.Size = new Size(397, 31);
             textEmail.TabIndex = 16;
             // 
+            // registerCountry
+            // 
+            registerCountry.BackColor = Color.FromArgb(40, 40, 40);
+            registerCountry.BorderStyle = BorderStyle.FixedSingle;
+            registerCountry.Font = new Font("Segoe UI", 10.8F);
+            registerCountry.ForeColor = Color.White;
+            registerCountry.Location = new Point(611, 402);
+            registerCountry.Name = "registerCountry";
+            registerCountry.Size = new Size(158, 31);
+            registerCountry.TabIndex = 17;
+            // 
             // Registo
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(18, 18, 18);
             ClientSize = new Size(832, 603);
-            Controls.Add(textEmail);
             Controls.Add(registerCountry);
+            Controls.Add(textEmail);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(dateTimePicker1);
@@ -276,6 +275,7 @@
             RightToLeftLayout = true;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "UAmplify";
+            FormClosing += Register_FormClosed;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -300,7 +300,7 @@
         private TextBox textBox5;
         private PictureBox pictureBox1;
         private Label label6;
-        private TextBox registerCountry;
         private TextBox textEmail;
+        private TextBox registerCountry;
     }
 }
