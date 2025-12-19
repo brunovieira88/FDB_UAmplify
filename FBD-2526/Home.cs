@@ -161,5 +161,12 @@ namespace FBD_2526
             albums.Show();
             this.Hide();
         }
+
+        private void btnPlaylists_Click(object sender, EventArgs e)
+        {
+            Playlists playlists = new Playlists(UserId);
+            playlists.Show();
+            this.Hide();
+        }
     }
 }

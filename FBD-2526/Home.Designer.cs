@@ -111,6 +111,7 @@
             btnPlaylists.TabIndex = 4;
             btnPlaylists.Text = "Playlists";
             btnPlaylists.UseVisualStyleBackColor = false;
+            btnPlaylists.Click += btnPlaylists_Click;
             // 
             // btnAlbums
             // 
