@@ -113,7 +113,7 @@ namespace FBD_2526
                 int idAlbum = Convert.ToInt32(dgvAlbums.Rows[e.RowIndex].Cells["id"].Value);
                 string nomeAlbum = dgvAlbums.Rows[e.RowIndex].Cells["Album"].Value.ToString();
                 string nomeArtista = dgvAlbums.Rows[e.RowIndex].Cells["Artist"].Value.ToString();
-                AlbumDetails detailsForm = new AlbumDetails(idAlbum, nomeAlbum, nomeArtista);
+                AlbumDetails detailsForm = new AlbumDetails(this.UserId, idAlbum, nomeAlbum, nomeArtista);
                 detailsForm.ShowDialog();
             }
         }

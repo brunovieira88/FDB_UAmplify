@@ -210,7 +210,7 @@ namespace FBD_2526
 
             if (dgvMyPlaylists.Columns[e.ColumnIndex].Name == "OpenAction")
             {
-                PlaylistDetails details = new PlaylistDetails(id, name, owner);
+                PlaylistDetails details = new PlaylistDetails(this.UserId, id, name, owner);
                 details.ShowDialog();
             }
 
@@ -256,7 +256,7 @@ namespace FBD_2526
             //se clicou em view
             if (dgvSearch.Columns[e.ColumnIndex].Name == "ViewAction")
             {
-                PlaylistDetails details = new PlaylistDetails(idPlaylist, name, owner);
+                PlaylistDetails details = new PlaylistDetails(this.UserId, idPlaylist, name, owner);
                 details.ShowDialog();
             }
             //se clicou em save

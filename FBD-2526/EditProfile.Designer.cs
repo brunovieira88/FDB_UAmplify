@@ -2,455 +2,418 @@
 {
     partial class EditProfile
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
+            if (disposing && (components != null)) components.Dispose();
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditProfile));
-            toolbarPanel = new Panel();
-            btnPerfil = new Button();
-            btnPlaylists = new Button();
-            btnAlbums = new Button();
-            btnMusics = new Button();
-            btnHome = new Button();
-            lblLogo = new Label();
-            contentPanel = new Panel();
-            btnEdit = new Button();
-            lblTitle = new Label();
-            panelDivider = new Panel();
-            btnCancel = new Button();
-            btnDone = new Button();
-            txtPassword = new TextBox();
-            label6 = new Label();
-            txtCountry = new TextBox();
-            label5 = new Label();
-            dateBorn = new DateTimePicker();
-            label4 = new Label();
-            txtEmail = new TextBox();
-            label3 = new Label();
-            txtUserName = new TextBox();
-            label2 = new Label();
-            txtName = new TextBox();
-            label1 = new Label();
-            pictureBox1 = new PictureBox();
-            toolbarPanel.SuspendLayout();
-            contentPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
+            this.toolbarPanel = new System.Windows.Forms.Panel();
+            this.btnPerfil = new System.Windows.Forms.Button();
+            this.btnPlaylists = new System.Windows.Forms.Button();
+            this.btnAlbums = new System.Windows.Forms.Button();
+            this.btnMusics = new System.Windows.Forms.Button();
+            this.btnHome = new System.Windows.Forms.Button();
+            this.lblLogo = new System.Windows.Forms.Label();
+            this.contentPanel = new System.Windows.Forms.Panel();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.lblXP = new System.Windows.Forms.Label();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.panelDivider = new System.Windows.Forms.Panel();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnDone = new System.Windows.Forms.Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtCountry = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateBorn = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.toolbarPanel.SuspendLayout();
+            this.contentPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
+
             // 
             // toolbarPanel
             // 
-            toolbarPanel.BackColor = Color.FromArgb(30, 30, 30);
-            toolbarPanel.Controls.Add(btnPerfil);
-            toolbarPanel.Controls.Add(btnPlaylists);
-            toolbarPanel.Controls.Add(btnAlbums);
-            toolbarPanel.Controls.Add(btnMusics);
-            toolbarPanel.Controls.Add(btnHome);
-            toolbarPanel.Controls.Add(lblLogo);
-            toolbarPanel.Dock = DockStyle.Top;
-            toolbarPanel.Location = new Point(0, 0);
-            toolbarPanel.Margin = new Padding(4, 5, 4, 5);
-            toolbarPanel.Name = "toolbarPanel";
-            toolbarPanel.Size = new Size(1333, 92);
-            toolbarPanel.TabIndex = 0;
-            // 
-            // btnPerfil
-            // 
-            btnPerfil.BackColor = Color.Transparent;
-            btnPerfil.Cursor = Cursors.Hand;
-            btnPerfil.FlatAppearance.BorderSize = 0;
-            btnPerfil.FlatAppearance.MouseOverBackColor = Color.FromArgb(40, 40, 40);
-            btnPerfil.FlatStyle = FlatStyle.Flat;
-            btnPerfil.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnPerfil.ForeColor = Color.FromArgb(30, 215, 96);
-            btnPerfil.Location = new Point(893, 23);
-            btnPerfil.Margin = new Padding(4, 5, 4, 5);
-            btnPerfil.Name = "btnPerfil";
-            btnPerfil.Size = new Size(120, 46);
-            btnPerfil.TabIndex = 5;
-            btnPerfil.Text = "Profile";
-            btnPerfil.UseVisualStyleBackColor = false;
-            // 
-            // btnPlaylists
-            // 
-            btnPlaylists.BackColor = Color.Transparent;
-            btnPlaylists.Cursor = Cursors.Hand;
-            btnPlaylists.FlatAppearance.BorderSize = 0;
-            btnPlaylists.FlatAppearance.MouseOverBackColor = Color.FromArgb(40, 40, 40);
-            btnPlaylists.FlatStyle = FlatStyle.Flat;
-            btnPlaylists.Font = new Font("Segoe UI", 10F);
-            btnPlaylists.ForeColor = Color.White;
-            btnPlaylists.Location = new Point(733, 23);
-            btnPlaylists.Margin = new Padding(4, 5, 4, 5);
-            btnPlaylists.Name = "btnPlaylists";
-            btnPlaylists.Size = new Size(120, 46);
-            btnPlaylists.TabIndex = 4;
-            btnPlaylists.Text = "Playlists";
-            btnPlaylists.UseVisualStyleBackColor = false;
-            btnPlaylists.Click += btnPlaylists_Click;
-            // 
-            // btnAlbums
-            // 
-            btnAlbums.BackColor = Color.Transparent;
-            btnAlbums.Cursor = Cursors.Hand;
-            btnAlbums.FlatAppearance.BorderSize = 0;
-            btnAlbums.FlatAppearance.MouseOverBackColor = Color.FromArgb(40, 40, 40);
-            btnAlbums.FlatStyle = FlatStyle.Flat;
-            btnAlbums.Font = new Font("Segoe UI", 10F);
-            btnAlbums.ForeColor = Color.White;
-            btnAlbums.Location = new Point(600, 23);
-            btnAlbums.Margin = new Padding(4, 5, 4, 5);
-            btnAlbums.Name = "btnAlbums";
-            btnAlbums.Size = new Size(120, 46);
-            btnAlbums.TabIndex = 3;
-            btnAlbums.Text = "Albums";
-            btnAlbums.UseVisualStyleBackColor = false;
-            btnAlbums.Click += btnAlbums_Click;
-            // 
-            // btnMusics
-            // 
-            btnMusics.BackColor = Color.Transparent;
-            btnMusics.Cursor = Cursors.Hand;
-            btnMusics.FlatAppearance.BorderSize = 0;
-            btnMusics.FlatAppearance.MouseOverBackColor = Color.FromArgb(40, 40, 40);
-            btnMusics.FlatStyle = FlatStyle.Flat;
-            btnMusics.Font = new Font("Segoe UI", 10F);
-            btnMusics.ForeColor = Color.White;
-            btnMusics.Location = new Point(467, 23);
-            btnMusics.Margin = new Padding(4, 5, 4, 5);
-            btnMusics.Name = "btnMusics";
-            btnMusics.Size = new Size(120, 46);
-            btnMusics.TabIndex = 2;
-            btnMusics.Text = "Musics";
-            btnMusics.UseVisualStyleBackColor = false;
-            btnMusics.Click += btnMusics_Click;
-            // 
-            // btnHome
-            // 
-            btnHome.BackColor = Color.Transparent;
-            btnHome.Cursor = Cursors.Hand;
-            btnHome.FlatAppearance.BorderSize = 0;
-            btnHome.FlatAppearance.MouseOverBackColor = Color.FromArgb(40, 40, 40);
-            btnHome.FlatStyle = FlatStyle.Flat;
-            btnHome.Font = new Font("Segoe UI", 10F);
-            btnHome.ForeColor = Color.White;
-            btnHome.Location = new Point(333, 23);
-            btnHome.Margin = new Padding(4, 5, 4, 5);
-            btnHome.Name = "btnHome";
-            btnHome.Size = new Size(120, 46);
-            btnHome.TabIndex = 1;
-            btnHome.Text = "Home";
-            btnHome.UseVisualStyleBackColor = false;
-            btnHome.Click += btnHome_Click;
-            // 
-            // lblLogo
-            // 
-            lblLogo.AutoSize = true;
-            lblLogo.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            lblLogo.ForeColor = Color.FromArgb(30, 215, 96);
-            lblLogo.Location = new Point(27, 23);
-            lblLogo.Margin = new Padding(4, 0, 4, 0);
-            lblLogo.Name = "lblLogo";
-            lblLogo.Size = new Size(153, 41);
-            lblLogo.TabIndex = 0;
-            lblLogo.Text = "UAmplify";
+            this.toolbarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.toolbarPanel.Controls.Add(this.btnPerfil);
+            this.toolbarPanel.Controls.Add(this.btnPlaylists);
+            this.toolbarPanel.Controls.Add(this.btnAlbums);
+            this.toolbarPanel.Controls.Add(this.btnMusics);
+            this.toolbarPanel.Controls.Add(this.btnHome);
+            this.toolbarPanel.Controls.Add(this.lblLogo);
+            this.toolbarPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.toolbarPanel.Location = new System.Drawing.Point(0, 0);
+            this.toolbarPanel.Name = "toolbarPanel";
+            this.toolbarPanel.Size = new System.Drawing.Size(1333, 92);
+            this.toolbarPanel.TabIndex = 0;
+            this.btnPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.btnPerfil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPerfil.FlatAppearance.BorderSize = 0;
+            this.btnPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPerfil.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(215)))), ((int)(((byte)(96)))));
+            this.btnPerfil.Location = new System.Drawing.Point(893, 23);
+            this.btnPerfil.Name = "btnPerfil";
+            this.btnPerfil.Size = new System.Drawing.Size(120, 46);
+            this.btnPerfil.TabIndex = 5;
+            this.btnPerfil.Text = "Profile";
+            this.btnPerfil.UseVisualStyleBackColor = false;
+
+            this.btnPlaylists.BackColor = System.Drawing.Color.Transparent;
+            this.btnPlaylists.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlaylists.FlatAppearance.BorderSize = 0;
+            this.btnPlaylists.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPlaylists.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnPlaylists.ForeColor = System.Drawing.Color.White;
+            this.btnPlaylists.Location = new System.Drawing.Point(733, 23);
+            this.btnPlaylists.Name = "btnPlaylists";
+            this.btnPlaylists.Size = new System.Drawing.Size(120, 46);
+            this.btnPlaylists.TabIndex = 4;
+            this.btnPlaylists.Text = "Playlists";
+            this.btnPlaylists.UseVisualStyleBackColor = false;
+            this.btnPlaylists.Click += new System.EventHandler(this.btnPlaylists_Click);
+
+            this.btnAlbums.BackColor = System.Drawing.Color.Transparent;
+            this.btnAlbums.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlbums.FlatAppearance.BorderSize = 0;
+            this.btnAlbums.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlbums.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnAlbums.ForeColor = System.Drawing.Color.White;
+            this.btnAlbums.Location = new System.Drawing.Point(600, 23);
+            this.btnAlbums.Name = "btnAlbums";
+            this.btnAlbums.Size = new System.Drawing.Size(120, 46);
+            this.btnAlbums.TabIndex = 3;
+            this.btnAlbums.Text = "Albums";
+            this.btnAlbums.UseVisualStyleBackColor = false;
+            this.btnAlbums.Click += new System.EventHandler(this.btnAlbums_Click);
+
+            this.btnMusics.BackColor = System.Drawing.Color.Transparent;
+            this.btnMusics.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMusics.FlatAppearance.BorderSize = 0;
+            this.btnMusics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMusics.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnMusics.ForeColor = System.Drawing.Color.White;
+            this.btnMusics.Location = new System.Drawing.Point(467, 23);
+            this.btnMusics.Name = "btnMusics";
+            this.btnMusics.Size = new System.Drawing.Size(120, 46);
+            this.btnMusics.TabIndex = 2;
+            this.btnMusics.Text = "Musics";
+            this.btnMusics.UseVisualStyleBackColor = false;
+            this.btnMusics.Click += new System.EventHandler(this.btnMusics_Click);
+
+            this.btnHome.BackColor = System.Drawing.Color.Transparent;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.FlatAppearance.BorderSize = 0;
+            this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnHome.ForeColor = System.Drawing.Color.White;
+            this.btnHome.Location = new System.Drawing.Point(333, 23);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(120, 46);
+            this.btnHome.TabIndex = 1;
+            this.btnHome.Text = "Home";
+            this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+
+            this.lblLogo.AutoSize = true;
+            this.lblLogo.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lblLogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(215)))), ((int)(((byte)(96)))));
+            this.lblLogo.Location = new System.Drawing.Point(27, 23);
+            this.lblLogo.Name = "lblLogo";
+            this.lblLogo.Size = new System.Drawing.Size(153, 41);
+            this.lblLogo.TabIndex = 0;
+            this.lblLogo.Text = "UAmplify";
+
             // 
             // contentPanel
             // 
-            contentPanel.BackColor = Color.FromArgb(18, 18, 18);
-            contentPanel.Controls.Add(btnEdit);
-            contentPanel.Controls.Add(lblTitle);
-            contentPanel.Controls.Add(panelDivider);
-            contentPanel.Controls.Add(btnCancel);
-            contentPanel.Controls.Add(btnDone);
-            contentPanel.Controls.Add(txtPassword);
-            contentPanel.Controls.Add(label6);
-            contentPanel.Controls.Add(txtCountry);
-            contentPanel.Controls.Add(label5);
-            contentPanel.Controls.Add(dateBorn);
-            contentPanel.Controls.Add(label4);
-            contentPanel.Controls.Add(txtEmail);
-            contentPanel.Controls.Add(label3);
-            contentPanel.Controls.Add(txtUserName);
-            contentPanel.Controls.Add(label2);
-            contentPanel.Controls.Add(txtName);
-            contentPanel.Controls.Add(label1);
-            contentPanel.Controls.Add(pictureBox1);
-            contentPanel.Dock = DockStyle.Fill;
-            contentPanel.Location = new Point(0, 92);
-            contentPanel.Margin = new Padding(4, 5, 4, 5);
-            contentPanel.Name = "contentPanel";
-            contentPanel.Padding = new Padding(40, 46, 40, 46);
-            contentPanel.Size = new Size(1333, 963);
-            contentPanel.TabIndex = 1;
+            this.contentPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+
+      
+            this.contentPanel.Controls.Add(this.lblStatus);
+            this.contentPanel.Controls.Add(this.lblXP);
+
+            this.contentPanel.Controls.Add(this.btnEdit);
+            this.contentPanel.Controls.Add(this.lblTitle);
+            this.contentPanel.Controls.Add(this.panelDivider);
+            this.contentPanel.Controls.Add(this.btnCancel);
+            this.contentPanel.Controls.Add(this.btnDone);
+            this.contentPanel.Controls.Add(this.txtPassword);
+            this.contentPanel.Controls.Add(this.label6);
+            this.contentPanel.Controls.Add(this.txtCountry);
+            this.contentPanel.Controls.Add(this.label5);
+            this.contentPanel.Controls.Add(this.dateBorn);
+            this.contentPanel.Controls.Add(this.label4);
+            this.contentPanel.Controls.Add(this.txtEmail);
+            this.contentPanel.Controls.Add(this.label3);
+            this.contentPanel.Controls.Add(this.txtUserName);
+            this.contentPanel.Controls.Add(this.label2);
+            this.contentPanel.Controls.Add(this.txtName);
+            this.contentPanel.Controls.Add(this.label1);
+            this.contentPanel.Controls.Add(this.pictureBox1);
+            this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contentPanel.Location = new System.Drawing.Point(0, 92);
+            this.contentPanel.Name = "contentPanel";
+            this.contentPanel.Padding = new System.Windows.Forms.Padding(40, 46, 40, 46);
+            this.contentPanel.Size = new System.Drawing.Size(1333, 963);
+            this.contentPanel.TabIndex = 1;
+
+            // 
+            // lblXP
+            // 
+            this.lblXP.AutoSize = true;
+            this.lblXP.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lblXP.ForeColor = System.Drawing.Color.LightGray;
+            this.lblXP.Location = new System.Drawing.Point(40, 330);
+            this.lblXP.Name = "lblXP";
+            this.lblXP.Size = new System.Drawing.Size(100, 28);
+            this.lblXP.TabIndex = 40;
+            this.lblXP.Text = "Total XP: 0";
+
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblStatus.ForeColor = System.Drawing.Color.Gold; // Dourado
+            this.lblStatus.Location = new System.Drawing.Point(40, 360);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(100, 32);
+            this.lblStatus.TabIndex = 41;
+            this.lblStatus.Text = "Loading...";
+
             // 
             // btnEdit
             // 
-            btnEdit.BackColor = Color.FromArgb(30, 215, 96);
-            btnEdit.Cursor = Cursors.Hand;
-            btnEdit.FlatAppearance.BorderSize = 0;
-            btnEdit.FlatStyle = FlatStyle.Flat;
-            btnEdit.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnEdit.ForeColor = Color.Black;
-            btnEdit.Location = new Point(707, 480);
-            btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(155, 45);
-            btnEdit.TabIndex = 37;
-            btnEdit.Text = "EDIT";
-            btnEdit.UseVisualStyleBackColor = false;
-            btnEdit.Click += btnEdit_Click_1;
-            // 
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(215)))), ((int)(((byte)(96)))));
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.ForeColor = System.Drawing.Color.Black;
+            this.btnEdit.Location = new System.Drawing.Point(707, 480);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(155, 45);
+            this.btnEdit.TabIndex = 37;
+            this.btnEdit.Text = "EDIT";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
+
             // lblTitle
-            // 
-            lblTitle.AutoSize = true;
-            lblTitle.Font = new Font("Segoe UI", 24F, FontStyle.Bold);
-            lblTitle.ForeColor = Color.White;
-            lblTitle.Location = new Point(40, 40);
-            lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(230, 54);
-            lblTitle.TabIndex = 35;
-            lblTitle.Text = "Edit Profile";
-            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(40, 40);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(230, 54);
+            this.lblTitle.TabIndex = 35;
+            this.lblTitle.Text = "Edit Profile";
+
             // panelDivider
-            // 
-            panelDivider.BackColor = Color.FromArgb(40, 40, 40);
-            panelDivider.Location = new Point(40, 100);
-            panelDivider.Name = "panelDivider";
-            panelDivider.Size = new Size(822, 1);
-            panelDivider.TabIndex = 36;
-            // 
+            this.panelDivider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panelDivider.Location = new System.Drawing.Point(40, 100);
+            this.panelDivider.Name = "panelDivider";
+            this.panelDivider.Size = new System.Drawing.Size(822, 1);
+            this.panelDivider.TabIndex = 36;
+
             // btnCancel
-            // 
-            btnCancel.BackColor = Color.Transparent;
-            btnCancel.Cursor = Cursors.Hand;
-            btnCancel.FlatAppearance.BorderSize = 0;
-            btnCancel.FlatAppearance.MouseOverBackColor = Color.FromArgb(40, 40, 40);
-            btnCancel.FlatStyle = FlatStyle.Flat;
-            btnCancel.Font = new Font("Segoe UI Semibold", 11F, FontStyle.Bold);
-            btnCancel.ForeColor = Color.White;
-            btnCancel.Location = new Point(570, 480);
-            btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(120, 45);
-            btnCancel.TabIndex = 33;
-            btnCancel.Text = "Cancel";
-            btnCancel.UseVisualStyleBackColor = false;
-            btnCancel.Click += btnCancel_Click;
-            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(570, 480);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(120, 45);
+            this.btnCancel.TabIndex = 33;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+
             // btnDone
-            // 
-            btnDone.BackColor = Color.FromArgb(30, 215, 96);
-            btnDone.Cursor = Cursors.Hand;
-            btnDone.FlatAppearance.BorderSize = 0;
-            btnDone.FlatStyle = FlatStyle.Flat;
-            btnDone.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-            btnDone.ForeColor = Color.Black;
-            btnDone.Location = new Point(707, 480);
-            btnDone.Name = "btnDone";
-            btnDone.Size = new Size(155, 45);
-            btnDone.TabIndex = 32;
-            btnDone.Text = "SAVE PROFILE";
-            btnDone.UseVisualStyleBackColor = false;
-            btnDone.Click += btnDone_Click;
-            // 
+            this.btnDone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(215)))), ((int)(((byte)(96)))));
+            this.btnDone.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDone.FlatAppearance.BorderSize = 0;
+            this.btnDone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDone.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnDone.ForeColor = System.Drawing.Color.Black;
+            this.btnDone.Location = new System.Drawing.Point(707, 480);
+            this.btnDone.Name = "btnDone";
+            this.btnDone.Size = new System.Drawing.Size(155, 45);
+            this.btnDone.TabIndex = 32;
+            this.btnDone.Text = "SAVE PROFILE";
+            this.btnDone.UseVisualStyleBackColor = false;
+            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
+
             // txtPassword
-            // 
-            txtPassword.BackColor = Color.FromArgb(40, 40, 40);
-            txtPassword.BorderStyle = BorderStyle.FixedSingle;
-            txtPassword.Font = new Font("Segoe UI", 11F);
-            txtPassword.ForeColor = Color.Black;
-            txtPassword.Location = new Point(282, 382);
-            txtPassword.Name = "txtPassword";
-            txtPassword.PasswordChar = '•';
-            txtPassword.Size = new Size(580, 32);
-            txtPassword.TabIndex = 30;
-            txtPassword.TextChanged += txtPassword_TextChanged;
-            // 
+            this.txtPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtPassword.ForeColor = System.Drawing.Color.Black;
+            this.txtPassword.Location = new System.Drawing.Point(282, 382);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '•';
+            this.txtPassword.Size = new System.Drawing.Size(580, 32);
+            this.txtPassword.TabIndex = 30;
+
             // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 10F);
-            label6.ForeColor = Color.FromArgb(179, 179, 179);
-            label6.Location = new Point(282, 360);
-            label6.Name = "label6";
-            label6.Size = new Size(80, 23);
-            label6.TabIndex = 29;
-            label6.Text = "Password";
-            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
+            this.label6.Location = new System.Drawing.Point(282, 360);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(80, 23);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Password";
+
             // txtCountry
-            // 
-            txtCountry.BackColor = Color.FromArgb(40, 40, 40);
-            txtCountry.BorderStyle = BorderStyle.FixedSingle;
-            txtCountry.Font = new Font("Segoe UI", 11F);
-            txtCountry.ForeColor = Color.Black;
-            txtCountry.Location = new Point(282, 302);
-            txtCountry.Name = "txtCountry";
-            txtCountry.Size = new Size(281, 32);
-            txtCountry.TabIndex = 28;
-            txtCountry.TextChanged += txtCountry_TextChanged;
-            // 
+            this.txtCountry.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.txtCountry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCountry.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtCountry.ForeColor = System.Drawing.Color.Black;
+            this.txtCountry.Location = new System.Drawing.Point(282, 302);
+            this.txtCountry.Name = "txtCountry";
+            this.txtCountry.Size = new System.Drawing.Size(281, 32);
+            this.txtCountry.TabIndex = 28;
+
             // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 10F);
-            label5.ForeColor = Color.FromArgb(179, 179, 179);
-            label5.Location = new Point(282, 280);
-            label5.Name = "label5";
-            label5.Size = new Size(71, 23);
-            label5.TabIndex = 27;
-            label5.Text = "Country";
-            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
+            this.label5.Location = new System.Drawing.Point(282, 280);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 23);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Country";
+
             // dateBorn
-            // 
-            dateBorn.CalendarMonthBackground = Color.FromArgb(40, 40, 40);
-            dateBorn.CalendarTitleBackColor = Color.FromArgb(30, 215, 96);
-            dateBorn.CalendarTrailingForeColor = Color.Gray;
-            dateBorn.Font = new Font("Segoe UI", 11F);
-            dateBorn.Location = new Point(612, 302);
-            dateBorn.Name = "dateBorn";
-            dateBorn.Size = new Size(250, 32);
-            dateBorn.TabIndex = 26;
-            dateBorn.ValueChanged += dateBorn_ValueChanged;
-            // 
+            this.dateBorn.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.dateBorn.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(215)))), ((int)(((byte)(96)))));
+            this.dateBorn.CalendarTrailingForeColor = System.Drawing.Color.Gray;
+            this.dateBorn.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.dateBorn.Location = new System.Drawing.Point(612, 302);
+            this.dateBorn.Name = "dateBorn";
+            this.dateBorn.Size = new System.Drawing.Size(250, 32);
+            this.dateBorn.TabIndex = 26;
+
             // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 10F);
-            label4.ForeColor = Color.FromArgb(179, 179, 179);
-            label4.Location = new Point(612, 280);
-            label4.Name = "label4";
-            label4.Size = new Size(87, 23);
-            label4.TabIndex = 25;
-            label4.Text = "Birth Date";
-            label4.Click += label4_Click;
-            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
+            this.label4.Location = new System.Drawing.Point(612, 280);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(87, 23);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Birth Date";
+
             // txtEmail
-            // 
-            txtEmail.BackColor = Color.FromArgb(40, 40, 40);
-            txtEmail.BorderStyle = BorderStyle.FixedSingle;
-            txtEmail.Font = new Font("Segoe UI", 11F);
-            txtEmail.ForeColor = Color.Black;
-            txtEmail.Location = new Point(282, 222);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(580, 32);
-            txtEmail.TabIndex = 24;
-            txtEmail.TextChanged += txtEmail_TextChanged;
-            // 
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtEmail.ForeColor = System.Drawing.Color.Black;
+            this.txtEmail.Location = new System.Drawing.Point(282, 222);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(580, 32);
+            this.txtEmail.TabIndex = 24;
+
             // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 10F);
-            label3.ForeColor = Color.FromArgb(179, 179, 179);
-            label3.Location = new Point(282, 200);
-            label3.Name = "label3";
-            label3.Size = new Size(51, 23);
-            label3.TabIndex = 23;
-            label3.Text = "Email";
-            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
+            this.label3.Location = new System.Drawing.Point(282, 200);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 23);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Email";
+
             // txtUserName
-            // 
-            txtUserName.BackColor = Color.FromArgb(40, 40, 40);
-            txtUserName.BorderStyle = BorderStyle.FixedSingle;
-            txtUserName.Font = new Font("Segoe UI", 11F);
-            txtUserName.ForeColor = Color.Black;
-            txtUserName.Location = new Point(610, 142);
-            txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(252, 32);
-            txtUserName.TabIndex = 22;
-            txtUserName.TextChanged += txtUserName_TextChanged;
-            // 
+            this.txtUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.txtUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtUserName.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtUserName.ForeColor = System.Drawing.Color.Black;
+            this.txtUserName.Location = new System.Drawing.Point(610, 142);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(252, 32);
+            this.txtUserName.TabIndex = 22;
+
             // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10F);
-            label2.ForeColor = Color.FromArgb(179, 179, 179);
-            label2.Location = new Point(610, 120);
-            label2.Name = "label2";
-            label2.Size = new Size(90, 23);
-            label2.TabIndex = 21;
-            label2.Text = "UserName";
-            label2.Click += label2_Click;
-            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
+            this.label2.Location = new System.Drawing.Point(610, 120);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 23);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "UserName";
+
             // txtName
-            // 
-            txtName.BackColor = Color.FromArgb(40, 40, 40);
-            txtName.BorderStyle = BorderStyle.FixedSingle;
-            txtName.Font = new Font("Segoe UI", 11F);
-            txtName.ForeColor = Color.Black;
-            txtName.Location = new Point(282, 142);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(281, 32);
-            txtName.TabIndex = 20;
-            txtName.TextChanged += txtName_TextChanged;
-            // 
+            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtName.ForeColor = System.Drawing.Color.Black;
+            this.txtName.Location = new System.Drawing.Point(282, 142);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(281, 32);
+            this.txtName.TabIndex = 20;
+
             // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10F);
-            label1.ForeColor = Color.FromArgb(179, 179, 179);
-            label1.Location = new Point(282, 120);
-            label1.Name = "label1";
-            label1.Size = new Size(56, 23);
-            label1.TabIndex = 19;
-            label1.Text = "Name";
-            label1.Click += label1_Click;
-            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(179)))), ((int)(((byte)(179)))));
+            this.label1.Location = new System.Drawing.Point(282, 120);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 23);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Name";
+
             // pictureBox1
-            // 
-            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(40, 120);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(200, 200);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 18;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(40, 120);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(200, 200);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
+
             // 
             // EditProfile
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(18, 18, 18);
-            ClientSize = new Size(1333, 1055);
-            Controls.Add(contentPanel);
-            Controls.Add(toolbarPanel);
-            Name = "EditProfile";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Edit Profile";
-            FormClosed += EditProfile_FormClosed;
-            Load += EditProfile_Load;
-            toolbarPanel.ResumeLayout(false);
-            toolbarPanel.PerformLayout();
-            contentPanel.ResumeLayout(false);
-            contentPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
-
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.ClientSize = new System.Drawing.Size(1333, 1055);
+            this.Controls.Add(this.contentPanel);
+            this.Controls.Add(this.toolbarPanel);
+            this.Name = "EditProfile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Edit Profile";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EditProfile_FormClosed);
+            this.Load += new System.EventHandler(this.EditProfile_Load);
+            this.toolbarPanel.ResumeLayout(false);
+            this.toolbarPanel.PerformLayout();
+            this.contentPanel.ResumeLayout(false);
+            this.contentPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
         }
-
-        #endregion
-
         private System.Windows.Forms.Panel toolbarPanel;
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnPlaylists;
@@ -476,6 +439,8 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Button btnEdit;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Label lblXP; // NOVO
+        private System.Windows.Forms.Label lblStatus; // NOVO
     }
 }

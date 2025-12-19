@@ -99,12 +99,20 @@ namespace FBD_2526
                             txtPassword.Text = reader["password"].ToString();
                             txtCountry.Text = reader["country"].ToString();
 
+                            lblXP.Text = "Total XP: " + reader["xp"].ToString();
+                            lblStatus.Text = reader["Status"].ToString();
+                            string status = lblStatus.Text;
+                            if (status.Contains("Gold")) lblStatus.ForeColor = Color.Gold;
+                            else if (status.Contains("Silver")) lblStatus.ForeColor = Color.Silver;
+                            else lblStatus.ForeColor = Color.SandyBrown;
                             ogName = txtName.Text;
                             ogUserName = txtUserName.Text;
                             ogEmail = txtEmail.Text;
                             ogBornDate = dateBorn.Value;
                             ogPassword = txtPassword.Text;
                             ogCountry = txtCountry.Text;
+
+
                         }
                     }
 
