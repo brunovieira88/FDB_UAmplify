@@ -54,7 +54,9 @@ namespace FBD_2526
                 if (!verifySGBDConnection())
                     return;
 
-                SqlCommand cmd = new SqlCommand("SELECT * FROM uamplify.musicView", cn);
+                SqlCommand cmd = new SqlCommand("uamplify.SearchMusic", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@txt", ' ');
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 listView1.Items.Clear();
@@ -63,30 +65,23 @@ namespace FBD_2526
                 // Adiciona os cabeçalhos das colunas
                 listView1.Columns.Add("ID", 50);
                 listView1.Columns.Add("Nome", 200);
-                listView1.Columns.Add("Duração", 80);
-                listView1.Columns.Add("Data", 100);
-                listView1.Columns.Add("Album", 70);
-                listView1.Columns.Add("Gênero", 70);
-                listView1.Columns.Add("Idioma", 80);
+                listView1.Columns.Add("Artista", 100);
+                listView1.Columns.Add("Duração", 100);
+                listView1.Columns.Add("ReleaseDate", 150);
 
                 while (reader.Read())
                 {
                     String musicID = reader["id"]?.ToString() ?? "";
-                    String Name = reader["name"]?.ToString() ?? "";
+                    String Name = reader["music"]?.ToString() ?? "";
+                    String Artist = reader["artist"]?.ToString() ?? "";
                     String Duration = reader["duration"]?.ToString() ?? "";
-                    String ReleaseDate = reader["releaseDate"]?.ToString() ?? "";
-                    String IdAlbum = reader["albumName"]?.ToString() ?? "";
-                    String IdGenre = reader["genreType"]?.ToString() ?? "";
-                    String Language = reader["language"]?.ToString() ?? "";
-                    String Lyrics = reader["lyrics"]?.ToString() ?? "";
+                    String ReleaseDate = reader["release Date"]?.ToString() ?? "";
 
                     ListViewItem item = new ListViewItem(musicID);
                     item.SubItems.Add(Name);
+                    item.SubItems.Add(Artist);
                     item.SubItems.Add(Duration);
                     item.SubItems.Add(ReleaseDate);
-                    item.SubItems.Add(IdAlbum);
-                    item.SubItems.Add(IdGenre);
-                    item.SubItems.Add(Language);
 
                     listView1.Items.Add(item);
                 }
