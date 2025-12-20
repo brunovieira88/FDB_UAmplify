@@ -71,7 +71,7 @@ namespace FBD_2526
             if (txtUserName.Text != ogUserName) return true;
             if (txtEmail.Text != ogEmail) return true;
             if (txtCountry.Text != ogCountry) return true;
-            if (txtPassword.Text != ogPassword) return true;
+            if (txtPassword.Text != " ") return true;
             if (dateBorn.Value.Date != ogBornDate.Date) return true;
 
             return false;
@@ -96,7 +96,7 @@ namespace FBD_2526
                             txtUserName.Text = reader["username"].ToString();
                             txtEmail.Text = reader["email"].ToString();
                             dateBorn.Value = (DateTime)(reader["birthDate"]);
-                            txtPassword.Text = reader["password"].ToString();
+                            //txtPassword.Text = reader["password"].ToString();
                             txtCountry.Text = reader["country"].ToString();
 
                             lblXP.Text = "Total XP: " + reader["xp"].ToString();
@@ -109,7 +109,7 @@ namespace FBD_2526
                             ogUserName = txtUserName.Text;
                             ogEmail = txtEmail.Text;
                             ogBornDate = dateBorn.Value;
-                            ogPassword = txtPassword.Text;
+                            //ogPassword = txtPassword.Text;
                             ogCountry = txtCountry.Text;
 
 
