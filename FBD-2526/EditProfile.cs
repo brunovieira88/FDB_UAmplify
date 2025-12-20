@@ -28,7 +28,7 @@ namespace FBD_2526
         private string ogName;
         private string ogUserName;
         private string ogEmail;
-        private string ogPassword;
+        //private string ogPassword;
         private string ogCountry;
         private DateTime ogBornDate = DateTime.Now;
 
@@ -155,7 +155,7 @@ namespace FBD_2526
 
                     ogName = txtName.Text;
                     ogEmail = txtEmail.Text;
-                    ogPassword = txtPassword.Text;
+                    //ogPassword = txtPassword.Text;
                     ogCountry = txtCountry.Text;
                     ogUserName = txtUserName.Text;
                     ogBornDate = dateBorn.Value;
@@ -191,7 +191,7 @@ namespace FBD_2526
 
                 txtName.Text = ogName;
                 txtEmail.Text = ogEmail;
-                txtPassword.Text = ogPassword;
+                //txtPassword.Text = ogPassword;
                 txtCountry.Text = ogCountry;
                 txtUserName.Text = ogUserName;
                 dateBorn.Value = ogBornDate;

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FBD-2526")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f8be7e6bc240d1aa83b96285ee9be156f8444a93")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7c4e2f65a89ab6d5e8c07e278ef5a337a77b436")]
 [assembly: System.Reflection.AssemblyProductAttribute("FBD-2526")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FBD-2526")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
