@@ -24,6 +24,7 @@ namespace FBD_2526
             txtSearch.Enter += txtSearch_Enter;
             txtSearch.Leave += txtSearch_Leave;
             dgvListeners.CellFormatting += dgvMusics_CellFormatting;
+            dgvPending.CellContentClick += dgvPending_CellContentClick;
         }
 
         private SqlConnection getSGBDConnection()
@@ -161,6 +162,80 @@ namespace FBD_2526
                 e.FormattingApplied = true;
             }
         }
+
+        private void dgvPending_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return; 
+
+            try
+            {
+                int targetListenerId = Convert.ToInt32(dgvPending.Rows[e.RowIndex].Cells["userId"].Value);
+                if (dgvPending.Columns[e.ColumnIndex].Name == "Add")
+                {
+                    AcceptRequest(targetListenerId);
+                }
+                else if (dgvPending.Columns[e.ColumnIndex].Name == "Del")
+                {
+                    RecuseRequest(targetListenerId);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro ao processar o pedido: " + ex.Message);
+            }
+        }
+
+
+        private void AcceptRequest(int targetListenerId)
+        {
+            try
+            {
+                using (SqlConnection conn = getSGBDConnection())
+                using (SqlCommand cmd = new SqlCommand("uamplify.acceptPendingRequest", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@userId", UserId);
+                    cmd.Parameters.AddWithValue("@idListener", targetListenerId);
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Pedido aceite com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    LoadPending();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao aceitar pedido:\n" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void RecuseRequest(int targetListenerId)
+        {
+            try
+            {
+                using (SqlConnection conn = getSGBDConnection())
+                using (SqlCommand cmd = new SqlCommand("uamplify.recusePendingRequest", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@userId", UserId);
+                    cmd.Parameters.AddWithValue("@idListener", targetListenerId);
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Pedido recusado/removido.", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadPending();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao recusar pedido:\n" + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
 
         private void txtSearch_Enter(object sender, EventArgs e)
         {

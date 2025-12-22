@@ -176,7 +176,7 @@ namespace FBD_2526
 
             SqlCommand cmd = new SqlCommand("uamplify.ua_followOrUnfollowListener", cn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@iduser", UserId);
+            cmd.Parameters.AddWithValue("@userId", UserId);
             cmd.Parameters.AddWithValue("@idListener", ListennerProfileId);
             try
             {
@@ -278,6 +278,27 @@ namespace FBD_2526
         {
             Listeners listeners = new Listeners(UserId);
             listeners.Show();
+            this.Hide();
+        }
+
+        private void btnAlbums_Click(object sender, EventArgs e)
+        {
+            Albums albums = new Albums(UserId);
+            albums.Show();
+            this.Hide();
+        }
+
+        private void btnPlaylists_Click(object sender, EventArgs e)
+        {
+            Playlists playlists = new Playlists(UserId);
+            playlists.Show();
+            this.Hide();
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            EditProfile editProfile = new EditProfile(UserId);
+            editProfile.Show();
             this.Hide();
         }
     }

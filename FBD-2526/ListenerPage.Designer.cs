@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListenerPage));
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             toolbarPanel = new Panel();
+            btnCommunity = new Button();
             btnRETURN = new Button();
             btnPerfil = new Button();
             btnPlaylists = new Button();
@@ -51,7 +52,6 @@
             lblCountry = new Label();
             lblTag = new Label();
             lblListenerName = new Label();
-            btnCommunity = new Button();
             toolbarPanel.SuspendLayout();
             contentPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvFollowing).BeginInit();
@@ -76,6 +76,23 @@
             toolbarPanel.Name = "toolbarPanel";
             toolbarPanel.Size = new Size(1333, 92);
             toolbarPanel.TabIndex = 0;
+            // 
+            // btnCommunity
+            // 
+            btnCommunity.BackColor = Color.Transparent;
+            btnCommunity.Cursor = Cursors.Hand;
+            btnCommunity.FlatAppearance.BorderSize = 0;
+            btnCommunity.FlatAppearance.MouseOverBackColor = Color.FromArgb(40, 40, 40);
+            btnCommunity.FlatStyle = FlatStyle.Flat;
+            btnCommunity.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            btnCommunity.ForeColor = Color.FromArgb(30, 215, 96);
+            btnCommunity.Location = new Point(876, 23);
+            btnCommunity.Margin = new Padding(4, 5, 4, 5);
+            btnCommunity.Name = "btnCommunity";
+            btnCommunity.Size = new Size(120, 46);
+            btnCommunity.TabIndex = 12;
+            btnCommunity.Text = "Community";
+            btnCommunity.UseVisualStyleBackColor = false;
             // 
             // btnRETURN
             // 
@@ -106,6 +123,7 @@
             btnPerfil.TabIndex = 5;
             btnPerfil.Text = "Profile ";
             btnPerfil.UseVisualStyleBackColor = false;
+            btnPerfil.Click += btnPerfil_Click;
             // 
             // btnPlaylists
             // 
@@ -123,6 +141,7 @@
             btnPlaylists.TabIndex = 4;
             btnPlaylists.Text = "Playlists";
             btnPlaylists.UseVisualStyleBackColor = false;
+            btnPlaylists.Click += btnPlaylists_Click;
             // 
             // btnAlbums
             // 
@@ -140,6 +159,7 @@
             btnAlbums.TabIndex = 3;
             btnAlbums.Text = "Albums";
             btnAlbums.UseVisualStyleBackColor = false;
+            btnAlbums.Click += btnAlbums_Click;
             // 
             // btnMusics
             // 
@@ -157,6 +177,7 @@
             btnMusics.TabIndex = 2;
             btnMusics.Text = "Musics";
             btnMusics.UseVisualStyleBackColor = false;
+            btnMusics.Click += btnMusics_Click;
             // 
             // btnHome
             // 
@@ -174,6 +195,7 @@
             btnHome.TabIndex = 1;
             btnHome.Text = "Home";
             btnHome.UseVisualStyleBackColor = false;
+            btnHome.Click += btnHome_Click;
             // 
             // lblLogo
             // 
@@ -231,23 +253,23 @@
             dgvFollowing.BorderStyle = BorderStyle.None;
             dgvFollowing.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvFollowing.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.FromArgb(24, 24, 24);
-            dataGridViewCellStyle5.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = Color.FromArgb(179, 179, 179);
-            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(24, 24, 24);
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgvFollowing.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(24, 24, 24);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = Color.FromArgb(179, 179, 179);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(24, 24, 24);
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvFollowing.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvFollowing.ColumnHeadersHeight = 40;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.FromArgb(24, 24, 24);
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 11F);
-            dataGridViewCellStyle6.ForeColor = Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(40, 40, 40);
-            dataGridViewCellStyle6.SelectionForeColor = Color.FromArgb(30, 215, 96);
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dgvFollowing.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(24, 24, 24);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(40, 40, 40);
+            dataGridViewCellStyle2.SelectionForeColor = Color.FromArgb(30, 215, 96);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dgvFollowing.DefaultCellStyle = dataGridViewCellStyle2;
             dgvFollowing.EnableHeadersVisualStyles = false;
             dgvFollowing.GridColor = Color.FromArgb(40, 40, 40);
             dgvFollowing.Location = new Point(50, 689);
@@ -276,6 +298,7 @@
             btnFollow.TabIndex = 8;
             btnFollow.Text = "Follow";
             btnFollow.UseVisualStyleBackColor = false;
+            btnFollow.Click += btnFollow_Click;
             // 
             // pbProfile
             // 
@@ -298,23 +321,23 @@
             dgvPlaylists.BorderStyle = BorderStyle.None;
             dgvPlaylists.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dgvPlaylists.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = Color.FromArgb(24, 24, 24);
-            dataGridViewCellStyle7.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            dataGridViewCellStyle7.ForeColor = Color.FromArgb(179, 179, 179);
-            dataGridViewCellStyle7.SelectionBackColor = Color.FromArgb(24, 24, 24);
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            dgvPlaylists.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(24, 24, 24);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(179, 179, 179);
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(24, 24, 24);
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvPlaylists.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvPlaylists.ColumnHeadersHeight = 40;
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.FromArgb(24, 24, 24);
-            dataGridViewCellStyle8.Font = new Font("Segoe UI", 11F);
-            dataGridViewCellStyle8.ForeColor = Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = Color.FromArgb(40, 40, 40);
-            dataGridViewCellStyle8.SelectionForeColor = Color.FromArgb(30, 215, 96);
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
-            dgvPlaylists.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(24, 24, 24);
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11F);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(40, 40, 40);
+            dataGridViewCellStyle4.SelectionForeColor = Color.FromArgb(30, 215, 96);
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dgvPlaylists.DefaultCellStyle = dataGridViewCellStyle4;
             dgvPlaylists.EnableHeadersVisualStyles = false;
             dgvPlaylists.GridColor = Color.FromArgb(40, 40, 40);
             dgvPlaylists.Location = new Point(44, 330);
@@ -375,23 +398,6 @@
             lblListenerName.Size = new Size(439, 81);
             lblListenerName.TabIndex = 0;
             lblListenerName.Text = "Listener Name";
-            // 
-            // btnCommunity
-            // 
-            btnCommunity.BackColor = Color.Transparent;
-            btnCommunity.Cursor = Cursors.Hand;
-            btnCommunity.FlatAppearance.BorderSize = 0;
-            btnCommunity.FlatAppearance.MouseOverBackColor = Color.FromArgb(40, 40, 40);
-            btnCommunity.FlatStyle = FlatStyle.Flat;
-            btnCommunity.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            btnCommunity.ForeColor = Color.FromArgb(30, 215, 96);
-            btnCommunity.Location = new Point(876, 23);
-            btnCommunity.Margin = new Padding(4, 5, 4, 5);
-            btnCommunity.Name = "btnCommunity";
-            btnCommunity.Size = new Size(120, 46);
-            btnCommunity.TabIndex = 12;
-            btnCommunity.Text = "Community";
-            btnCommunity.UseVisualStyleBackColor = false;
             // 
             // ListenerPage
             // 
