@@ -58,7 +58,6 @@ namespace FBD_2526
                 {
                     userName.Text = reader["name"]?.ToString() ?? "";
                     userEmail.Text = reader["email"]?.ToString() ?? "";
-                    userPassword.Text = reader["password"]?.ToString() ?? "";
                     _targetUserId = Convert.ToInt32(reader["userId"]?.ToString());
 
                     if (reader["birthDate"] != DBNull.Value)
