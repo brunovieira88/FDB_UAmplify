@@ -223,7 +223,6 @@ namespace FBD_2526
                     string desc = dgvMyPlaylists.Rows[e.RowIndex].Cells["Description"].Value.ToString();
                     EditPlaylist editPage = new EditPlaylist(id, name, desc);
                     editPage.Show();
-                    this.Hide();
                 }
             }
         }

@@ -130,7 +130,6 @@ namespace FBD_2526
 
                 AlbumDetails detailsForm = new AlbumDetails(this.UserId, idAlbum, nomeAlbum, nomeArtista);
                 detailsForm.Show();
-                this.Hide();
             }
 
             else if (dgvAlbums.Columns[e.ColumnIndex].Name == "Artist")
