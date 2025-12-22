@@ -235,7 +235,7 @@ namespace FBD_2526
                 listView1.Columns.Add("Nome", 200);
                 listView1.Columns.Add("Duração", 80);
                 listView1.Columns.Add("Data", 100);
-                listView1.Columns.Add("Album", 70);
+                listView1.Columns.Add("Artista", 70);
                 listView1.Columns.Add("Gênero", 70);
                 listView1.Columns.Add("Idioma", 80);
 
@@ -245,7 +245,7 @@ namespace FBD_2526
                     String musicName = reader["musicName"]?.ToString() ?? "";
                     String musicDuration = reader["musicDuration"]?.ToString() ?? "";
                     String musicReleaseDate = reader["musicReleaseDate"]?.ToString() ?? "";
-                    String musicAlbum = reader["musicIdAlbum"]?.ToString() ?? "";
+                    String musicAlbum = reader["primaryArtistId"]?.ToString() ?? "";
                     String musicGenre = reader["musicIdGenre"]?.ToString() ?? "";
                     String musicLanguage = reader["musicLanguage"]?.ToString() ?? "";
                     ListViewItem item = new ListViewItem(operation);

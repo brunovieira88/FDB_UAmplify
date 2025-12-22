@@ -64,7 +64,6 @@ namespace FBD_2526
             IdMusic.Text = "";
             musicName.Text = "";
             musicDuration.Text = "";
-            musicReleaseDate.Text = "";
             musicAlbumId.Text = "";
             musicAlbumName.Text = "";
             musicIdGenre.Text = "";
@@ -108,9 +107,12 @@ namespace FBD_2526
                             IdMusic.Text = reader["id"].ToString();
                             musicName.Text = reader["name"].ToString();
                             musicDuration.Text = reader["duration"].ToString();
-                            musicReleaseDate.Text = reader["releaseDate"].ToString();
                             string albumId = reader["idalbum"].ToString();
                             string artistId = reader["idArtist"].ToString();
+                            if (reader["releaseDate"] != DBNull.Value)
+                            {
+                                musicReleaseDate.Value = Convert.ToDateTime(reader["releaseDate"]);
+                            }
 
                             musicAlbumId.Text = albumId;
                             musicAlbumName.Text = reader["albumName"].ToString();
@@ -192,14 +194,28 @@ namespace FBD_2526
             catch (Exception ex) { MessageBox.Show("Erro ao carregar género: " + ex.Message); }
         }
 
-        private void InsertUpdateMusicLog(String operation)
+        private DataTable GetFeatsFromListView()
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("id", typeof(int));
+            foreach (var obj in listFeats.Items)
+            {
+                if (obj is ArtistItem item)
+                {
+                    dt.Rows.Add(item.Id);
+                }
+            }
+            return dt;
+        }
+
+        private void InsertMusicLog(String operation)
         {
             try
             {
                 using (SqlConnection cn = getSGBDConnection())
                 {
                     cn.Open();
-                    SqlCommand cmd = new SqlCommand("ua_registInsertUpdateLog", cn);
+                    SqlCommand cmd = new SqlCommand("ua_registInsertLog", cn);
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.AddWithValue("@operation", operation);
@@ -207,11 +223,12 @@ namespace FBD_2526
                     cmd.Parameters.AddWithValue("@musicName", musicName.Text);
                     cmd.Parameters.AddWithValue("@musicDuration", musicDuration.Text);
 
-                    DateTime releaseDate;
-                    if (DateTime.TryParse(musicReleaseDate.Text, out releaseDate))
-                        cmd.Parameters.AddWithValue("@musicReleaseDate", releaseDate);
-                    else
-                        cmd.Parameters.AddWithValue("@musicReleaseDate", DBNull.Value);
+                    if (musicReleaseDate.Value > DateTime.Now)
+                    {
+                        MessageBox.Show("A data da musica não pode ser no futuro.");
+                        return;
+                    }
+                    cmd.Parameters.AddWithValue("@musicReleaseDate", musicReleaseDate.Value);
                     if (chkIsAlbum.Checked)
                     {
                         if (string.IsNullOrEmpty(musicAlbumId.Text))
@@ -235,14 +252,62 @@ namespace FBD_2526
                     cmd.Parameters.AddWithValue("@musicLanguage", musicLanguage.Text);
                     cmd.Parameters.AddWithValue("@musicLyrics", musicLyrics.Text);
 
-                    DataTable featTable = new DataTable();
-                    featTable.Columns.Add("id", typeof(int));
-                    foreach (var item in listFeats.Items)
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Log atualizado com sucesso na tabela temporária!");
+                }
+            }
+            catch (Exception ex) { MessageBox.Show("Erro ao inserir: " + ex.Message); }
+        }
+
+
+        private void UpdateMusicLog(String operation)
+        {
+            try
+            {
+                using (SqlConnection cn = getSGBDConnection())
+                {
+                    cn.Open();
+                    SqlCommand cmd = new SqlCommand("uamplify.ua_registUpdateLog", cn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.AddWithValue("@operation", operation);
+                    cmd.Parameters.AddWithValue("@musicId", IdMusic.Text);
+                    cmd.Parameters.AddWithValue("@musicName", musicName.Text);
+                    cmd.Parameters.AddWithValue("@musicDuration", musicDuration.Text);
+
+                    if (musicReleaseDate.Value > DateTime.Now)
                     {
-                        if (item is ArtistItem artist) featTable.Rows.Add(artist.Id);
+                        MessageBox.Show("A data da musica não pode ser no futuro.");
+                        return;
                     }
-                    SqlParameter tvpParam = cmd.Parameters.AddWithValue("@featArtistIds", featTable);
-                    tvpParam.SqlDbType = SqlDbType.Structured;
+                    cmd.Parameters.AddWithValue("@musicReleaseDate", musicReleaseDate.Value);
+                    if (chkIsAlbum.Checked)
+                    {
+                        if (string.IsNullOrEmpty(musicAlbumId.Text))
+                            cmd.Parameters.AddWithValue("@musicIdAlbum", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@musicIdAlbum", musicAlbumId.Text);
+
+                        cmd.Parameters.AddWithValue("@primaryArtistId", DBNull.Value);
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@musicIdAlbum", DBNull.Value);
+
+                        if (string.IsNullOrEmpty(musicArtistId.Text))
+                            cmd.Parameters.AddWithValue("@primaryArtistId", DBNull.Value);
+                        else
+                            cmd.Parameters.AddWithValue("@primaryArtistId", musicArtistId.Text);
+                    }
+
+                    cmd.Parameters.AddWithValue("@musicIdGenre", musicIdGenre.Text);
+                    cmd.Parameters.AddWithValue("@musicLanguage", musicLanguage.Text);
+                    cmd.Parameters.AddWithValue("@musicLyrics", musicLyrics.Text);
+
+                    DataTable tabelaFeats = GetFeatsFromListView();
+
+                    SqlParameter tvpParam = cmd.Parameters.AddWithValue("@featArtistIds", tabelaFeats);
+                    tvpParam.SqlDbType = SqlDbType.Structured;  
                     tvpParam.TypeName = "uamplify.ArtistIdList";
 
                     cmd.ExecuteNonQuery();
@@ -369,7 +434,7 @@ namespace FBD_2526
 
         private void button3_Click(object sender, EventArgs e)
         {
-            InsertUpdateMusicLog("INSERT");
+            InsertMusicLog("INSERT");
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -379,7 +444,7 @@ namespace FBD_2526
 
         private void button4_Click(object sender, EventArgs e)
         {
-            InsertUpdateMusicLog("UPDATE");
+            UpdateMusicLog("UPDATE");
         }
 
         private void btnAddFeat_Click(object sender, EventArgs e) { addMusicFeat(); }

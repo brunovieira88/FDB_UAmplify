@@ -123,7 +123,7 @@ namespace FBD_2526
             cmd.Parameters.AddWithValue("@idMod", UserId);
             cmd.Parameters.AddWithValue("@artistName", artistName.Text);
             cmd.Parameters.AddWithValue("@description", artistDescription.Text);
-            cmd.Parameters.AddWithValue("@idGenre", artistGenreId);
+            cmd.Parameters.AddWithValue("@idGenre", artistGenreId.Text);
             string inputVerified = artistVerified.Text.Trim().ToLower();
             if (!string.IsNullOrEmpty(inputVerified))
             {

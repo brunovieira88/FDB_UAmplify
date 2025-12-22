@@ -41,7 +41,7 @@
             userPassword = new TextBox();
             label7 = new Label();
             label4 = new Label();
-            userBirthDate = new TextBox();
+            userBirthDate = new DateTimePicker();
             SuspendLayout();
             // 
             // panel1
@@ -172,8 +172,8 @@
             // 
             userBirthDate.Location = new Point(569, 156);
             userBirthDate.Name = "userBirthDate";
-            userBirthDate.Size = new Size(183, 27);
-            userBirthDate.TabIndex = 34;
+            userBirthDate.Size = new Size(182, 27);
+            userBirthDate.TabIndex = 35;
             // 
             // EditUser
             // 
@@ -215,6 +215,6 @@
         private TextBox userPassword;
         private Label label7;
         private Label label4;
-        private TextBox userBirthDate;
+        private DateTimePicker userBirthDate;
     }
 }

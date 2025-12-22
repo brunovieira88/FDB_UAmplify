@@ -59,9 +59,13 @@ namespace FBD_2526
                     albumId.Text = reader["id"]?.ToString() ?? "";
                     albumName.Text = reader["name"]?.ToString() ?? "";
                     albumDuration.Text = reader["duration"]?.ToString() ?? "";
-                    albumReleaseDate.Text = reader["releaseDate"]?.ToString() ?? "";
                     albumArtistId.Text = reader["idArtist"]?.ToString() ?? "";
                     albumArtistName.Text = reader["artistName"]?.ToString() ?? "";
+
+                    if (reader["releaseDate"] != DBNull.Value)
+                    {
+                        albumReleaseDate.Value = Convert.ToDateTime(reader["releaseDate"]);
+                    }
                     ;
                 }
 
@@ -140,8 +144,14 @@ namespace FBD_2526
             cmd.CommandType = CommandType.StoredProcedure; // Define que é uma SP
             cmd.Parameters.AddWithValue("@idModerator", UserId);
             cmd.Parameters.AddWithValue("@albumName", albumName.Text);
-            cmd.Parameters.AddWithValue("@albumReleaseDate", Convert.ToDateTime(albumReleaseDate.Text));
             cmd.Parameters.AddWithValue("@idArtist", albumArtistId.Text);
+            if (albumReleaseDate.Value > DateTime.Now)
+            {
+                MessageBox.Show("A data do album não pode ser no futuro.");
+                return;
+            }
+            cmd.Parameters.AddWithValue("@albumReleaseDate", albumReleaseDate.Value);
+
             try
             {
                 int rows = cmd.ExecuteNonQuery();
@@ -166,7 +176,7 @@ namespace FBD_2526
             cmd.Parameters.AddWithValue("@idModerator", UserId);
             cmd.Parameters.AddWithValue("@albumId", albumId.Text);
             cmd.Parameters.AddWithValue("@albumName", albumName.Text);
-            cmd.Parameters.AddWithValue("@albumReleaseDate", Convert.ToDateTime(albumReleaseDate.Text));
+            cmd.Parameters.AddWithValue("@albumReleaseDate", albumReleaseDate.Value);
             cmd.Parameters.AddWithValue("@idArtist", albumArtistId.Text);
             try
             {

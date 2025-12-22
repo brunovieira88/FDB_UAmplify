@@ -37,7 +37,6 @@
             label2 = new Label();
             albumDuration = new TextBox();
             label4 = new Label();
-            albumReleaseDate = new TextBox();
             button4 = new Button();
             button3 = new Button();
             button2 = new Button();
@@ -47,6 +46,7 @@
             label7 = new Label();
             albumArtistId = new TextBox();
             button5 = new Button();
+            albumReleaseDate = new DateTimePicker();
             SuspendLayout();
             // 
             // panel1
@@ -100,14 +100,14 @@
             // 
             albumName.Location = new Point(241, 139);
             albumName.Name = "albumName";
-            albumName.Size = new Size(293, 27);
+            albumName.Size = new Size(267, 27);
             albumName.TabIndex = 17;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label2.Location = new Point(560, 116);
+            label2.Location = new Point(513, 116);
             label2.Name = "label2";
             label2.Size = new Size(71, 20);
             label2.TabIndex = 18;
@@ -115,7 +115,7 @@
             // 
             // albumDuration
             // 
-            albumDuration.Location = new Point(560, 139);
+            albumDuration.Location = new Point(514, 139);
             albumDuration.Name = "albumDuration";
             albumDuration.ReadOnly = true;
             albumDuration.Size = new Size(70, 27);
@@ -125,18 +125,11 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label4.Location = new Point(668, 116);
+            label4.Location = new Point(607, 116);
             label4.Name = "label4";
             label4.Size = new Size(95, 20);
             label4.TabIndex = 20;
             label4.Text = "ReleaseDate";
-            // 
-            // albumReleaseDate
-            // 
-            albumReleaseDate.Location = new Point(653, 139);
-            albumReleaseDate.Name = "albumReleaseDate";
-            albumReleaseDate.Size = new Size(138, 27);
-            albumReleaseDate.TabIndex = 21;
             // 
             // button4
             // 
@@ -233,11 +226,19 @@
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
             // 
+            // albumReleaseDate
+            // 
+            albumReleaseDate.Location = new Point(607, 139);
+            albumReleaseDate.Name = "albumReleaseDate";
+            albumReleaseDate.Size = new Size(189, 27);
+            albumReleaseDate.TabIndex = 34;
+            // 
             // AlbumEdit
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(803, 601);
+            Controls.Add(albumReleaseDate);
             Controls.Add(button5);
             Controls.Add(albumArtistId);
             Controls.Add(label7);
@@ -247,7 +248,6 @@
             Controls.Add(button2);
             Controls.Add(button3);
             Controls.Add(button4);
-            Controls.Add(albumReleaseDate);
             Controls.Add(label4);
             Controls.Add(albumDuration);
             Controls.Add(label2);
@@ -274,7 +274,6 @@
         private Label label2;
         private TextBox albumDuration;
         private Label label4;
-        private TextBox albumReleaseDate;
         private Button button4;
         private Button button3;
         private Button button2;
@@ -284,5 +283,6 @@
         private Label label7;
         private TextBox albumArtistId;
         private Button button5;
+        private DateTimePicker albumReleaseDate;
     }
 }

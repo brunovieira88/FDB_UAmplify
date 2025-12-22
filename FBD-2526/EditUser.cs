@@ -58,9 +58,13 @@ namespace FBD_2526
                 {
                     userName.Text = reader["name"]?.ToString() ?? "";
                     userEmail.Text = reader["email"]?.ToString() ?? "";
-                    userBirthDate.Text = reader["birthDate"]?.ToString() ?? "";
                     userPassword.Text = reader["password"]?.ToString() ?? "";
                     _targetUserId = Convert.ToInt32(reader["userId"]?.ToString());
+
+                    if (reader["birthDate"] != DBNull.Value)
+                    {
+                        userBirthDate.Value = Convert.ToDateTime(reader["birthDate"]);
+                    }
                     ;
                 }
                 else
@@ -100,8 +104,15 @@ namespace FBD_2526
             cmd.Parameters.AddWithValue("@username", userUsername.Text);
             cmd.Parameters.AddWithValue("@name", userName.Text);
             cmd.Parameters.AddWithValue("@email", userEmail.Text);
-            cmd.Parameters.AddWithValue("@birthDate", Convert.ToDateTime(userBirthDate.Text));
             cmd.Parameters.AddWithValue("@password", userPassword.Text);
+
+            if (userBirthDate.Value > DateTime.Now)
+            {
+                MessageBox.Show("A data do album não pode ser no futuro.");
+                return;
+            }
+
+            cmd.Parameters.AddWithValue("@birthDate", userBirthDate.Value);
             try
             {
                 int rows = cmd.ExecuteNonQuery();
