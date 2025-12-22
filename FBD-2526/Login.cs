@@ -116,7 +116,7 @@ namespace FBD_2526
 
             if (ValidarLogin(username, password))
             {
-                MessageBox.Show($"Bem-vindo, {UserName}!\n(ID de Utilizador: {UserId})",
+                MessageBox.Show($"Bem-vindo, {UserName}!\n",
                     "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (isMod())
                 {

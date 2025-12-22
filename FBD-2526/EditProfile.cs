@@ -36,8 +36,6 @@ namespace FBD_2526
         {
             UserId = userId;
             InitializeComponent();
-            //para debug
-            MessageBox.Show("ID recebido: " + UserId);
         }
 
         private void EditProfile_Load(object sender, EventArgs e)
