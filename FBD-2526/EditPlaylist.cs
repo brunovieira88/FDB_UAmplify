@@ -56,7 +56,7 @@ namespace FBD_2526
                     dgvInPlaylist.Columns["RemoveAction"].Width = 50;
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Erro: " + ex.Message); }
+            catch (Exception ex) { MessageBox.Show("Erro: "); }
         }
 
         private void SearchAllMusics(string txt)
@@ -86,7 +86,7 @@ namespace FBD_2526
                     dgvAllMusics.Columns["AddAction"].Width = 50;
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Erro: " + ex.Message); }
+            catch (Exception ex) { MessageBox.Show("Erro: "); }
         }
 
         private void dgvAllMusics_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -125,7 +125,7 @@ namespace FBD_2526
                     MessageBox.Show("Details updated successfully!");
                 }
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { MessageBox.Show("Error"); }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -145,7 +145,7 @@ namespace FBD_2526
                         this.Close();
                     }
                 }
-                catch (Exception ex) { MessageBox.Show(ex.Message); }
+                catch (Exception ex) { MessageBox.Show("Error"); }
             }
         }
 
@@ -163,7 +163,7 @@ namespace FBD_2526
                     cmd.ExecuteNonQuery();
                 }
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { MessageBox.Show("Error"); }
         }
         private void DgvAllMusics_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {

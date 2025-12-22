@@ -50,7 +50,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("error creating playlist: " + ex.Message);
+                MessageBox.Show("error creating playlist: ");
             }
         }
 

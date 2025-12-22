@@ -74,7 +74,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao carregar album: " + ex.Message);
+                MessageBox.Show("Erro ao carregar album: ");
             }
             finally
             {
@@ -126,7 +126,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao carregar clientes: " + ex.Message);
+                MessageBox.Show("Erro ao carregar clientes: ");
             }
             finally
             {

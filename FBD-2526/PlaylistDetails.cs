@@ -62,7 +62,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("erro ao registar play: " + ex.Message);
+                MessageBox.Show("erro ao registar play: ");
             }
         }
 
@@ -97,7 +97,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("error loading playlist tracks: " + ex.Message);
+                MessageBox.Show("error loading playlist tracks: ");
             }
         }
 

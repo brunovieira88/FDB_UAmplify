@@ -72,7 +72,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro: " + ex.Message);
+                MessageBox.Show("Erro: ");
             }
         }
 

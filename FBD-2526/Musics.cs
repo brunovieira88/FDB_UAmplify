@@ -76,7 +76,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao ligar à base de dados:\n" + ex.Message,
+                MessageBox.Show("Erro ao ligar à base de dados:\n",
                     "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
@@ -119,7 +119,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("erro ao registar play: " + ex.Message);
+                MessageBox.Show("erro ao registar play: ");
             }
         }
         private void Musics_Load(object sender, EventArgs e)

@@ -120,8 +120,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                Interaction.MsgBox("FAILED TO OPEN CONNECTION TO DATABASE DUE TO THE FOLLOWING ERROR" +
-                Constants.vbCrLf + ex.Message, MsgBoxStyle.Critical, "Connection Test");
+                Interaction.MsgBox("FAILED TO OPEN CONNECTION TO DATABASE");
             }
             cn.Close();
         }
@@ -164,8 +163,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                Interaction.MsgBox("FAILED TO OPEN CONNECTION TO DATABASE DUE TO THE FOLLOWING ERROR" +
-                Constants.vbCrLf + ex.Message, MsgBoxStyle.Critical, "Connection Test");
+                Interaction.MsgBox("FAILED TO OPEN CONNECTION TO DATABASE");
             }
             cn.Close();
         }

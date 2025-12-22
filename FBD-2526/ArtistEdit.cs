@@ -70,7 +70,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao carregar clientes: " + ex.Message);
+                MessageBox.Show("Erro ao carregar clientes: ");
             }
             finally
             {
@@ -104,7 +104,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao carregar clientes: " + ex.Message);
+                MessageBox.Show("Erro ao carregar clientes: ");
             }
             finally
             {
@@ -138,7 +138,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao inserir: " + ex.Message);
+                MessageBox.Show("Erro ao inserir: ");   
             }
             finally
             {
@@ -171,7 +171,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao atualizar: " + ex.Message);
+                MessageBox.Show("Erro ao atualizar: ");
             }
             finally
             {
@@ -194,7 +194,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao atualizar: " + ex.Message);
+                MessageBox.Show("Erro ao atualizar: ");
             }
             finally
             {

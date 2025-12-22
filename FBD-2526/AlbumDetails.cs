@@ -61,7 +61,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("error loading album tracks: " + ex.Message);
+                MessageBox.Show("error loading album tracks");
             }
         }
 
@@ -104,7 +104,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("erro ao registar play: " + ex.Message);
+                MessageBox.Show("erro ao registar play");
             }
         }
         private void btnClose_Click(object sender, EventArgs e)

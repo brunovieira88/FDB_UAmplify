@@ -151,7 +151,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao carregar musica: " + ex.Message);
+                MessageBox.Show("Erro ao carregar musica: ");
             }
             finally
             {
@@ -173,7 +173,7 @@ namespace FBD_2526
                     if (reader.Read()) musicAlbumName.Text = reader["name"].ToString();
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Erro ao carregar álbum: " + ex.Message); }
+            catch (Exception ex) { MessageBox.Show("Erro ao carregar álbum: "); }
         }
 
         public void loadGenreType()
@@ -191,7 +191,7 @@ namespace FBD_2526
                     else musicGenreName.Text = "";
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Erro ao carregar género: " + ex.Message); }
+            catch (Exception ex) { MessageBox.Show("Erro ao carregar género: "); }
         }
 
         private DataTable GetFeatsFromListView()
@@ -256,7 +256,7 @@ namespace FBD_2526
                     MessageBox.Show("Log atualizado com sucesso na tabela temporária!");
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Erro ao inserir: " + ex.Message); }
+            catch (Exception ex) { MessageBox.Show("Erro ao inserir: "); }
         }
 
 
@@ -314,7 +314,7 @@ namespace FBD_2526
                     MessageBox.Show("Log atualizado com sucesso na tabela temporária!");
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Erro ao inserir: " + ex.Message); }
+            catch (Exception ex) { MessageBox.Show("Erro ao inserir: "); }
         }
 
         private void DeleteMusicLog()
@@ -332,7 +332,7 @@ namespace FBD_2526
                     MessageBox.Show("Música marcada para remoção");
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Erro ao eliminar: " + ex.Message); }
+            catch (Exception ex) { MessageBox.Show("Erro ao eliminar: "); }
         }
 
         private void loadPrimaryFeats()
@@ -357,7 +357,7 @@ namespace FBD_2526
                     }
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Erro ao carregar feats: " + ex.Message); }
+            catch (Exception ex) { MessageBox.Show("Erro ao carregar feats: "); }
         }
 
         private void addMusicFeat()
@@ -389,7 +389,7 @@ namespace FBD_2526
                     else MessageBox.Show("Artista não encontrado.");
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Erro ao buscar artista: " + ex.Message); }
+            catch (Exception ex) { MessageBox.Show("Erro ao buscar artista: "); }
         }
 
         private void getPrimaryArtist()
@@ -414,7 +414,7 @@ namespace FBD_2526
                     }
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Erro ao carregar artista principal: " + ex.Message); }
+            catch (Exception ex) { MessageBox.Show("Erro ao carregar artista principal: "); }
         }
 
         private void removeMusicFeats()

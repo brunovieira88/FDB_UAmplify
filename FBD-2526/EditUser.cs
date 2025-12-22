@@ -77,7 +77,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao carregar user: " + ex.Message);
+                MessageBox.Show("Erro ao carregar user: ");
             }
             finally
             {
@@ -120,7 +120,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao atualizar o user" + ex.Message);
+                MessageBox.Show("Erro ao atualizar o user");
             }
             finally
             {

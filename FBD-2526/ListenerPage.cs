@@ -78,7 +78,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao ligar à base de dados:\n" + ex.Message,
+                MessageBox.Show("Erro ao ligar à base de dados:\n",
                     "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
@@ -120,7 +120,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao ligar à base de dados:\n" + ex.Message,
+                MessageBox.Show("Erro ao ligar à base de dados:\n"  ,
                     "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
@@ -163,7 +163,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao ligar à base de dados:\n" + ex.Message,
+                MessageBox.Show("Erro ao ligar à base de dados:\n",
                     "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Close();
             }
@@ -186,7 +186,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro a dar follow" + ex.Message);
+                MessageBox.Show("Erro a dar follow");
             }
             finally
             {
@@ -218,7 +218,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao verificar estado de seguidor:\n" + ex.Message);
+                MessageBox.Show("Erro ao verificar estado de seguidor:\n");
             }
         }
 

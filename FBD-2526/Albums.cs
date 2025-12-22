@@ -30,6 +30,12 @@ namespace FBD_2526
             dgvAlbums.CellFormatting += dgvAlbums_CellFormatting;
             txtSearch.Enter += txtSearch_Enter;
             txtSearch.Leave += txtSearch_Leave;
+            txtSearch.TextChanged += txtSearch_TextChanged;
+        }
+
+        private void TxtSearch_TextChanged(object? sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)

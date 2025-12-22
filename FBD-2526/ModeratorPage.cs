@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
-using Microsoft.Data.SqlClient; // Usando a biblioteca moderna
+using Microsoft.Data.SqlClient; 
 
 namespace FBD_2526
 {
@@ -91,7 +91,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao carregar clientes: " + ex.Message);
+                MessageBox.Show("Erro ao carregar clientes: ");
             }
         }
         private void loadArtists()
@@ -133,7 +133,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao carregar clientes: " + ex.Message);
+                MessageBox.Show("Erro ao carregar clientes: ");
             }
         }
 
@@ -175,7 +175,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao carregar clientes: " + ex.Message);
+                MessageBox.Show("Erro ao carregar clientes: ");
             }
         }
         private void loadUsers()
@@ -214,7 +214,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao carregar clientes: " + ex.Message);
+                MessageBox.Show("Erro ao carregar clientes: ");
             }
         }
 
@@ -263,7 +263,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao carregar clientes: " + ex.Message);
+                MessageBox.Show("Erro ao carregar clientes: ");
             }
 
         }
@@ -284,7 +284,7 @@ namespace FBD_2526
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro a dar push: " + ex.Message);
+                MessageBox.Show("Erro a dar push: ");
             }
         }
 
