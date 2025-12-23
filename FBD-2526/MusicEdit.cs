@@ -314,7 +314,7 @@ namespace FBD_2526
                     MessageBox.Show("Log atualizado com sucesso na tabela temporária!");
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Erro ao inserir: "); }
+            catch (Exception ex) { MessageBox.Show("Erro ao atualizar "); }
         }
 
         private void DeleteMusicLog()

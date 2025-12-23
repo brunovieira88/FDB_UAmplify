@@ -275,17 +275,26 @@ namespace FBD_2526
                     return;
 
                 SqlCommand cmd = new SqlCommand("ua_pushToOriginalTable", cn);
+                cn.InfoMessage += new SqlInfoMessageEventHandler(OnSqlInfoMessage); 
+
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@idModerator", UserId);
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Processo de sincronização terminado.");
+                MessageBox.Show("Processo de sincronização terminado.Verifique se houve mensagens de erro.");
+
+                cn.InfoMessage -= new SqlInfoMessageEventHandler(OnSqlInfoMessage);
                 loadMusicLogs();
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                MessageBox.Show("Erro a dar push: ");
+                MessageBox.Show("Erro a fazer o push");
             }
+        }
+
+        private void OnSqlInfoMessage(object sender, SqlInfoMessageEventArgs e)
+        {
+            MessageBox.Show("Aviso do SQL: " + e.Message);
         }
 
 
